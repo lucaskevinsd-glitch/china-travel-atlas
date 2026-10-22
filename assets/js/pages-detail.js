@@ -17,7 +17,7 @@
     const fav = CTA.store.isFavorite(d.id);
     const imgs = (d.images || []).filter(i => i && i.src);
     const hero = imgs.length
-      ? '<img class="detail-hero" src="' + esc(imgs[0].src) + '" alt="' + esc(imgs[0].alt || d.name) + '" width="1200" height="675">' +
+      ? '<img class="detail-hero" src="' + esc(imgs[0].src) + '" alt="' + esc(imgs[0].alt || d.name) + '" width="1200" height="675" onerror="CTA.imgErr(this,\'hero\')">' +
         '<p class="img-credit">图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</p>'
       : '<div class="detail-hero hero-placeholder">图片待补充（须有明确授权后才上线）</div>';
     el.innerHTML =

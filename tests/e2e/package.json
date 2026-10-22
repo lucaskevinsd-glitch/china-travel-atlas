@@ -1,0 +1,7 @@
+{
+  "name": "cta-e2e",
+  "private": true,
+  "type": "module",
+  "description": "真实浏览器冒烟测试（独立工具，不进站点构建；使用本机 Chromium + playwright-core，不下载浏览器）",
+  "dependencies": { "playwright-core": "^1.56.0" }
+}

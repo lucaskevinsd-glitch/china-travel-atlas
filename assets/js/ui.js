@@ -11,10 +11,17 @@
   function errorBox(code) {
     return '<div class="error-box" role="alert">' + esc(CTA.errorMessage(code)) + '</div>';
   }
+  /* 图片加载失败降级：以占位块替换破图（真实浏览器冒烟发现，2026-10-22）。 */
+  function imgErr(img, kind) {
+    const div = document.createElement('div');
+    div.className = img.className + (kind === 'hero' ? ' hero-placeholder' : ' card-img-placeholder');
+    div.textContent = kind === 'hero' ? '图片加载失败' : '🏞️';
+    img.replaceWith(div);
+  }
   function destCard(d) {
     const fav = CTA.store.isFavorite(d.id);
     const img = d.coverThumb
-      ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '" loading="lazy" width="640" height="400">'
+      ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '" loading="lazy" width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
       : '<div class="card-img card-img-placeholder" aria-hidden="true">🏞️</div>';
     const themes = (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('');
     return '<article class="dest-card">' +
@@ -34,4 +41,5 @@
     btn.textContent = now ? '⭐ 已收藏' : '☆ 收藏';
   });
   CTA.ui = { esc, emptyState, errorBox, destCard };
+  CTA.imgErr = imgErr;
 })();
