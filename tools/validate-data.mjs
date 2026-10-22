@@ -88,7 +88,9 @@ const destDir = join(root, 'data/destinations');
 const files = readdirSync(destDir).filter(f => f.endsWith('.json')).sort();
 let total = 0, published = 0;
 for (const f of files) {
-  const list = readJson('data/destinations/' + f);
+  let list;
+  try { list = readJson('data/destinations/' + f); }
+  catch (e) { err(f, 'JSON 格式不合法: ' + e.message); continue; }
   if (!Array.isArray(list)) { err(f, '文件顶层须为数组'); continue; }
   for (const d of list) { total++; if (d && d.status === 'published') published++; validateDestination(d, f); }
 }

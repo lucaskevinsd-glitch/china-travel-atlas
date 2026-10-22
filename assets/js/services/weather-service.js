@@ -90,5 +90,5 @@
 
   const api = { getWeather, normalizeOpenMeteo, _cacheKey: cacheKey };
   if (typeof window !== 'undefined') { window.CTA = window.CTA || {}; CTA.weatherService = api; }
-  if (typeof module !== 'undefined' && module.exports) module.exports = { normalizeOpenMeteo };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })();
