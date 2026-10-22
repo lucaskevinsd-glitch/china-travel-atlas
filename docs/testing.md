@@ -26,3 +26,5 @@
 夹具：把站点复制到 /tmp/cta-e2e-site，放入 1 条 published 测试记录（候选张家界数据 + 本地生成色块图，alt/credit 明确标注 fixture），跑该副本的 build-index 与 validate --check-index 通过后，删除其全图文件以验证破图降级。
 运行：`cd tests/e2e && npm install && node smoke.mjs`（16 项断言：首页/筛选/搜索/详情/天气失败降级/破图降级/收藏/规划/移动端 375 无溢出/无未捕获错误）。
 真实 HTTP 冒烟（2026-10-22 补）：Firefox（Playwright 官方构建）直连 python http.server 的 http://127.0.0.1:8124 全量 16/16 通过（tests/e2e/smoke-http.mjs，站点文件零拦截，仅天气 API 被 abort 模拟失败）。Chromium 在本沙箱仍被 LNA 拦截回环，继续用 smoke.mjs 的拦截方案。夹具可按本节步骤重建（/tmp 会被清理）。
+发现页状态恢复专项（2026-10-22 补）：tests/e2e/discover-state.mjs，夹具为 30 条 published 色块记录（/tmp/cta-state-site，CTA_FIXTURE 可覆盖）；CTA_BROWSER=firefox（http.server 8125）或 chromium（拦截）运行，断言场景 A（筛选+滚动恢复）/B（首页往返不受影响）/C（二次往返不累积错误）共 8 项。
+天气关闭降级专项（2026-10-22 补）：tests/e2e/weather-off.mjs，夹具为同上数据但 config 的 weatherEnabled 置 false（/tmp/cta-wxoff-site，http.server 8126），断言详情主体完整、天气区明确不可用、收藏与规划可用，共 6 项。

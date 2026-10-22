@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "zhangjiajie-national-forest-park",
+    "name": "张家界国家森林公园",
+    "province": "湖南省",
+    "city": "张家界市",
+    "district": "武陵源区",
+    "location": {
+      "lat": 29.3328,
+      "lng": 110.4262,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "nature",
+      "mountains",
+      "photography",
+      "hiking"
+    ],
+    "summary": "位于武陵源风景名胜区核心地带，以三千余座石英砂岩峰柱著称，峰林、峡谷、溪流与常年云雾构成独特地貌，属世界自然遗产武陵源的组成部分。",
+    "highlights": [
+      "石英砂岩峰林地貌，峰柱密集",
+      "金鞭溪峡谷溪流步道",
+      "袁家界、天子山观景台俯瞰峰林云海"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "徒步",
+      "摄影",
+      "观景台游览"
+    ],
+    "transportNotes": "可乘高铁至张家界西站后转乘旅游专线车前往武陵源标志门一带；班次与票价以车站当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-1.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-1.webp",
+        "alt": "张家界石英砂岩峰林特写，峰柱与植被",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_38099-Zhangjiajie_(48757253473).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-2.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-2.webp",
+        "alt": "张家界峰林全景，蓝天下的石柱群",
+        "credit": "Kuruman from Tokyo, Japan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park.jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-3.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-3.webp",
+        "alt": "云雾缭绕的张家界峰柱",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_38023-Zhangjiajie_(48757574461).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-4.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-4.webp",
+        "alt": "张家界峰林与远山云海",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_37811-Zhangjiajie_(48757570921).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-5.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-5.webp",
+        "alt": "黄石寨索道缆车与峰林",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_37754-Zhangjiajie_(48757570501).jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·武陵源",
+      "url": "https://whc.unesco.org/en/list/640/",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至天门山国家森林公园（29.0503,110.4786），已更正为黄石寨/金鞭溪点（OSM，武陵源区，属国家森林公园核心区）；与草案坐标相距约 2.1 km，同景区不同点位，正式录入时定点。图片进展（2026-10-22）：5 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
+    "adcode": "430811",
+    "seasonNotes": "春季多雾、秋季天高云淡能见度较好；具体天气以出行前预报为准。"
+  },
+  {
+    "id": "jiuzhaigou",
+    "name": "九寨沟",
+    "province": "四川省",
+    "city": "阿坝藏族羌族自治州",
+    "district": "九寨沟县",
+    "location": {
+      "lat": 33.268,
+      "lng": 103.9177,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "photography"
+    ],
+    "summary": "位于四川阿坝州九寨沟县，以高山湖泊群、瀑布群和彩林著称，湖水因钙华沉积呈现多色变化，1992年列入联合国教科文组织世界自然遗产。",
+    "highlights": [
+      "海子群湖泊与钙华滩流",
+      "诺日朗瀑布等瀑布群",
+      "秋季彩林与雪山倒影"
+    ],
+    "bestSeasons": [
+      "autumn",
+      "summer"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "摄影",
+      "徒步",
+      "观光车游览"
+    ],
+    "transportNotes": "可乘飞机至九寨黄龙机场，或乘动车至川青铁路黄龙九寨站、松潘站后换乘景区直通车前往（九寨沟景区官方网站“到达方式”页载明两站均有直达九寨沟的景区直通车）；也可经成都方向陆路前往。班次以运营方当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/jiuzhaigou-1.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-1.webp",
+        "alt": "九寨沟湖泊倒影与山林",
+        "credit": "MSK / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_in_Jiuzhaigou.jpg"
+      }
+    ],
+    "source": {
+      "name": "九寨沟景区官网·到达方式",
+      "url": "https://www.jiuzhai.com/intelligent-service/arrival-mode",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标位于景区南段，已更正为沟口站/荷叶寨点（OSM，景区入口区）。终审改写（2026-10-22）：交通结构经九寨沟景区官网 jiuzhai.com“到达方式”页核实（黄龙九寨站/松潘站直通车）；未写入距离、时长与票价。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "huangshan",
+    "name": "黄山风景区",
+    "province": "安徽省",
+    "city": "黄山市",
+    "district": "黄山区",
+    "location": {
+      "lat": 30.1383784,
+      "lng": 118.1601569,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "mountains",
+      "nature",
+      "photography",
+      "hiking"
+    ],
+    "summary": "黄山以奇松、怪石、云海、温泉著称，是世界文化与自然双遗产；花岗岩峰林与高山植被构成其代表性景观，登山步道体系成熟。",
+    "highlights": [
+      "迎客松等黄山松景观",
+      "云海与日出观景点位密集",
+      "西海大峡谷峰林地貌"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "登山徒步",
+      "摄影",
+      "缆车观光"
+    ],
+    "transportNotes": "可乘高铁至黄山北站后转乘景区换乘车至黄山风景区南大门汤口；班次以当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/huangshan-1.webp",
+        "thumb": "assets/img/thumb/huangshan-1.webp",
+        "alt": "黄山奇峰与松树，远山层叠",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount-huangshan_53319729912.jpg"
+      }
+    ],
+    "source": {
+      "name": "黄山风景区官方站·常见旅游咨询",
+      "url": "https://wap.huangshan.com.cn/detail/strategy/fjqlyzx",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "li-river",
+    "name": "漓江",
+    "province": "广西壮族自治区",
+    "city": "桂林市",
+    "district": "阳朔县",
+    "location": {
+      "lat": 24.9176,
+      "lng": 110.534,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "photography",
+      "family"
+    ],
+    "summary": "漓江是桂林山水的核心水系，桂林至阳朔段两岸石灰岩峰林倒映江面，竹筏与游船是传统游览方式，沿岸有兴坪古镇及杨堤等村落。",
+    "highlights": [
+      "喀斯特峰林与江面倒影",
+      "兴坪古镇与黄布倒影观景点",
+      "竹筏、游船水上游览"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "游船",
+      "竹筏",
+      "骑行"
+    ],
+    "transportNotes": "桂林市区可乘车至磨盘山、竹江等客运港乘游船顺流而下至阳朔；杨堤、兴坪等码头可乘排筏游览漓江阳朔段。船班以码头当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/li-river-1.webp",
+        "thumb": "assets/img/thumb/li-river-1.webp",
+        "alt": "漓江兴坪段江面、竹筏与喀斯特峰林",
+        "credit": "shankar s. from Dubai, united arab emirates / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:This_I_think_is_Xingping_village_(35270767323).jpg"
+      }
+    ],
+    "source": {
+      "name": "桂林漓江景区官网·交通出行",
+      "url": "https://www.lijiangriver.com/mobile/article/lyfw.jtcx",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。漓江为线状水系无单点坐标，本记录取兴坪段兴坪古镇点为代表点，仅用于地图定位与天气查询。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原交通把杨堤（排筏码头）与游船客运港并列易误导，据漓江景区官网交通页更正：游船自竹江/磨盘山客运港发船，杨堤、兴坪为排筏码头；简介“杨堤古镇”同步改为村落表述。"
+  },
+  {
+    "id": "kanas-lake",
+    "name": "喀纳斯湖",
+    "province": "新疆维吾尔自治区",
+    "city": "阿勒泰地区",
+    "district": "布尔津县",
+    "location": {
+      "lat": 48.7995143,
+      "lng": 87.0272937,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "photography"
+    ],
+    "summary": "喀纳斯湖位于新疆阿勒泰布尔津县北部山区，是高山冰碛堰塞湖，湖畔有喀纳斯景区村落与原始泰加林，秋季林色变化显著。",
+    "highlights": [
+      "高山湖泊与湖湾步道",
+      "观鱼台俯瞰湖面全景",
+      "图瓦人村落文化"
+    ],
+    "bestSeasons": [
+      "summer",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "徒步",
+      "摄影",
+      "游船"
+    ],
+    "transportNotes": "可乘飞机至喀纳斯机场或经布尔津县城转乘景区交通至贾登峪门票站换乘区间车；以当日运营为准。",
+    "images": [
+      {
+        "src": "assets/img/full/kanas-lake-1.webp",
+        "thumb": "assets/img/thumb/kanas-lake-1.webp",
+        "alt": "冬季喀纳斯湖雪原与针叶林",
+        "credit": "Pazakui / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanas_Lake_Winter.jpg"
+      }
+    ],
+    "source": {
+      "name": "新疆维吾尔自治区发展改革委文件（喀纳斯区间车）",
+      "url": "https://xjdrc.xinjiang.gov.cn/xjfgw/c108396/201808/063adea548004cfcaf56376cb9c5847f.shtml",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为喀纳斯湖湖面点（OSM），首版注记误写为贾登峪门户区，特此更正。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "daocheng-yading",
+    "name": "稻城亚丁",
+    "province": "四川省",
+    "city": "甘孜藏族自治州",
+    "district": "稻城县",
+    "location": {
+      "lat": 28.4086901,
+      "lng": 100.387419,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "mountains",
+      "nature",
+      "hiking",
+      "photography"
+    ],
+    "summary": "稻城亚丁位于四川甘孜州稻城县香格里拉镇，以仙乃日、央迈勇、夏诺多吉三座雪峰及高山湖泊、草甸著称，是高海拔徒步目的地。",
+    "highlights": [
+      "三怙主雪峰群",
+      "珍珠海、牛奶海等高山湖泊",
+      "洛绒牛场草甸"
+    ],
+    "bestSeasons": [
+      "autumn",
+      "summer"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "高海拔徒步",
+      "摄影"
+    ],
+    "transportNotes": "可乘飞机至稻城亚丁机场或经康定、理塘方向陆路前往香格里拉镇；高原行程安排以景区当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/daocheng-yading-1.webp",
+        "thumb": "assets/img/thumb/daocheng-yading-1.webp",
+        "alt": "亚丁雪山与高山草甸溪流",
+        "credit": "Dcpeets / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yading_Chanadorje-Xianuoduoji_Chonggu_Grassland.jpg"
+      }
+    ],
+    "source": {
+      "name": "英文维基百科·Yading（景区官网抓取失败，次级来源与官网索引一致）",
+      "url": "https://en.wikipedia.org/wiki/Yading",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "qinghai-lake",
+    "name": "青海湖",
+    "province": "青海省",
+    "city": "海南藏族自治州",
+    "district": "共和县",
+    "location": {
+      "lat": 36.6448,
+      "lng": 100.4356,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "photography",
+      "family"
+    ],
+    "summary": "青海湖是中国最大的内陆咸水湖，位于青藏高原东北部，环湖主要开放景区有二郎剑、仙女湾等点位，夏季湖畔油菜花是代表性景观，湖区也是重要的候鸟栖息地。",
+    "highlights": [
+      "高原咸水湖全景",
+      "环湖公路骑行路段",
+      "夏季湖畔花海"
+    ],
+    "bestSeasons": [
+      "summer"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "环湖骑行",
+      "摄影",
+      "自驾"
+    ],
+    "transportNotes": "西宁可乘班车或自驾经环湖东路、西路前往二郎剑等景区；班次与开放点位以当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/qinghai-lake-1.webp",
+        "thumb": "assets/img/thumb/qinghai-lake-1.webp",
+        "alt": "青海湖湖岸与湖面",
+        "credit": "Jonashtand / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:202606_Qinghai_Lake_02.jpg"
+      }
+    ],
+    "source": {
+      "name": "文化和旅游部数据服务·青海湖风景区",
+      "url": "https://sjfw.mct.gov.cn/site/dataservice/culdetails?id=35111&curId=10",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介把鸟岛与二郎剑并列为景区点位；据文旅部数据服务（现开放景区仅二郎剑、仙女湾）与风景名胜区协会（鸟岛自2017年关闭），已删去鸟岛点位表述。"
+  },
+  {
+    "id": "changbaishan-tianchi",
+    "name": "长白山天池",
+    "province": "吉林省",
+    "city": "延边朝鲜族自治州",
+    "district": "安图县",
+    "location": {
+      "lat": 42.0265,
+      "lng": 128.0669,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "mountains",
+      "nature"
+    ],
+    "summary": "长白山天池是中国最深的湖泊之一，位于中朝界山长白山主峰火山口，由火山喷发后积水形成，是中朝界湖；北坡、西坡均可登临观天池，其中北坡另有长白瀑布、聚龙温泉群等点位。",
+    "highlights": [
+      "火山口湖全景",
+      "长白瀑布与聚龙温泉群",
+      "高山花园与岳桦林带"
+    ],
+    "bestSeasons": [
+      "summer",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "登山观景",
+      "徒步",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至长白山站（池北区二道白河镇）或飞机至长白山机场，再转乘景区交通；以当日运营为准。",
+    "images": [
+      {
+        "src": "assets/img/full/changbaishan-tianchi-1.webp",
+        "thumb": "assets/img/thumb/changbaishan-tianchi-1.webp",
+        "alt": "长白山天池湖面与火山口湖岸",
+        "credit": "Acasis / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Changbai-Gebirge.jpg"
+      }
+    ],
+    "source": {
+      "name": "吉林省地方志编纂委员会·长白山天池",
+      "url": "https://dfz.jl.gov.cn/ybjl/201811/t20181108_5447143.html",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审定点（2026-10-22，按总设计师决策）：采用北坡观景台点位——天文峰（长白山北坡观天池的传统观景峰）OSM peak 节点 42.0265,128.0669，反查行政区为安图县池北区（长白山管委会），与记录吉林省/延边州/安图县一致；不再使用界湖湖面点。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介把温泉、瀑布笼统挂在北坡与西坡名下；据吉林省地方志等来源，瀑布与温泉群为北坡点位，已收窄表述。坐标语义（北坡天文峰观景点）未动。"
+  },
+  {
+    "id": "huangguoshu-waterfall",
+    "name": "黄果树瀑布",
+    "province": "贵州省",
+    "city": "安顺市",
+    "district": "镇宁布依族苗族自治县",
+    "location": {
+      "lat": 25.9924212,
+      "lng": 105.6661996,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "family",
+      "photography"
+    ],
+    "summary": "黄果树瀑布位于贵州安顺镇宁县，是黄果树瀑布群的核心，主瀑宽高在国内大瀑布中居前，景区含陡坡塘、天星桥等片区。",
+    "highlights": [
+      "主瀑与水帘洞",
+      "天星桥喀斯特水景",
+      "陡坡塘瀑布"
+    ],
+    "bestSeasons": [
+      "summer"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "徒步",
+      "摄影"
+    ],
+    "transportNotes": "安顺市区及贵阳方向有景区直通车至黄果树景区；班次以当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/huangguoshu-waterfall-1.webp",
+        "thumb": "assets/img/thumb/huangguoshu-waterfall-1.webp",
+        "alt": "黄果树大瀑布正面",
+        "credit": "Robinliu / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huangguoshu_Waterfall_-_Pixabay.jpg"
+      }
+    ],
+    "source": {
+      "name": "中国风景名胜区协会·黄果树瀑布风景名胜区",
+      "url": "https://china-npa.org/info/1468.jspx",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "forbidden-city",
+    "name": "故宫博物院",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "东城区",
+    "location": {
+      "lat": 39.9174311,
+      "lng": 116.3907817,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "family"
+    ],
+    "summary": "故宫博物院位于北京中轴线中心，是明清两代皇宫紫禁城所在地，存有规模宏大的木构宫殿建筑群，1961年列为全国重点文物保护单位，藏有大量文物。",
+    "highlights": [
+      "中轴线宫殿建筑群",
+      "太和殿等外朝三大殿",
+      "博物院专题展馆"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "文化讲解"
+    ],
+    "transportNotes": "北京地铁1号线、8号线等可达天安门与故宫周边；入院实行预约制，规则以故宫博物院当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/forbidden-city-1.webp",
+        "thumb": "assets/img/thumb/forbidden-city-1.webp",
+        "alt": "故宫宫殿屋顶与汉白玉栏杆",
+        "credit": "Reinhold Möller Ermell / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beijing_Forbidden_City_Hall_of_Central_Harmony_terraces-20071018-RM-143736.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·明清故宫",
+      "url": "https://whc.unesco.org/en/list/439/",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "terracotta-army",
+    "name": "秦始皇帝陵博物院",
+    "province": "陕西省",
+    "city": "西安市",
+    "district": "临潼区",
+    "location": {
+      "lat": 34.3874,
+      "lng": 109.2777,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "family"
+    ],
+    "summary": "秦始皇帝陵博物院位于西安临潼区，以秦始皇兵马俑坑为核心展示内容，三个俑坑出土陶俑与青铜车马等文物，是世界文化遗产秦始皇陵的组成部分。",
+    "highlights": [
+      "一号坑军阵全景",
+      "青铜车马展",
+      "秦始皇帝陵遗址公园"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "文化讲解"
+    ],
+    "transportNotes": "西安市区可乘地铁9号线至华清池站后接驳，或乘旅游专线至博物院；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/terracotta-army-1.webp",
+        "thumb": "assets/img/thumb/terracotta-army-1.webp",
+        "alt": "兵马俑坑出土陶俑面部特写",
+        "credit": "Gary Todd / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Warriors,_Pit_1_01.jpg"
+      }
+    ],
+    "source": {
+      "name": "秦始皇帝陵博物院官网·交通路线",
+      "url": "https://bmy.com.cn/guide/368.html",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "mogao-caves",
+    "name": "莫高窟",
+    "province": "甘肃省",
+    "city": "酒泉市",
+    "district": "敦煌市",
+    "location": {
+      "lat": 40.0373,
+      "lng": 94.8042,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "photography"
+    ],
+    "summary": "莫高窟位于甘肃敦煌鸣沙山东麓断崖上，现存洞窟、壁画与彩塑跨越多个朝代，是丝绸之路上重要的佛教石窟群，1987年列入世界文化遗产。",
+    "highlights": [
+      "多朝代洞窟与壁画",
+      "九层楼标志性外观",
+      "敦煌研究院数字展示中心"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "文化讲解"
+    ],
+    "transportNotes": "敦煌市区可乘专线车至莫高窟数字展示中心换乘前往窟区；参观实行预约制，以敦煌研究院公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/mogao-caves-1.webp",
+        "thumb": "assets/img/thumb/mogao-caves-1.webp",
+        "alt": "莫高窟九层楼与崖壁洞窟",
+        "credit": "Zhangzhugang / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·莫高窟",
+      "url": "https://whc.unesco.org/en/list/440/",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "pingyao-ancient-city",
+    "name": "平遥古城",
+    "province": "山西省",
+    "city": "晋中市",
+    "district": "平遥县",
+    "location": {
+      "lat": 37.2013,
+      "lng": 112.1764,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "ancient-town"
+    ],
+    "summary": "平遥古城位于山西晋中平遥县，城墙与街巷格局保存较完整，清代曾是晋商票号的中心、中国的金融中心之一，城内有县衙、日昇昌票号旧址等历史建筑。",
+    "highlights": [
+      "明清古城墙与市楼",
+      "晋商票号旧址",
+      "古县衙建筑群"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "古城步行",
+      "参观",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至平遥古城站或火车至平遥站，再接驳前往古城；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/pingyao-ancient-city-1.webp",
+        "thumb": "assets/img/thumb/pingyao-ancient-city-1.webp",
+        "alt": "平遥古城航拍全貌与城墙",
+        "credit": "Chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_pingyao_ancient_city_aerial_pano_2019.jpg"
+      }
+    ],
+    "source": {
+      "name": "国家文物局遗产页（http）与维基百科·平遥古城互证",
+      "url": "https://zh.wikipedia.org/zh-tw/%E5%B9%B3%E9%81%A5%E5%8F%A4%E5%9F%8E",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标落在古城外西南（文景大道一带），已更正为平遥县衙点（OSM，衙门街，古城内）。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介“明清时期曾是晋商金融中心”年代过宽，据国家文物局与维基来源（金融中心地位形成于清代）收窄为清代。"
+  },
+  {
+    "id": "potala-palace",
+    "name": "布达拉宫",
+    "province": "西藏自治区",
+    "city": "拉萨市",
+    "district": "城关区",
+    "location": {
+      "lat": 29.6575676,
+      "lng": 91.1170188,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic"
+    ],
+    "summary": "布达拉宫位于拉萨玛布日山上，由白宫与红宫等建筑组成，是西藏自治区标志性建筑与世界文化遗产，内部珍藏大量文物与壁画。",
+    "highlights": [
+      "红宫白宫建筑群",
+      "宫内壁画与文物",
+      "拉萨河谷观景"
+    ],
+    "bestSeasons": [
+      "summer",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "文化讲解"
+    ],
+    "transportNotes": "拉萨贡嘎机场、拉萨站均有前往市区的交通；参观实行预约与限流，以布达拉宫管理处当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/potala-palace-1.webp",
+        "thumb": "assets/img/thumb/potala-palace-1.webp",
+        "alt": "布达拉宫与前景白塔",
+        "credit": "Laika ac from UK / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Potala_Palace_(23651397662).jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·布达拉宫",
+      "url": "https://whc.unesco.org/zh/list/707",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "mount-tai",
+    "name": "泰山",
+    "province": "山东省",
+    "city": "泰安市",
+    "district": "泰山区",
+    "location": {
+      "lat": 36.2088448,
+      "lng": 117.1223456,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "mountains",
+      "historic",
+      "hiking"
+    ],
+    "summary": "泰山位于山东泰安，是五岳之首，自古为帝王封禅之地，登山盘道沿线有历代摩崖石刻与碑刻，南天门、玉皇顶为代表性点位，属世界文化与自然双遗产。",
+    "highlights": [
+      "十八盘登山盘道",
+      "历代摩崖石刻",
+      "玉皇顶日出观景"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "登山徒步",
+      "摄影"
+    ],
+    "transportNotes": "泰安站、泰山站均有前往红门、天外村等进山口的公交与接驳；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/mount-tai-1.webp",
+        "thumb": "assets/img/thumb/mount-tai-1.webp",
+        "alt": "泰山南天门与盘道",
+        "credit": "Rolf Müller (User:Rolfmueller) / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_tai_south_gate_to_heaven_2006_09_2.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·泰山",
+      "url": "https://whc.unesco.org/zh/list/437",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "longmen-grottoes",
+    "name": "龙门石窟",
+    "province": "河南省",
+    "city": "洛阳市",
+    "district": "洛龙区",
+    "location": {
+      "lat": 34.5571154,
+      "lng": 112.4707112,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic"
+    ],
+    "summary": "龙门石窟位于洛阳伊河两岸的龙门山与香山上，开凿于北魏至唐代，现存造像与碑刻众多，卢舍那大佛为代表作，2000年列入世界文化遗产。",
+    "highlights": [
+      "奉先寺卢舍那大佛",
+      "万佛洞等洞窟群",
+      "伊河两岸石窟景观"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "摄影"
+    ],
+    "transportNotes": "洛阳市区可乘地铁2号线至龙门高铁站或八里堂站后换乘公交前往景区，或由市区乘公交直达；以洛阳市交通与景区当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/longmen-grottoes-1.webp",
+        "thumb": "assets/img/thumb/longmen-grottoes-1.webp",
+        "alt": "龙门石窟卢舍那大佛头像",
+        "credit": "Gary Todd / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Buddhist_Grottoes_at_Longmen-_Fengxian_Temple,_Head_of_Manjusri.jpg"
+      }
+    ],
+    "source": {
+      "name": "龙门石窟官网·关于龙门",
+      "url": "https://www.lmsk.cn/Gywm",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原“地铁至龙门相关站点”表述含糊；经查洛阳地铁2号线一期并无龙门石窟站（终点八里堂），已改写为龙门高铁站/八里堂站换乘公交。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "lijiang-old-town",
+    "name": "丽江古城",
+    "province": "云南省",
+    "city": "丽江市",
+    "district": "古城区",
+    "location": {
+      "lat": 26.8739042,
+      "lng": 100.2352809,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "ancient-town",
+      "historic",
+      "photography"
+    ],
+    "summary": "丽江古城依地形而建，保留了高品质的历史城镇景观，建筑融合多个民族文化元素，其古老的供水系统结构复杂且至今仍在有效运行，1997年列入世界遗产。",
+    "highlights": [
+      "依山就水的大研古城街巷与水系格局",
+      "多民族文化交融的传统建筑风貌",
+      "仍在运行的古老供水系统"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "古城步行游览",
+      "摄影",
+      "文化参观"
+    ],
+    "transportNotes": "可乘飞机至丽江三义机场或乘火车至丽江站，再转乘机场巴士、公交前往古城区；班次以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/lijiang-old-town-1.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-1.webp",
+        "alt": "丽江古城夜景，狮子山一带灯火",
+        "credit": "chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_lijiang_old_town_night.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-2.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-2.webp",
+        "alt": "丽江古城大水车与玉河",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Old-town-02.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-3.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-3.webp",
+        "alt": "丽江古城屋顶群俯瞰",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Old-town-03.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-4.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-4.webp",
+        "alt": "丽江古城传统商铺街巷",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Heritage-shops-in-old-town-01.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织世界遗产中心·丽江古城",
+      "url": "https://whc.unesco.org/zh/list/811",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标与草案坐标实际相距约 0.2 km（首版注记 0.9 km 有误），均在古城范围。图片进展（2026-10-22）：4 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
+    "adcode": "530702",
+    "seasonNotes": "高原地区昼夜温差大，雨季集中在夏季；出行装备以当日预报为准。"
+  },
+  {
+    "id": "west-lake-hangzhou",
+    "name": "杭州西湖",
+    "province": "浙江省",
+    "city": "杭州市",
+    "district": "西湖区",
+    "location": {
+      "lat": 30.2439,
+      "lng": 120.1341,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "nature",
+      "historic",
+      "photography",
+      "family"
+    ],
+    "summary": "西湖文化景观由西湖与三面环绕的丘陵组成，自九世纪起启发众多诗人、学者与艺术家，湖堤、岛屿、亭台与园林构成人与自然融合的经典景观。",
+    "highlights": [
+      "苏堤、白堤等湖堤景观与十景文化传统",
+      "湖中岛屿、亭台与环湖历史建筑群",
+      "对周边国家园林设计产生过深远影响"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "环湖步行",
+      "摄影",
+      "园林游览"
+    ],
+    "transportNotes": "杭州市内多条地铁线路可达湖滨与西湖景区周边站点，出站后步行或接驳公交前往环湖区域；以杭州地铁当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/west-lake-hangzhou-1.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-1.webp",
+        "alt": "西湖湖面与杭州城市天际线",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260424_West_Lake_and_Hangzhou_Skyline.jpg"
+      },
+      {
+        "src": "assets/img/full/west-lake-hangzhou-2.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-2.webp",
+        "alt": "西湖手摇船与远山",
+        "credit": "Jakub Hałun / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20090524_Hangzhou_West_Lake_7531.jpg"
+      },
+      {
+        "src": "assets/img/full/west-lake-hangzhou-3.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-3.webp",
+        "alt": "西湖白堤与对岸城市天际线",
+        "credit": "Y Chen / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hangzhou_Skyline_against_the_West_Lake.png"
+      }
+    ],
+    "source": {
+      "name": "联合国新闻·杭州西湖文化景观列入名录",
+      "url": "https://news.un.org/zh/story/2011/06/154242",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至台湾高雄同名地点（22.7272,120.3230），已更正为杭州西湖苏堤点（OSM，西湖区北山街道）；与草案坐标（湖东侧）相距约 1.7 km，同属西湖湖区。图片进展（2026-10-22）：3 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
+    "adcode": "330106",
+    "seasonNotes": "春季桃柳与秋季桂香为代表性时段；节假日环湖区域人流较大。"
+  },
+  {
+    "id": "the-bund-shanghai",
+    "name": "外滩",
+    "province": "上海市",
+    "city": "上海市",
+    "district": "黄浦区",
+    "location": {
+      "lat": 31.2353356,
+      "lng": 121.487632,
+      "coordSystem": "WGS-84"
+    },
+    "type": "urban",
+    "themes": [
+      "historic",
+      "family"
+    ],
+    "summary": "外滩位于上海黄浦江西岸，是近代历史建筑群与陆家嘴天际线隔江相望的城市景观带，沿江步行空间连接南京路步行街等城市商圈。",
+    "highlights": [
+      "万国建筑博览群临江立面",
+      "黄浦江与陆家嘴天际线",
+      "外白渡桥等近代桥梁"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "城市步行",
+      "摄影",
+      "夜景游览"
+    ],
+    "transportNotes": "上海地铁2号线、10号线南京东路站等可步行抵达外滩沿江区域；以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/the-bund-shanghai-1.webp",
+        "thumb": "assets/img/thumb/the-bund-shanghai-1.webp",
+        "alt": "黄浦江畔外滩历史建筑群夜景",
+        "credit": "Dllu / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_hour_view_of_the_Bund_from_the_Shanghai_World_Financial_Center_dllu.jpg"
+      },
+      {
+        "src": "assets/img/full/the-bund-shanghai-2.webp",
+        "thumb": "assets/img/thumb/the-bund-shanghai-2.webp",
+        "alt": "从外滩眺望黄浦江对岸陆家嘴天际线",
+        "credit": "King of Hearts / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_panorama.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科·外滩（上海市政府与文保名录互证）",
+      "url": "https://zh.wikipedia.org/wiki/%E5%A4%96%E6%BB%A9",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "chengdu-panda-base",
+    "name": "成都大熊猫繁育研究基地",
+    "province": "四川省",
+    "city": "成都市",
+    "district": "成华区",
+    "location": {
+      "lat": 30.7432278,
+      "lng": 104.1329312,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "family",
+      "nature"
+    ],
+    "summary": "成都大熊猫繁育研究基地位于成都成华区，是以大熊猫繁育科研、科普教育为核心的专类园区，园内有不同年龄阶段大熊猫及小熊猫等动物展区。",
+    "highlights": [
+      "大熊猫成年与幼年展区",
+      "小熊猫活动区",
+      "竹林生态园区环境"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "参观",
+      "亲子科普"
+    ],
+    "transportNotes": "成都市区可乘地铁3号线至熊猫大道站后接驳景区摆渡车；以基地当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/chengdu-panda-base-1.webp",
+        "thumb": "assets/img/thumb/chengdu-panda-base-1.webp",
+        "alt": "大熊猫幼崽在木架上休息",
+        "credit": "George Lu / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panda_in_Chengdu_Research_Base_of_Giant_Panda_Breeding_-_7708872342.jpg"
+      }
+    ],
+    "source": {
+      "name": "成都大熊猫繁育研究基地官网·公共交通",
+      "url": "https://www.panda.org.cn/cn/service/transit/",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为基地正门地址点（熊猫大道 1375 号，OSM），首版注记误写为停车点，特此更正。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "hongya-cave",
+    "name": "洪崖洞",
+    "province": "重庆市",
+    "city": "重庆市",
+    "district": "渝中区",
+    "location": {
+      "lat": 29.5650738,
+      "lng": 106.5753425,
+      "coordSystem": "WGS-84"
+    },
+    "type": "urban",
+    "themes": [
+      "photography",
+      "family"
+    ],
+    "summary": "洪崖洞位于重庆渝中区嘉陵江畔，是依山临江修建的吊脚楼风格建筑群，与解放碑商圈、千厮门大桥相邻，是重庆山地城市形态的代表性点位。",
+    "highlights": [
+      "吊脚楼风格立面与山地层叠空间",
+      "千厮门大桥与嘉陵江景",
+      "解放碑商圈步行可达"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "城市步行",
+      "摄影",
+      "夜景游览"
+    ],
+    "transportNotes": "重庆轨道交通1号线、6号线小什字站等步行可达；以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/hongya-cave-1.webp",
+        "thumb": "assets/img/thumb/hongya-cave-1.webp",
+        "alt": "洪崖洞夜景与崖壁建筑群",
+        "credit": "Yumeto / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250521_Hongyadong_(223216).jpg"
+      }
+    ],
+    "source": {
+      "name": "重庆市人民政府网·洪崖洞",
+      "url": "https://www.cq.gov.cn/zjcq/cycq/jplyxl/dsy/dsjp/202409/t20240905_13599455.html",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "canton-tower",
+    "name": "广州塔",
+    "province": "广东省",
+    "city": "广州市",
+    "district": "海珠区",
+    "location": {
+      "lat": 23.1090145,
+      "lng": 113.3191477,
+      "coordSystem": "WGS-84"
+    },
+    "type": "urban",
+    "themes": [
+      "family",
+      "photography"
+    ],
+    "summary": "广州塔位于广州市海珠区、珠江南岸，是广州现代城市地标建筑，塔身设有观光层与户外游乐设施，与海心沙岛、珠江新城隔江相望，海心桥在其旁跨江连接二沙岛一带。",
+    "highlights": [
+      "塔身观光层城市全景",
+      "珠江与海心桥夜景",
+      "广州中轴线城市景观"
+    ],
+    "bestSeasons": [
+      "autumn",
+      "winter"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "观光",
+      "摄影",
+      "城市步行"
+    ],
+    "transportNotes": "广州地铁3号线、APM线广州塔站可达；开放与预约规则以广州塔当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/canton-tower-1.webp",
+        "thumb": "assets/img/thumb/canton-tower-1.webp",
+        "alt": "广州塔与珠江、城市天际线",
+        "credit": "Tim Wu / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg"
+      }
+    ],
+    "source": {
+      "name": "广州塔公开资料（海珠区政府口径互证）",
+      "url": "https://meetguangzhou.com/cn/guang-zhou-ta",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介误写“珠江北岸”，据广州塔公开资料（塔址海珠区、距珠江南岸约125米）更正为南岸、“相邻”改为“隔江相望”。"
+  },
+  {
+    "id": "gulangyu",
+    "name": "鼓浪屿",
+    "province": "福建省",
+    "city": "厦门市",
+    "district": "思明区",
+    "location": {
+      "lat": 24.4472464,
+      "lng": 118.0618914,
+      "coordSystem": "WGS-84"
+    },
+    "type": "coastal",
+    "themes": [
+      "coastal",
+      "historic",
+      "family"
+    ],
+    "summary": "鼓浪屿位于厦门思明区隔海相望的岛屿上，岛上保存有众多近代中外风格建筑与钢琴文化传统，2017年以鼓浪屿历史国际社区列入世界文化遗产。",
+    "highlights": [
+      "近代建筑群与历史国际社区",
+      "日光岩制高点",
+      "菽庄花园与钢琴博物馆"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "步行游览",
+      "参观",
+      "摄影"
+    ],
+    "transportNotes": "厦门市区经邮轮中心厦鼓码头乘渡轮前往鼓浪屿，船票实行预订制；以厦门轮渡当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/gulangyu-1.webp",
+        "thumb": "assets/img/thumb/gulangyu-1.webp",
+        "alt": "鼓浪屿日光岩与菽庄花园海滨",
+        "credit": "Rolfmueller / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gulangyu_sunlight_rock_2011_12.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国新闻·鼓浪屿列入世界遗产",
+      "url": "https://news.un.org/zh/story/2017/07/278612",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "yalong-bay",
+    "name": "亚龙湾",
+    "province": "海南省",
+    "city": "三亚市",
+    "district": "吉阳区",
+    "location": {
+      "lat": 18.2243578,
+      "lng": 109.6241652,
+      "coordSystem": "WGS-84"
+    },
+    "type": "coastal",
+    "themes": [
+      "coastal",
+      "family"
+    ],
+    "summary": "亚龙湾位于三亚市吉阳区东部海岸，是海南岛代表性海湾之一，海湾沿线分布度假酒店群与公共海滩，热带海洋气候冬季相对温暖。",
+    "highlights": [
+      "海湾沙滩与海水浴场",
+      "热带滨海度假区环境",
+      "亚龙湾热带天堂森林公园邻接"
+    ],
+    "bestSeasons": [
+      "winter",
+      "spring"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "海滩休闲",
+      "游泳",
+      "摄影"
+    ],
+    "transportNotes": "三亚凤凰机场、亚龙湾站均有前往亚龙湾区域的接驳与公交；以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/yalong-bay-1.webp",
+        "thumb": "assets/img/thumb/yalong-bay-1.webp",
+        "alt": "亚龙湾沙滩与海浪",
+        "credit": "lienyuan lee / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%9E%E9%BE%8D%E7%81%A3_Yalong_Bay_-_panoramio_(3).jpg"
+      }
+    ],
+    "source": {
+      "name": "亚龙湾国家级旅游度假区官网（http）与清华大学三亚国际数学论坛机构页互证",
+      "url": "https://tsimf.tsinghua.edu.cn/cn/visitors/sanya_tour/nearby_facilities.htm",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 第六轮补核）：原简介“海棠湾西侧”方位泛述无直接来源支撑，已收窄为“吉阳区东部海岸”；度假区设立与国家级评级、7.5 公里海湾见度假区官网（syyalongbay.cn）原文，亚龙湾站与吉阳区归属见清华大学三亚国际数学论坛机构页。结论：已修正。"
+  },
+  {
+    "id": "dali-ancient-city",
+    "name": "大理古城",
+    "province": "云南省",
+    "city": "大理白族自治州",
+    "district": "大理市",
+    "location": {
+      "lat": 25.698269,
+      "lng": 100.162485,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "ancient-town",
+      "historic",
+      "family"
+    ],
+    "summary": "大理古城位于云南大理市，背靠苍山、面朝洱海，明清时期形成棋盘式街巷格局，城内保留城门、城墙段与白族传统民居，是滇西历史城镇代表。",
+    "highlights": [
+      "苍山洱海之间的古城格局",
+      "文献楼等城门建筑",
+      "白族民居与古城街巷"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "古城步行",
+      "摄影",
+      "文化参观"
+    ],
+    "transportNotes": "大理站、大理机场均有前往大理古城的机场巴士与公交；以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/dali-ancient-city-1.webp",
+        "thumb": "assets/img/thumb/dali-ancient-city-1.webp",
+        "alt": "大理古城街巷与远山",
+        "credit": "chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_dali_old_town_yunnan_2012.jpg"
+      }
+    ],
+    "source": {
+      "name": "大理旅游集团官网·大理古城",
+      "url": "https://www.dalitravel.cn/content/read/233.html",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "zhangye-danxia",
+    "name": "张掖七彩丹霞",
+    "province": "甘肃省",
+    "city": "张掖市",
+    "district": "肃南裕固族自治县",
+    "location": {
+      "lat": 38.952852,
+      "lng": 100.0872653,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "photography"
+    ],
+    "summary": "张掖七彩丹霞位于甘肃张掖临泽县与肃南县交界地带，以彩色丘陵地貌著称，红色砂砾岩层在光照下呈现条带状色彩，设有多个观景台。",
+    "highlights": [
+      "彩色丘陵条带地貌",
+      "多观景台日落观景",
+      "丹霞地貌科普展示"
+    ],
+    "bestSeasons": [
+      "summer",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "摄影",
+      "观光车游览"
+    ],
+    "transportNotes": "张掖市区、张掖西站有前往七彩丹霞景区的旅游交通；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/zhangye-danxia-1.webp",
+        "thumb": "assets/img/thumb/zhangye-danxia-1.webp",
+        "alt": "张掖七彩丹霞彩色丘陵",
+        "credit": "iamangela9 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Danxia-landform-1562852.jpg"
+      }
+    ],
+    "source": {
+      "name": "张掖市人民政府官网·七彩丹霞景区",
+      "url": "https://www.zhangye.gov.cn/chzy/zyly/ajjq/202303/t20230318_1007476_ghb.html",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。景区跨临泽、肃南两县，OSM 点位落于肃南侧；行政区表述正式录入前复核。终审更正（2026-10-22）：坐标点位于肃南侧（七彩丹霞东入口一带），district 已由临泽县改为肃南裕固族自治县；景区跨临泽、肃南两县，西入口在临泽县倪家营镇，正式录入时在交通说明中区分两入口。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验升级（2026-10-22 第六轮补核）：张掖市人民政府官网七彩丹霞页已实际打开，支持景区位于临泽、肃南两县境内、丹霞与彩色丘陵复合景观、7 处观景台，与简介逐项一致；交通为泛述（张掖西站有景区旅游交通），省文旅厅页面多次抓取失败未打开正文，交通部分证据等级注明为多方一致。结论：已核实。"
+  },
+  {
+    "id": "yuanyang-terraces",
+    "name": "元阳梯田",
+    "province": "云南省",
+    "city": "红河哈尼族彝族自治州",
+    "district": "元阳县",
+    "location": {
+      "lat": 23.0974614,
+      "lng": 102.7844998,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "nature",
+      "photography"
+    ],
+    "summary": "元阳梯田位于云南红河州元阳县哀牢山南部，是哈尼族等民族历代开垦的山地梯田系统，核心片区属世界文化遗产红河哈尼梯田的组成部分，冬季灌水期镜面效果显著。",
+    "highlights": [
+      "老虎嘴、坝达等梯田观景点",
+      "灌水季梯田镜面景观",
+      "哈尼族村寨文化"
+    ],
+    "bestSeasons": [
+      "winter",
+      "spring"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "摄影",
+      "徒步"
+    ],
+    "transportNotes": "昆明、建水方向有班车至元阳县（南沙镇）与新街镇，新街镇是前往多依树、老虎嘴等梯田观景点的主要门户，再转乘当地交通前往各观景点；以客运站当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/yuanyang-terraces-1.webp",
+        "thumb": "assets/img/thumb/yuanyang-terraces-1.webp",
+        "alt": "元阳梯田水面与田埂",
+        "credit": "Anders Johnson / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yuanyang_-_panoramio.jpg"
+      }
+    ],
+    "source": {
+      "name": "联合国教科文组织新闻·红河哈尼梯田列入名录",
+      "url": "https://www.unesco.org/zh/articles/honghehanititianwenhuajingguanlierushijieyichanminglu",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原表述把新街镇等同县城不准确（县城为南沙镇），已改写并区分两镇角色。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "wuyuan-huangling",
+    "name": "婺源篁岭",
+    "province": "江西省",
+    "city": "上饶市",
+    "district": "婺源县",
+    "location": {
+      "lat": 29.3201,
+      "lng": 118.1171,
+      "coordSystem": "WGS-84"
+    },
+    "type": "rural",
+    "themes": [
+      "ancient-town",
+      "photography",
+      "family"
+    ],
+    "summary": "篁岭位于江西上饶婺源县江湾镇，是建于山崖上的古村落，以晒秋民俗景观与梯田花海著称，村落建筑依山层叠分布，可乘缆车抵达。",
+    "highlights": [
+      "晒秋民俗景观",
+      "山崖古村层叠建筑",
+      "春季梯田油菜花海"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "步行游览",
+      "摄影",
+      "缆车观光"
+    ],
+    "transportNotes": "可乘高铁至婺源站后转乘前往篁岭的班车；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/wuyuan-huangling-1.webp",
+        "thumb": "assets/img/thumb/wuyuan-huangling-1.webp",
+        "alt": "篁岭晒秋与山村全景",
+        "credit": "EditQ / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A9%BA%E6%BA%90%E7%AF%81%E5%B2%AD%E6%99%92%E7%A7%8B.jpg"
+      }
+    ],
+    "source": {
+      "name": "文化和旅游部·婺源篁岭",
+      "url": "https://www.mct.gov.cn/whzx/qgwhxxlb/jx/202308/t20230810_946583.htm",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "kashgar-old-city",
+    "name": "喀什古城",
+    "province": "新疆维吾尔自治区",
+    "city": "喀什地区",
+    "district": "喀什市",
+    "location": {
+      "lat": 39.4720554,
+      "lng": 75.9876279,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "historic",
+      "ancient-town",
+      "photography"
+    ],
+    "summary": "喀什古城位于新疆喀什市，是保存有浓厚地域特色的历史街区，街巷与生土建筑呈现中亚与本地文化交融风貌，周边有艾提尕尔清真寺等历史建筑。",
+    "highlights": [
+      "迷宫式传统街巷",
+      "生土建筑与手工艺店铺",
+      "艾提尕尔清真寺邻接"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "步行游览",
+      "摄影",
+      "文化参观"
+    ],
+    "transportNotes": "喀什徕宁国际机场、喀什站均可接驳前往市区古城；以当日运营信息为准。",
+    "images": [
+      {
+        "src": "assets/img/full/kashgar-old-city-1.webp",
+        "thumb": "assets/img/thumb/kashgar-old-city-1.webp",
+        "alt": "喀什古城老街与土黄色民居",
+        "credit": "N509FZ / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:West_start_of_Qasa_Rd,_Ancient_City_of_Kashi_(20230923192615).jpg"
+      }
+    ],
+    "source": {
+      "name": "喀什市人民政府·喀什古城景区",
+      "url": "https://xjks.gov.cn/kss/c109220/202107/cf5c58abf182416ab062b61d17151980.shtml",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
+  },
+  {
+    "id": "enshi-grand-canyon",
+    "name": "恩施大峡谷",
+    "province": "湖北省",
+    "city": "恩施土家族苗族自治州",
+    "district": "恩施市",
+    "location": {
+      "lat": 30.424202,
+      "lng": 109.1746676,
+      "coordSystem": "WGS-84"
+    },
+    "type": "natural",
+    "themes": [
+      "nature",
+      "mountains",
+      "hiking"
+    ],
+    "summary": "恩施大峡谷位于湖北省恩施市境内、临近利川市，以喀斯特峡谷、绝壁长廊与地缝景观著称，云龙地缝与七星寨为两大片区，标志性景观一炷香为罕见的喀斯特岩柱。",
+    "highlights": [
+      "绝壁栈道与峰丛",
+      "云龙地缝瀑布群",
+      "一炷香石柱景观"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "徒步",
+      "摄影",
+      "索道观光"
+    ],
+    "transportNotes": "恩施站、恩施许家坪机场均有前往大峡谷方向的旅游交通；以当日运营公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/enshi-grand-canyon-1.webp",
+        "thumb": "assets/img/thumb/enshi-grand-canyon-1.webp",
+        "alt": "恩施大峡谷一炷香石柱",
+        "credit": "HoweyYuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Enshi_Grand_Canyon_20240725_130732.jpg"
+      }
+    ],
+    "source": {
+      "name": "恩施大峡谷景区运营方官网·景区介绍",
+      "url": "https://www.esdaxiagu.com/scenic/",
+      "retrievedAt": "2026-10-22"
+    },
+    "verifiedAt": "2026-10-22",
+    "status": "draft",
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：景区跨恩施市与利川市，OSM 坐标点位于恩施市一侧（七星寨片区），district 已由利川市更正为恩施市。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介“利川市与恩施市交界地带”与景区运营方官网口径（位于恩施市境内）冲突，已按官网更正，与 district=恩施市 一致。"
+  }
+]

@@ -18,8 +18,8 @@ export const EXPECTED_VERDICTS = {
   'pingyao-ancient-city': '已修正', 'potala-palace': '已核实', 'mount-tai': '已核实',
   'longmen-grottoes': '已核实', 'west-lake-hangzhou': '已核实', 'the-bund-shanghai': '已核实',
   'chengdu-panda-base': '已核实', 'hongya-cave': '已核实', 'canton-tower': '已修正',
-  'gulangyu': '已核实', 'yalong-bay': '初审通过', 'dali-ancient-city': '已核实',
-  'zhangye-danxia': '初审通过', 'yuanyang-terraces': '已核实', 'wuyuan-huangling': '已核实',
+  'gulangyu': '已核实', 'yalong-bay': '已修正', 'dali-ancient-city': '已核实',
+  'zhangye-danxia': '已核实', 'yuanyang-terraces': '已核实', 'wuyuan-huangling': '已核实',
   'kashgar-old-city': '已核实', 'enshi-grand-canyon': '已修正', 'lijiang-old-town': '已核实',
 };
 
@@ -72,7 +72,7 @@ function main() {
     const found = audit.split('\n').some(l => l.startsWith(`| ${id} | ${v} |`));
     if (!found) { verdictMismatch++; fail(`审核表状态不符：${id} 期望「${v}」`); }
   }
-  if (!verdictMismatch) ok('审核表第二部分 30 条状态与预期口径一致（已核实 22/已修正 6/初审通过 2）');
+  if (!verdictMismatch) ok('审核表第二部分 30 条状态与预期口径一致（已核实 23/已修正 7/初审通过 0）');
 
   // 图片资产
   const approvedBySrc = new Map();

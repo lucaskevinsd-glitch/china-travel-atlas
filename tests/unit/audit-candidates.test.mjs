@@ -2,12 +2,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { checkRecordText, EXPECTED_VERDICTS } from '../../tools/audit-candidates.mjs';
 
-test('审计口径表覆盖 30 条且分布为 22/6/2', () => {
+test('审计口径表覆盖 30 条且分布为 23/7/0', () => {
   const vals = Object.values(EXPECTED_VERDICTS);
   assert.equal(vals.length, 30);
-  assert.equal(vals.filter(v => v === '已核实').length, 22);
-  assert.equal(vals.filter(v => v === '已修正').length, 6);
-  assert.equal(vals.filter(v => v === '初审通过').length, 2);
+  assert.equal(vals.filter(v => v === '已核实').length, 23);
+  assert.equal(vals.filter(v => v === '已修正').length, 7);
+  assert.equal(vals.filter(v => v === '初审通过').length, 0);
 });
 
 test('广州塔北岸旧表述会被检出', () => {
