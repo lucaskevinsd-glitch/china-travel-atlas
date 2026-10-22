@@ -6,8 +6,8 @@
     "city": "张家界市",
     "district": "武陵源区",
     "location": {
-      "lat": 29.0502892,
-      "lng": 110.4786156,
+      "lat": 29.3328,
+      "lng": 110.4262,
       "coordSystem": "WGS-84"
     },
     "type": "mountain",
@@ -45,7 +45,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。坐标为 OSM 标记的公园南门一侧点位（永定区），与上一轮草案坐标（武陵源侧）相距约 5.7 km；正式录入前须确定采用的入口点位。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至天门山国家森林公园（29.0503,110.4786），已更正为黄石寨/金鞭溪点（OSM，武陵源区，属国家森林公园核心区）；与草案坐标相距约 2.1 km，同景区不同点位，正式录入时定点。"
   },
   {
     "id": "jiuzhaigou",
@@ -54,8 +54,8 @@
     "city": "阿坝藏族羌族自治州",
     "district": "九寨沟县",
     "location": {
-      "lat": 33.1183597,
-      "lng": 103.8838886,
+      "lat": 33.268,
+      "lng": 103.9177,
       "coordSystem": "WGS-84"
     },
     "type": "natural",
@@ -91,7 +91,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标位于景区南段，已更正为沟口站/荷叶寨点（OSM，景区入口区）。"
   },
   {
     "id": "huangshan",
@@ -232,7 +232,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。OSM 点位为贾登峪门户区（景区换乘入口），非湖面中心点。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为喀纳斯湖湖面点（OSM），首版注记误写为贾登峪门户区，特此更正。"
   },
   {
     "id": "daocheng-yading",
@@ -371,7 +371,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。待定记录（2026-10-22 复核）：坐标 42.0059,128.0550 为天池湖面点，天池系中朝界湖，OSM 将该点行政归属显示为朝鲜一侧；保持吉林省表述与此点存在口径冲突，正式发布前须由总设计师定：湖面点（附界湖说明）或改用北坡观景台点。"
   },
   {
     "id": "huangguoshu-waterfall",
@@ -560,8 +560,8 @@
     "city": "晋中市",
     "district": "平遥县",
     "location": {
-      "lat": 37.1547195,
-      "lng": 112.1434193,
+      "lat": 37.2013,
+      "lng": 112.1764,
       "coordSystem": "WGS-84"
     },
     "type": "historic",
@@ -597,7 +597,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标落在古城外西南（文景大道一带），已更正为平遥县衙点（OSM，衙门街，古城内）。"
   },
   {
     "id": "potala-palace",
@@ -778,7 +778,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。坐标与上一轮草案坐标相距约 0.9 km，均在古城范围，属同点不同取位。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标与草案坐标实际相距约 0.2 km（首版注记 0.9 km 有误），均在古城范围。"
   },
   {
     "id": "west-lake-hangzhou",
@@ -787,8 +787,8 @@
     "city": "杭州市",
     "district": "西湖区",
     "location": {
-      "lat": 22.7271967,
-      "lng": 120.3230086,
+      "lat": 30.2439,
+      "lng": 120.1341,
       "coordSystem": "WGS-84"
     },
     "type": "cultural",
@@ -826,7 +826,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。坐标与上一轮草案坐标相距约 0.9 km，均在湖区范围，属同点不同取位。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至台湾高雄同名地点（22.7272,120.3230），已更正为杭州西湖苏堤点（OSM，西湖区北山街道）；与草案坐标（湖东侧）相距约 1.7 km，同属西湖湖区。"
   },
   {
     "id": "the-bund-shanghai",
@@ -917,7 +917,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。OSM 点位为基地停车点附近，正式录入前复核门区点。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为基地正门地址点（熊猫大道 1375 号，OSM），首版注记误写为停车点，特此更正。"
   },
   {
     "id": "hongya-cave",
@@ -1341,7 +1341,7 @@
     "name": "恩施大峡谷",
     "province": "湖北省",
     "city": "恩施土家族苗族自治州",
-    "district": "利川市",
+    "district": "恩施市",
     "location": {
       "lat": 30.424202,
       "lng": 109.1746676,
@@ -1381,6 +1381,6 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：景区跨恩施市与利川市，OSM 坐标点位于恩施市一侧（七星寨片区），district 已由利川市更正为恩施市。"
   }
 ]
