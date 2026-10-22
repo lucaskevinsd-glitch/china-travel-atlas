@@ -37,7 +37,48 @@
       "观景台游览"
     ],
     "transportNotes": "可乘高铁至张家界西站后转乘旅游专线车前往武陵源标志门一带；班次与票价以车站当日公告为准。",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-1.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-1.webp",
+        "alt": "张家界石英砂岩峰林特写，峰柱与植被",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_38099-Zhangjiajie_(48757253473).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-2.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-2.webp",
+        "alt": "张家界峰林全景，蓝天下的石柱群",
+        "credit": "Kuruman from Tokyo, Japan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park.jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-3.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-3.webp",
+        "alt": "云雾缭绕的张家界峰柱",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_38023-Zhangjiajie_(48757574461).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-4.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-4.webp",
+        "alt": "张家界峰林与远山云海",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_37811-Zhangjiajie_(48757570921).jpg"
+      },
+      {
+        "src": "assets/img/full/zhangjiajie-national-forest-park-5.webp",
+        "thumb": "assets/img/thumb/zhangjiajie-national-forest-park-5.webp",
+        "alt": "黄石寨索道缆车与峰林",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_37754-Zhangjiajie_(48757570501).jpg"
+      }
+    ],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
       "url": "https://www.openstreetmap.org/",
@@ -45,7 +86,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至天门山国家森林公园（29.0503,110.4786），已更正为黄石寨/金鞭溪点（OSM，武陵源区，属国家森林公园核心区）；与草案坐标相距约 2.1 km，同景区不同点位，正式录入时定点。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至天门山国家森林公园（29.0503,110.4786），已更正为黄石寨/金鞭溪点（OSM，武陵源区，属国家森林公园核心区）；与草案坐标相距约 2.1 km，同景区不同点位，正式录入时定点。图片进展（2026-10-22）：5 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。"
   },
   {
     "id": "jiuzhaigou",
@@ -82,7 +123,7 @@
       "徒步",
       "观光车游览"
     ],
-    "transportNotes": "可乘飞机至九寨黄龙机场或乘高铁至川青铁路相关车站后转乘景区直通车；班次以当日运营公告为准。",
+    "transportNotes": "可乘飞机至九寨黄龙机场，或乘动车至川青铁路黄龙九寨站、松潘站后换乘景区直通车前往（九寨沟景区官方网站“到达方式”页载明两站均有直达九寨沟的景区直通车）；也可经成都方向陆路前往。班次以运营方当日公告为准。",
     "images": [],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
@@ -91,7 +132,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标位于景区南段，已更正为沟口站/荷叶寨点（OSM，景区入口区）。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标位于景区南段，已更正为沟口站/荷叶寨点（OSM，景区入口区）。终审改写（2026-10-22）：交通结构经九寨沟景区官网 jiuzhai.com“到达方式”页核实（黄龙九寨站/松潘站直通车）；未写入距离、时长与票价。"
   },
   {
     "id": "huangshan",
@@ -334,8 +375,8 @@
     "city": "延边朝鲜族自治州",
     "district": "安图县",
     "location": {
-      "lat": 42.0058677,
-      "lng": 128.0550149,
+      "lat": 42.0265,
+      "lng": 128.0669,
       "coordSystem": "WGS-84"
     },
     "type": "mountain",
@@ -371,7 +412,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。待定记录（2026-10-22 复核）：坐标 42.0059,128.0550 为天池湖面点，天池系中朝界湖，OSM 将该点行政归属显示为朝鲜一侧；保持吉林省表述与此点存在口径冲突，正式发布前须由总设计师定：湖面点（附界湖说明）或改用北坡观景台点。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审定点（2026-10-22，按总设计师决策）：采用北坡观景台点位——天文峰（长白山北坡观天池的传统观景峰）OSM peak 节点 42.0265,128.0669，反查行政区为安图县池北区（长白山管委会），与记录吉林省/延边州/安图县一致；不再使用界湖湖面点。"
   },
   {
     "id": "huangguoshu-waterfall",
@@ -722,7 +763,7 @@
       "参观",
       "摄影"
     ],
-    "transportNotes": "洛阳市区可乘地铁至龙门相关站点后接驳，或乘公交至龙门石窟景区；以当日运营公告为准。",
+    "transportNotes": "洛阳市区可乘地铁2号线至龙门高铁站或八里堂站后换乘公交前往景区，或由市区乘公交直达；以洛阳市交通与景区当日公告为准。",
     "images": [],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
@@ -731,7 +772,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原“地铁至龙门相关站点”表述含糊；经查洛阳地铁2号线一期并无龙门石窟站（终点八里堂），已改写为龙门高铁站/八里堂站换乘公交。"
   },
   {
     "id": "lijiang-old-town",
@@ -770,7 +811,40 @@
       "文化参观"
     ],
     "transportNotes": "可乘飞机至丽江三义机场或乘火车至丽江站，再转乘机场巴士、公交前往古城区；班次以当日运营信息为准。",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/full/lijiang-old-town-1.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-1.webp",
+        "alt": "丽江古城夜景，狮子山一带灯火",
+        "credit": "chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_lijiang_old_town_night.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-2.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-2.webp",
+        "alt": "丽江古城大水车与玉河",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Old-town-02.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-3.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-3.webp",
+        "alt": "丽江古城屋顶群俯瞰",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Old-town-03.jpg"
+      },
+      {
+        "src": "assets/img/full/lijiang-old-town-4.webp",
+        "thumb": "assets/img/thumb/lijiang-old-town-4.webp",
+        "alt": "丽江古城传统商铺街巷",
+        "credit": "CEphoto, Uwe Aranas / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Heritage-shops-in-old-town-01.jpg"
+      }
+    ],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
       "url": "https://www.openstreetmap.org/",
@@ -778,7 +852,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标与草案坐标实际相距约 0.2 km（首版注记 0.9 km 有误），均在古城范围。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标与草案坐标实际相距约 0.2 km（首版注记 0.9 km 有误），均在古城范围。图片进展（2026-10-22）：4 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。"
   },
   {
     "id": "west-lake-hangzhou",
@@ -818,7 +892,32 @@
       "园林游览"
     ],
     "transportNotes": "杭州市内多条地铁线路可达湖滨与西湖景区周边站点，出站后步行或接驳公交前往环湖区域；以杭州地铁当日运营信息为准。",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/full/west-lake-hangzhou-1.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-1.webp",
+        "alt": "西湖湖面与杭州城市天际线",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260424_West_Lake_and_Hangzhou_Skyline.jpg"
+      },
+      {
+        "src": "assets/img/full/west-lake-hangzhou-2.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-2.webp",
+        "alt": "西湖手摇船与远山",
+        "credit": "Jakub Hałun / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20090524_Hangzhou_West_Lake_7531.jpg"
+      },
+      {
+        "src": "assets/img/full/west-lake-hangzhou-3.webp",
+        "thumb": "assets/img/thumb/west-lake-hangzhou-3.webp",
+        "alt": "西湖白堤与对岸城市天际线",
+        "credit": "Y Chen / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hangzhou_Skyline_against_the_West_Lake.png"
+      }
+    ],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
       "url": "https://www.openstreetmap.org/",
@@ -826,7 +925,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至台湾高雄同名地点（22.7272,120.3230），已更正为杭州西湖苏堤点（OSM，西湖区北山街道）；与草案坐标（湖东侧）相距约 1.7 km，同属西湖湖区。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至台湾高雄同名地点（22.7272,120.3230），已更正为杭州西湖苏堤点（OSM，西湖区北山街道）；与草案坐标（湖东侧）相距约 1.7 km，同属西湖湖区。图片进展（2026-10-22）：3 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。"
   },
   {
     "id": "the-bund-shanghai",
@@ -1157,7 +1256,7 @@
     "name": "张掖七彩丹霞",
     "province": "甘肃省",
     "city": "张掖市",
-    "district": "临泽县",
+    "district": "肃南裕固族自治县",
     "location": {
       "lat": 38.952852,
       "lng": 100.0872653,
@@ -1195,7 +1294,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。景区跨临泽、肃南两县，OSM 点位落于肃南侧；行政区表述正式录入前复核。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。景区跨临泽、肃南两县，OSM 点位落于肃南侧；行政区表述正式录入前复核。终审更正（2026-10-22）：坐标点位于肃南侧（七彩丹霞东入口一带），district 已由临泽县改为肃南裕固族自治县；景区跨临泽、肃南两县，西入口在临泽县倪家营镇，正式录入时在交通说明中区分两入口。"
   },
   {
     "id": "yuanyang-terraces",
@@ -1231,7 +1330,7 @@
       "摄影",
       "徒步"
     ],
-    "transportNotes": "昆明方向可乘班车至元阳县城（新街镇方向）再转乘前往各观景点；以当日运营公告为准。",
+    "transportNotes": "昆明、建水方向有班车至元阳县（南沙镇）与新街镇，新街镇是前往多依树、老虎嘴等梯田观景点的主要门户，再转乘当地交通前往各观景点；以客运站当日公告为准。",
     "images": [],
     "source": {
       "name": "OpenStreetMap Nominatim 地名检索（坐标）；内容待官方来源复核",
@@ -1240,7 +1339,7 @@
     },
     "verifiedAt": "2026-10-22",
     "status": "draft",
-    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。"
+    "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原表述把新街镇等同县城不准确（县城为南沙镇），已改写并区分两镇角色。"
   },
   {
     "id": "wuyuan-huangling",
