@@ -300,6 +300,616 @@
       "status": "rejected",
       "width": 3500,
       "reason": "2026-10-22 目检排除：消防水桶器材特写，非目的地代表画面（内容真实但用途不符）"
+    },
+    {
+      "destId": "huangshan",
+      "fileTitle": "File:Mount-huangshan 53319729912.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mount-huangshan_53319729912.jpg",
+      "artist": "xiquinhosilva",
+      "license": "CC BY 2.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/huangshan-1.webp",
+        "thumb": "assets/img/thumb/huangshan-1.webp",
+        "fullBytes": 379400,
+        "thumbBytes": 55716
+      },
+      "alt": "黄山奇峰与松树，远山层叠"
+    },
+    {
+      "destId": "li-river",
+      "fileTitle": "File:This I think is Xingping village (35270767323).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:This_I_think_is_Xingping_village_(35270767323).jpg",
+      "artist": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/li-river-1.webp",
+        "thumb": "assets/img/thumb/li-river-1.webp",
+        "fullBytes": 234296,
+        "thumbBytes": 28382
+      },
+      "alt": "漓江兴坪段江面、竹筏与喀斯特峰林"
+    },
+    {
+      "destId": "kanas-lake",
+      "fileTitle": "File:Kanas Lake Winter.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Kanas_Lake_Winter.jpg",
+      "artist": "Pazakui",
+      "license": "CC BY 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/kanas-lake-1.webp",
+        "thumb": "assets/img/thumb/kanas-lake-1.webp",
+        "fullBytes": 323852,
+        "thumbBytes": 47278
+      },
+      "alt": "冬季喀纳斯湖雪原与针叶林"
+    },
+    {
+      "destId": "daocheng-yading",
+      "fileTitle": "File:Yading Chanadorje-Xianuoduoji Chonggu Grassland.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Yading_Chanadorje-Xianuoduoji_Chonggu_Grassland.jpg",
+      "artist": "Dcpeets",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/daocheng-yading-1.webp",
+        "thumb": "assets/img/thumb/daocheng-yading-1.webp",
+        "fullBytes": 518758,
+        "thumbBytes": 70618
+      },
+      "alt": "亚丁雪山与高山草甸溪流"
+    },
+    {
+      "destId": "qinghai-lake",
+      "fileTitle": "File:202606 Qinghai Lake 02.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:202606_Qinghai_Lake_02.jpg",
+      "artist": "Jonashtand",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/qinghai-lake-1.webp",
+        "thumb": "assets/img/thumb/qinghai-lake-1.webp",
+        "fullBytes": 165902,
+        "thumbBytes": 26154
+      },
+      "alt": "青海湖湖岸与湖面"
+    },
+    {
+      "destId": "changbaishan-tianchi",
+      "fileTitle": "File:Changbai-Gebirge.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Changbai-Gebirge.jpg",
+      "artist": "Acasis",
+      "license": "CC BY-SA 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/changbaishan-tianchi-1.webp",
+        "thumb": "assets/img/thumb/changbaishan-tianchi-1.webp",
+        "fullBytes": 51972,
+        "thumbBytes": 8958
+      },
+      "alt": "长白山天池湖面与火山口湖岸"
+    },
+    {
+      "destId": "huangguoshu-waterfall",
+      "fileTitle": "File:Huangguoshu Waterfall - Pixabay.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangguoshu_Waterfall_-_Pixabay.jpg",
+      "artist": "Robinliu",
+      "license": "CC0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/huangguoshu-waterfall-1.webp",
+        "thumb": "assets/img/thumb/huangguoshu-waterfall-1.webp",
+        "fullBytes": 200512,
+        "thumbBytes": 30628
+      },
+      "alt": "黄果树大瀑布正面"
+    },
+    {
+      "destId": "forbidden-city",
+      "fileTitle": "File:Beijing Forbidden City Hall of Central Harmony terraces-20071018-RM-143736.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Beijing_Forbidden_City_Hall_of_Central_Harmony_terraces-20071018-RM-143736.jpg",
+      "artist": "Reinhold Möller Ermell",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/forbidden-city-1.webp",
+        "thumb": "assets/img/thumb/forbidden-city-1.webp",
+        "fullBytes": 249002,
+        "thumbBytes": 43264
+      },
+      "alt": "故宫宫殿屋顶与汉白玉栏杆"
+    },
+    {
+      "destId": "mogao-caves",
+      "fileTitle": "File:Dunhuang Mogao Ku 2013.12.31 12-30-18.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg",
+      "artist": "Zhangzhugang",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/mogao-caves-1.webp",
+        "thumb": "assets/img/thumb/mogao-caves-1.webp",
+        "fullBytes": 360092,
+        "thumbBytes": 50710
+      },
+      "alt": "莫高窟九层楼与崖壁洞窟"
+    },
+    {
+      "destId": "pingyao-ancient-city",
+      "fileTitle": "File:1 pingyao ancient city aerial pano 2019.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:1_pingyao_ancient_city_aerial_pano_2019.jpg",
+      "artist": "Chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/pingyao-ancient-city-1.webp",
+        "thumb": "assets/img/thumb/pingyao-ancient-city-1.webp",
+        "fullBytes": 194540,
+        "thumbBytes": 28940
+      },
+      "alt": "平遥古城航拍全貌与城墙"
+    },
+    {
+      "destId": "potala-palace",
+      "fileTitle": "File:Potala Palace (23651397662).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Potala_Palace_(23651397662).jpg",
+      "artist": "Laika ac from UK",
+      "license": "CC BY-SA 2.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/potala-palace-1.webp",
+        "thumb": "assets/img/thumb/potala-palace-1.webp",
+        "fullBytes": 315706,
+        "thumbBytes": 51426
+      },
+      "alt": "布达拉宫与前景白塔"
+    },
+    {
+      "destId": "chengdu-panda-base",
+      "fileTitle": "File:Panda in Chengdu Research Base of Giant Panda Breeding - 7708872342.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Panda_in_Chengdu_Research_Base_of_Giant_Panda_Breeding_-_7708872342.jpg",
+      "artist": "George Lu",
+      "license": "CC BY 2.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/chengdu-panda-base-1.webp",
+        "thumb": "assets/img/thumb/chengdu-panda-base-1.webp",
+        "fullBytes": 143490,
+        "thumbBytes": 28940
+      },
+      "alt": "大熊猫幼崽在木架上休息"
+    },
+    {
+      "destId": "hongya-cave",
+      "fileTitle": "File:20250521 Hongyadong (223216).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20250521_Hongyadong_(223216).jpg",
+      "artist": "Yumeto",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/hongya-cave-1.webp",
+        "thumb": "assets/img/thumb/hongya-cave-1.webp",
+        "fullBytes": 500092,
+        "thumbBytes": 75392
+      },
+      "alt": "洪崖洞夜景与崖壁建筑群"
+    },
+    {
+      "destId": "canton-tower",
+      "fileTitle": "File:Canton Tower 20241027.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027.jpg",
+      "artist": "Tim Wu",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/canton-tower-1.webp",
+        "thumb": "assets/img/thumb/canton-tower-1.webp",
+        "fullBytes": 299134,
+        "thumbBytes": 45352
+      },
+      "alt": "广州塔与珠江、城市天际线"
+    },
+    {
+      "destId": "dali-ancient-city",
+      "fileTitle": "File:1 dali old town yunnan 2012.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:1_dali_old_town_yunnan_2012.jpg",
+      "artist": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/dali-ancient-city-1.webp",
+        "thumb": "assets/img/thumb/dali-ancient-city-1.webp",
+        "fullBytes": 392090,
+        "thumbBytes": 52546
+      },
+      "alt": "大理古城街巷与远山"
+    },
+    {
+      "destId": "zhangye-danxia",
+      "fileTitle": "File:Danxia-landform-1562852.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Danxia-landform-1562852.jpg",
+      "artist": "iamangela9",
+      "license": "CC0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/zhangye-danxia-1.webp",
+        "thumb": "assets/img/thumb/zhangye-danxia-1.webp",
+        "fullBytes": 224758,
+        "thumbBytes": 31922
+      },
+      "alt": "张掖七彩丹霞彩色丘陵"
+    },
+    {
+      "destId": "yuanyang-terraces",
+      "fileTitle": "File:Yuanyang - panoramio.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Yuanyang_-_panoramio.jpg",
+      "artist": "Anders Johnson",
+      "license": "CC BY 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/yuanyang-terraces-1.webp",
+        "thumb": "assets/img/thumb/yuanyang-terraces-1.webp",
+        "fullBytes": 462466,
+        "thumbBytes": 61972
+      },
+      "alt": "元阳梯田水面与田埂"
+    },
+    {
+      "destId": "kashgar-old-city",
+      "fileTitle": "File:West start of Qasa Rd, Ancient City of Kashi (20230923192615).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:West_start_of_Qasa_Rd,_Ancient_City_of_Kashi_(20230923192615).jpg",
+      "artist": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/kashgar-old-city-1.webp",
+        "thumb": "assets/img/thumb/kashgar-old-city-1.webp",
+        "fullBytes": 515062,
+        "thumbBytes": 68318
+      },
+      "alt": "喀什古城老街与土黄色民居"
+    },
+    {
+      "destId": "enshi-grand-canyon",
+      "fileTitle": "File:Enshi Grand Canyon 20240725 130732.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Enshi_Grand_Canyon_20240725_130732.jpg",
+      "artist": "HoweyYuan",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/enshi-grand-canyon-1.webp",
+        "thumb": "assets/img/thumb/enshi-grand-canyon-1.webp",
+        "fullBytes": 299264,
+        "thumbBytes": 40494
+      },
+      "alt": "恩施大峡谷一炷香石柱"
+    },
+    {
+      "destId": "jiuzhaigou",
+      "fileTitle": "File:Lake in Jiuzhaigou.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Lake_in_Jiuzhaigou.jpg",
+      "artist": "MSK",
+      "license": "CC BY-SA 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/jiuzhaigou-1.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-1.webp",
+        "fullBytes": 546410,
+        "thumbBytes": 75802
+      },
+      "alt": "九寨沟湖泊倒影与山林"
+    },
+    {
+      "destId": "terracotta-army",
+      "fileTitle": "File:Qin Terracotta Warriors, Pit 1 01.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Warriors,_Pit_1_01.jpg",
+      "artist": "Gary Todd",
+      "license": "CC0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/terracotta-army-1.webp",
+        "thumb": "assets/img/thumb/terracotta-army-1.webp",
+        "fullBytes": 111234,
+        "thumbBytes": 18948
+      },
+      "alt": "兵马俑坑出土陶俑面部特写"
+    },
+    {
+      "destId": "longmen-grottoes",
+      "fileTitle": "File:Ancient Buddhist Grottoes at Longmen- Fengxian Temple, Head of Manjusri.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Buddhist_Grottoes_at_Longmen-_Fengxian_Temple,_Head_of_Manjusri.jpg",
+      "artist": "Gary Todd",
+      "license": "CC0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/longmen-grottoes-1.webp",
+        "thumb": "assets/img/thumb/longmen-grottoes-1.webp",
+        "fullBytes": 266744,
+        "thumbBytes": 47688
+      },
+      "alt": "龙门石窟卢舍那大佛头像"
+    },
+    {
+      "destId": "mount-tai",
+      "fileTitle": "File:Mount tai south gate to heaven 2006 09 2.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mount_tai_south_gate_to_heaven_2006_09_2.jpg",
+      "artist": "Rolf Müller (User:Rolfmueller)",
+      "license": "CC BY-SA 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/mount-tai-1.webp",
+        "thumb": "assets/img/thumb/mount-tai-1.webp",
+        "fullBytes": 613428,
+        "thumbBytes": 107714
+      },
+      "alt": "泰山南天门与盘道"
+    },
+    {
+      "destId": "gulangyu",
+      "fileTitle": "File:Gulangyu sunlight rock 2011 12.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Gulangyu_sunlight_rock_2011_12.jpg",
+      "artist": "Rolfmueller",
+      "license": "CC BY-SA 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/gulangyu-1.webp",
+        "thumb": "assets/img/thumb/gulangyu-1.webp",
+        "fullBytes": 401488,
+        "thumbBytes": 60662
+      },
+      "alt": "鼓浪屿日光岩与菽庄花园海滨"
+    },
+    {
+      "destId": "yalong-bay",
+      "fileTitle": "File:亞龍灣 Yalong Bay - panoramio (3).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%9E%E9%BE%8D%E7%81%A3_Yalong_Bay_-_panoramio_(3).jpg",
+      "artist": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/yalong-bay-1.webp",
+        "thumb": "assets/img/thumb/yalong-bay-1.webp",
+        "fullBytes": 143206,
+        "thumbBytes": 20730
+      },
+      "alt": "亚龙湾沙滩与海浪"
+    },
+    {
+      "destId": "the-bund-shanghai",
+      "fileTitle": "File:Blue hour view of the Bund from the Shanghai World Financial Center dllu.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Blue_hour_view_of_the_Bund_from_the_Shanghai_World_Financial_Center_dllu.jpg",
+      "artist": "Dllu",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/the-bund-shanghai-1.webp",
+        "thumb": "assets/img/thumb/the-bund-shanghai-1.webp",
+        "fullBytes": 297034,
+        "thumbBytes": 38720
+      },
+      "alt": "黄浦江畔外滩历史建筑群夜景"
+    },
+    {
+      "destId": "the-bund-shanghai",
+      "fileTitle": "File:Pudong Shanghai November 2017 panorama.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_panorama.jpg",
+      "artist": "King of Hearts",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/the-bund-shanghai-2.webp",
+        "thumb": "assets/img/thumb/the-bund-shanghai-2.webp",
+        "fullBytes": 123590,
+        "thumbBytes": 18024
+      },
+      "alt": "从外滩眺望黄浦江对岸陆家嘴天际线"
+    },
+    {
+      "destId": "wuyuan-huangling",
+      "fileTitle": "File:婺源篁岭晒秋.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:%E5%A9%BA%E6%BA%90%E7%AF%81%E5%B2%AD%E6%99%92%E7%A7%8B.jpg",
+      "artist": "EditQ",
+      "license": "CC BY-SA 4.0",
+      "status": "approved",
+      "visualReview": "2026-10-22 本轮目检通过：内容与目的地一致",
+      "localized": {
+        "src": "assets/img/full/wuyuan-huangling-1.webp",
+        "thumb": "assets/img/thumb/wuyuan-huangling-1.webp",
+        "fullBytes": 680568,
+        "thumbBytes": 94842
+      },
+      "alt": "篁岭晒秋与山村全景"
+    },
+    {
+      "destId": "huangshan",
+      "fileTitle": "File:Huangshan mist 20141109.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangshan_mist_20141109.jpg",
+      "artist": "颐园居",
+      "license": "CC BY-SA 4.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：画面雾气过重、峰体不可辨，让位于同组更清晰候选"
+    },
+    {
+      "destId": "li-river",
+      "fileTitle": "File:We gave up keeping track of the formation names (35689520400).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:We_gave_up_keeping_track_of_the_formation_names_(35689520400).jpg",
+      "artist": "shankar s. from Dubai, united arab emirates",
+      "license": "CC BY 2.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：只有峰林无江面，不能代表漓江"
+    },
+    {
+      "destId": "qinghai-lake",
+      "fileTitle": "File:202606 Qinghai Lake 01.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:202606_Qinghai_Lake_01.jpg",
+      "artist": "Jonashtand",
+      "license": "CC BY-SA 4.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：前景帐篷与游客杂物过多，让位于同组较干净候选"
+    },
+    {
+      "destId": "changbaishan-tianchi",
+      "fileTitle": "File:Heaven Lake, Paektu Mountain Volcano, North Korea, China - August 20th, 2021 - 3D Enhanced natural colors (51398714172).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Heaven_Lake,_Paektu_Mountain_Volcano,_North_Korea,_China_-_August_20th,_2021_-_3D_Enhanced_natural_colors_(51398714172).jpg",
+      "artist": "Pierre Markuse from Hamm, Germany",
+      "license": "CC BY 2.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：Sentinel 卫星三维渲染图，非实拍照片"
+    },
+    {
+      "destId": "forbidden-city",
+      "fileTitle": "File:Beijing China Forbidden-City-03.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Beijing_China_Forbidden-City-03.jpg",
+      "artist": "CEphoto, Uwe Aranas",
+      "license": "CC BY-SA 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：铜龟雕塑特写占据画面主体，宫殿仅作背景"
+    },
+    {
+      "destId": "terracotta-army",
+      "fileTitle": "File:The Terracotta Army Museum (50617518637).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:The_Terracotta_Army_Museum_(50617518637).jpg",
+      "artist": "Hugh Llewelyn from Keynsham, UK",
+      "license": "CC BY-SA 2.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：博物馆广场外景，无陶俑"
+    },
+    {
+      "destId": "terracotta-army",
+      "fileTitle": "File:The Terracotta Army Museum, Lintong (50616701878).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:The_Terracotta_Army_Museum,_Lintong_(50616701878).jpg",
+      "artist": "Hugh Llewelyn from Keynsham, UK",
+      "license": "CC BY-SA 2.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：未出土陶俑的空坑断面，无兵马俑"
+    },
+    {
+      "destId": "longmen-grottoes",
+      "fileTitle": "File:Longmen Grottoes 20240810 046.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Longmen_Grottoes_20240810_046.jpg",
+      "artist": "沈澄心",
+      "license": "CC0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：画面主体是监控摄像头立杆"
+    },
+    {
+      "destId": "longmen-grottoes",
+      "fileTitle": "File:Longmen Grottoes 20240810 077.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Longmen_Grottoes_20240810_077.jpg",
+      "artist": "沈澄心",
+      "license": "CC0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：伊河与桥景，石窟不可见"
+    },
+    {
+      "destId": "mount-tai",
+      "fileTitle": "File:Taishan.soleil levant.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Taishan.soleil_levant.jpg",
+      "artist": "Popolon",
+      "license": "CC BY-SA 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：只有雾中太阳圆面，无山景"
+    },
+    {
+      "destId": "gulangyu",
+      "fileTitle": "File:Gulangyu Island from Zhongshan Road, Xiamen.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Gulangyu_Island_from_Zhongshan_Road,_Xiamen.jpg",
+      "artist": "Slyronit",
+      "license": "CC BY-SA 4.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：隔海远望，岛体黑暗不可辨"
+    },
+    {
+      "destId": "gulangyu",
+      "fileTitle": "File:鼓浪嶼 Gulangyu Island - panoramio.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:%E9%BC%93%E6%B5%AA%E5%B6%BC_Gulangyu_Island_-_panoramio.jpg",
+      "artist": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：游客人群占据前景的历史建筑街景"
+    },
+    {
+      "destId": "yalong-bay",
+      "fileTitle": "File:Yalong bay - panoramio (4).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Yalong_bay_-_panoramio_(4).jpg",
+      "artist": "Tanya Dedyukhina",
+      "license": "CC BY 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：内湖与度假村，非海滩"
+    },
+    {
+      "destId": "yalong-bay",
+      "fileTitle": "File:The St. Regis Sanya Yalong Bay Resort - panoramio.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:The_St._Regis_Sanya_Yalong_Bay_Resort_-_panoramio.jpg",
+      "artist": "GPS8",
+      "license": "CC BY-SA 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：度假村码头且带 2012 年日期水印"
+    },
+    {
+      "destId": "yalong-bay",
+      "fileTitle": "File:Yalong Bay - panoramio.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Yalong_Bay_-_panoramio.jpg",
+      "artist": "fading",
+      "license": "CC BY-SA 3.0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：极端全景比例（约10:1）且画面平淡，让位于同组海滩图"
+    },
+    {
+      "destId": "wuyuan-huangling",
+      "fileTitle": "File:Huangling Village 20231020 03.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangling_Village_20231020_03.jpg",
+      "artist": "沈澄心",
+      "license": "CC0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：枝叶前景为主，村落不可见"
+    },
+    {
+      "destId": "wuyuan-huangling",
+      "fileTitle": "File:Huangling Village 20231020 18.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangling_Village_20231020_18.jpg",
+      "artist": "沈澄心",
+      "license": "CC0",
+      "status": "rejected",
+      "reason": "2026-10-22 本轮目检排除：古宅室内细节，非村落全景"
+    },
+    {
+      "destId": "wuyuan-huangling",
+      "fileTitle": "File:Huangling Village 20231020 10.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangling_Village_20231020_10.jpg",
+      "artist": "沈澄心",
+      "license": "CC0",
+      "status": "rejected",
+      "reason": "2026-10-22 目检排除：打卡指示牌与游客为画面主体"
     }
   ],
   "note": "图片候选登记表。来源 Wikimedia Commons，许可元数据经官方 API（imageinfo/extmetadata）于 2026-10-22 读取。status: license-ok-pending-visual=许可门槛通过、待人工目检内容；rejected=已排除。任何图片在 approved 与本地化完成前不得写入目的地正式数据。"
