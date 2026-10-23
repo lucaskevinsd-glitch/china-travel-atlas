@@ -85,7 +85,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至天门山国家森林公园（29.0503,110.4786），已更正为黄石寨/金鞭溪点（OSM，武陵源区，属国家森林公园核心区）；与草案坐标相距约 2.1 km，同景区不同点位，正式录入时定点。图片进展（2026-10-22）：5 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
     "adcode": "430811",
     "seasonNotes": "春季多雾、秋季天高云淡能见度较好；具体天气以出行前预报为准。"
@@ -142,7 +142,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标位于景区南段，已更正为沟口站/荷叶寨点（OSM，景区入口区）。终审改写（2026-10-22）：交通结构经九寨沟景区官网 jiuzhai.com“到达方式”页核实（黄龙九寨站/松潘站直通车）；未写入距离、时长与票价。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -199,7 +199,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -255,7 +255,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。漓江为线状水系无单点坐标，本记录取兴坪段兴坪古镇点为代表点，仅用于地图定位与天气查询。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原交通把杨堤（排筏码头）与游船客运港并列易误导，据漓江景区官网交通页更正：游船自竹江/磨盘山客运港发船，杨堤、兴坪为排筏码头；简介“杨堤古镇”同步改为村落表述。"
   },
   {
@@ -310,7 +310,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为喀纳斯湖湖面点（OSM），首版注记误写为贾登峪门户区，特此更正。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -366,7 +366,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -421,7 +421,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介把鸟岛与二郎剑并列为景区点位；据文旅部数据服务（现开放景区仅二郎剑、仙女湾）与风景名胜区协会（鸟岛自2017年关闭），已删去鸟岛点位表述。"
   },
   {
@@ -476,7 +476,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审定点（2026-10-22，按总设计师决策）：采用北坡观景台点位——天文峰（长白山北坡观天池的传统观景峰）OSM peak 节点 42.0265,128.0669，反查行政区为安图县池北区（长白山管委会），与记录吉林省/延边州/安图县一致；不再使用界湖湖面点。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介把温泉、瀑布笼统挂在北坡与西坡名下；据吉林省地方志等来源，瀑布与温泉群为北坡点位，已收窄表述。坐标语义（北坡天文峰观景点）未动。"
   },
   {
@@ -530,7 +530,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -584,7 +584,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -638,7 +638,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -692,7 +692,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -747,7 +747,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标落在古城外西南（文景大道一带），已更正为平遥县衙点（OSM，衙门街，古城内）。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介“明清时期曾是晋商金融中心”年代过宽，据国家文物局与维基来源（金融中心地位形成于清代）收窄为清代。"
   },
   {
@@ -800,7 +800,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -855,7 +855,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -908,7 +908,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原“地铁至龙门相关站点”表述含糊；经查洛阳地铁2号线一期并无龙门石窟站（终点八里堂），已改写为龙门高铁站/八里堂站换乘公交。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -988,7 +988,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标与草案坐标实际相距约 0.2 km（首版注记 0.9 km 有误），均在古城范围。图片进展（2026-10-22）：4 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
     "adcode": "530702",
     "seasonNotes": "高原地区昼夜温差大，雨季集中在夏季；出行装备以当日预报为准。"
@@ -1063,7 +1063,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：首版坐标误配至台湾高雄同名地点（22.7272,120.3230），已更正为杭州西湖苏堤点（OSM，西湖区北山街道）；与草案坐标（湖东侧）相距约 1.7 km，同属西湖湖区。图片进展（2026-10-22）：3 张 Commons 图片已完成许可+目检并本地化（见 data/candidates/image-candidates.json），记录仍为 draft，待内容终审后转正式数据。",
     "adcode": "330106",
     "seasonNotes": "春季桃柳与秋季桂香为代表性时段；节假日环湖区域人流较大。"
@@ -1128,7 +1128,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1182,7 +1182,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：坐标为基地正门地址点（熊猫大道 1375 号，OSM），首版注记误写为停车点，特此更正。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1238,7 +1238,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1293,7 +1293,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介误写“珠江北岸”，据广州塔公开资料（塔址海珠区、距珠江南岸约125米）更正为南岸、“相邻”改为“隔江相望”。"
   },
   {
@@ -1349,7 +1349,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1404,7 +1404,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 第六轮补核）：原简介“海棠湾西侧”方位泛述无直接来源支撑，已收窄为“吉阳区东部海岸”；度假区设立与国家级评级、7.5 公里海湾见度假区官网（syyalongbay.cn）原文，亚龙湾站与吉阳区归属见清华大学三亚国际数学论坛机构页。结论：已修正。"
   },
   {
@@ -1460,7 +1460,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1514,7 +1514,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。景区跨临泽、肃南两县，OSM 点位落于肃南侧；行政区表述正式录入前复核。终审更正（2026-10-22）：坐标点位于肃南侧（七彩丹霞东入口一带），district 已由临泽县改为肃南裕固族自治县；景区跨临泽、肃南两县，西入口在临泽县倪家营镇，正式录入时在交通说明中区分两入口。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验升级（2026-10-22 第六轮补核）：张掖市人民政府官网七彩丹霞页已实际打开，支持景区位于临泽、肃南两县境内、丹霞与彩色丘陵复合景观、7 处观景台，与简介逐项一致；交通为泛述（张掖西站有景区旅游交通），甘肃省文化和旅游厅网站（甘肃文化旅游网）张掖七彩丹霞页已在真实浏览器中打开：载明张掖站与张掖西站两站、汽车西站有开往丹霞的班车（约半小时一趟）、可在张掖西站购返程票，交通泛述获官方来源直接支持。结论：已核实。"
   },
   {
@@ -1568,7 +1568,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。终审改写（2026-10-22）：原表述把新街镇等同县城不准确（县城为南沙镇），已改写并区分两镇角色。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1624,7 +1624,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1680,7 +1680,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。"
   },
   {
@@ -1736,7 +1736,7 @@
       "retrievedAt": "2026-10-22"
     },
     "verifiedAt": "2026-10-22",
-    "status": "draft",
+    "status": "published",
     "verificationNote": "候选草案：坐标经 OpenStreetMap Nominatim 于 2026-10-22 检索核对（WGS-84）；简介、特色与交通说明待逐条对照官方/权威来源复核；图片未选定，无授权图片前不得转 published。更正记录（2026-10-22 复核）：景区跨恩施市与利川市，OSM 坐标点位于恩施市一侧（七星寨片区），district 已由利川市更正为恩施市。图片进展（2026-10-22 本轮）：主图已完成许可审核+目检并本地化（见 data/candidates/image-candidates.json）。事实核验修正（2026-10-22 本轮）：原简介“利川市与恩施市交界地带”与景区运营方官网口径（位于恩施市境内）冲突，已按官网更正，与 district=恩施市 一致。"
   }
 ]
