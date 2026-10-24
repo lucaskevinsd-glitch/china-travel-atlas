@@ -2003,6 +2003,222 @@
       "status": "rejected",
       "width": 4000,
       "visualReview": "2026-10-24 第三轮预览审看：林间步道无亚龙湾识别特征"
+    },
+    {
+      "artist": "そらみみ",
+      "destId": "wudadao-tianjin",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_Residence_of_Xu_Shuqiang_in_Wudadao_Area.jpg",
+      "fileTitle": "File:Former Residence of Xu Shuqiang in Wudadao Area.jpg",
+      "height": 2262,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 3015,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/wudadao-tianjin-1.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-1.webp"
+      },
+      "alt": "天津五大道洋楼"
+    },
+    {
+      "artist": "takwing.kwong",
+      "destId": "chengde-mountain-resort",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_1.jpg",
+      "fileTitle": "File:Chengde Mountain Resort 1.jpg",
+      "height": 1944,
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "status": "approved",
+      "width": 2592,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/chengde-mountain-resort-1.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-1.webp"
+      },
+      "alt": "承德避暑山庄湖畔楼阁"
+    },
+    {
+      "artist": "Emmazzye",
+      "destId": "hulunbuir-grassland",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hulun_Buir.jpg",
+      "fileTitle": "File:Hulun Buir.jpg",
+      "height": 3160,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4213,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/hulunbuir-grassland-1.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-1.webp"
+      },
+      "alt": "呼伦贝尔草原与蓝天"
+    },
+    {
+      "artist": "Pauloleong2002",
+      "destId": "shenyang-imperial-palace",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_02.jpg",
+      "fileTitle": "File:Mukden Palace 02.jpg",
+      "height": 3456,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4608,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/shenyang-imperial-palace-1.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-1.webp"
+      },
+      "alt": "沈阳故宫内陈设"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_02.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 02.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 6000,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/harbin-central-street-1.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-1.webp"
+      },
+      "alt": "哈尔滨中央大街牌坊"
+    },
+    {
+      "artist": "King of Hearts",
+      "destId": "suzhou-humble-garden",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_001.jpg",
+      "fileTitle": "File:Humble Administrator's Garden Suzhou November 2017 001.jpg",
+      "height": 3720,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 5580,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/suzhou-humble-garden-1.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-1.webp"
+      },
+      "alt": "苏州拙政园池塘与垂柳"
+    },
+    {
+      "artist": "Windmemories",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20260809_Yellow_River_at_Shapotou.jpg",
+      "fileTitle": "File:20260809 Yellow River at Shapotou.jpg",
+      "height": 1200,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 1800,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/shapotou-1.webp",
+        "thumb": "assets/img/thumb/shapotou-1.webp"
+      },
+      "alt": "沙坡头黄河与沙丘"
+    },
+    {
+      "artist": "Windmemories",
+      "destId": "qingdao-badaguan-zhanqiao",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20240729_Zhanqiao_01.jpg",
+      "fileTitle": "File:20240729 Zhanqiao 01.jpg",
+      "height": 1200,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 1800,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/qingdao-badaguan-zhanqiao-1.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-1.webp"
+      },
+      "alt": "青岛栈桥与回澜阁"
+    },
+    {
+      "artist": "Carsten Ullrich from Shanghai, China",
+      "destId": "wuzhen",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:A_picture_from_China_every_day_061.jpg",
+      "fileTitle": "File:A picture from China every day 061.jpg",
+      "height": 3000,
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "status": "approved",
+      "width": 4000,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/wuzhen-1.webp",
+        "thumb": "assets/img/thumb/wuzhen-1.webp"
+      },
+      "alt": "乌镇水乡民居倒影"
+    },
+    {
+      "artist": "Siyuwj",
+      "destId": "mount-emei",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Baoguo_Temple,_Emei,_2017-09-19_01.jpg",
+      "fileTitle": "File:Baoguo Temple, Emei, 2017-09-19 01.jpg",
+      "height": 4016,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 6016,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/mount-emei-1.webp",
+        "thumb": "assets/img/thumb/mount-emei-1.webp"
+      },
+      "alt": "峨眉山报国寺山门"
+    },
+    {
+      "artist": "Hhhh2",
+      "destId": "xijiang-miao-village",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village1.jpg",
+      "fileTitle": "File:Xi jiang Qianhu Miao Village1.jpg",
+      "height": 3024,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4032,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/xijiang-miao-village-1.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-1.webp"
+      },
+      "alt": "西江千户苗寨全景"
+    },
+    {
+      "artist": "\nGiovanni Boccardi",
+      "destId": "hongcun",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Villages_in_Southern_Anhui_%E2%80%93_Xidi_and_Hongcun-114145.jpg",
+      "fileTitle": "File:Ancient Villages in Southern Anhui – Xidi and Hongcun-114145.jpg",
+      "height": 768,
+      "license": "CC BY-SA 3.0 igo",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo",
+      "status": "approved",
+      "width": 1024,
+      "visualReview": "2026-10-24 第三轮预览审看，批准（第二批草稿首图）",
+      "localized": {
+        "full": "assets/img/full/hongcun-1.webp",
+        "thumb": "assets/img/thumb/hongcun-1.webp"
+      },
+      "alt": "宏村祠堂内景"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_01.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 01.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 6000,
+      "visualReview": "2026-10-24 第三轮预览审看：简介牌特写，非街景"
     }
   ],
   "note": "图片候选登记表。来源 Wikimedia Commons，许可元数据经官方 API（imageinfo/extmetadata）于 2026-10-22 读取。status: license-ok-pending-visual=许可门槛通过、待人工目检内容；rejected=已排除。任何图片在 approved 与本地化完成前不得写入目的地正式数据。"

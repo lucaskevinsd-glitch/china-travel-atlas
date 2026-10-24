@@ -1,0 +1,673 @@
+[
+  {
+    "id": "wudadao-tianjin",
+    "name": "五大道文化旅游区",
+    "province": "天津市",
+    "city": "天津市",
+    "district": "和平区",
+    "location": {
+      "lat": 39.1095,
+      "lng": 117.1967,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "historic",
+      "family",
+      "photography"
+    ],
+    "summary": "天津市中心偏南的民国年间高级住宅区与文化旅游区，片区内保留大量风格多样的洋楼建筑，适合步行漫游与建筑观赏。",
+    "highlights": [
+      "风格多样的近代洋楼建筑群",
+      "睦南公园一带街区漫步",
+      "名人故居与建筑外观"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "建筑观赏",
+      "街区漫步",
+      "摄影"
+    ],
+    "transportNotes": "位于天津市和平区，可乘公交、地铁至片区周边后步行进入；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/wudadao-tianjin-1.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-1.webp",
+        "alt": "天津五大道洋楼",
+        "credit": "そらみみ / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Former_Residence_of_Xu_Shuqiang_in_Wudadao_Area.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：五大道",
+      "url": "https://zh.wikipedia.org/wiki/%E4%BA%94%E5%A4%A7%E9%81%93",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：身份、坐标与简介经中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "chengde-mountain-resort",
+    "name": "承德避暑山庄",
+    "province": "河北省",
+    "city": "承德市",
+    "district": "双桥区",
+    "location": {
+      "lat": 40.9936,
+      "lng": 117.9294,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "family",
+      "photography"
+    ],
+    "summary": "清代夏宫，现存最大的皇家园林，与周围寺庙同为世界遗产，园内湖泊、宫殿与山峦景观结合。",
+    "highlights": [
+      "皇家园林湖泊与宫殿建筑",
+      "烟雨楼一带湖区景观",
+      "周围寺庙群"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 2
+    },
+    "activities": [
+      "园林游览",
+      "建筑观赏",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至承德南站后转乘公交或出租车前往；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/chengde-mountain-resort-1.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-1.webp",
+        "alt": "承德避暑山庄湖畔楼阁",
+        "credit": "takwing.kwong / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_1.jpg"
+      }
+    ],
+    "source": {
+      "name": "UNESCO：承德避暑山庄及其周围寺庙",
+      "url": "https://whc.unesco.org/en/list/440",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：世界遗产身份与坐标经 UNESCO 与中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "hulunbuir-grassland",
+    "name": "呼伦贝尔大草原（莫日格勒河）",
+    "province": "内蒙古自治区",
+    "city": "呼伦贝尔市",
+    "district": "陈巴尔虎旗",
+    "location": {
+      "lat": 49.785,
+      "lng": 120.1859,
+      "coordSystem": "WGS-84"
+    },
+    "type": "desert",
+    "themes": [
+      "nature",
+      "photography",
+      "grassland-desert"
+    ],
+    "summary": "以内蒙古呼伦贝尔草原为范围，代表点位取莫日格勒河流经的草原河曲一带，可观开阔草原、河流与畜群景观。",
+    "highlights": [
+      "莫日格勒河草原河曲",
+      "开阔草原与蓝天景观",
+      "草原公路沿线观景点"
+    ],
+    "bestSeasons": [
+      "summer",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 3
+    },
+    "activities": [
+      "草原观光",
+      "摄影",
+      "沿线自驾"
+    ],
+    "transportNotes": "可先抵达海拉尔后经公路前往陈巴尔虎旗一带；草原路段与天气变化大，以当日路况为准。",
+    "images": [
+      {
+        "src": "assets/img/full/hulunbuir-grassland-1.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-1.webp",
+        "alt": "呼伦贝尔草原与蓝天",
+        "credit": "Emmazzye / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hulun_Buir.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：莫日格勒河",
+      "url": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%97%A5%E6%A0%BC%E5%8B%92%E6%B2%B3",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：坐标为 Nominatim 河流点位初步核实（陈巴尔虎旗境内），范围表述已收窄至莫日格勒河一带，待正式评审。"
+  },
+  {
+    "id": "shenyang-imperial-palace",
+    "name": "沈阳故宫",
+    "province": "辽宁省",
+    "city": "沈阳市",
+    "district": "沈河区",
+    "location": {
+      "lat": 41.7958,
+      "lng": 123.45,
+      "coordSystem": "WGS-84"
+    },
+    "type": "historic",
+    "themes": [
+      "historic",
+      "family"
+    ],
+    "summary": "始建于1625年的后金、清入关前皇宫，后为盛京行宫，占地约6万平方米，是沈阳明清旧城中心的历史建筑群。",
+    "highlights": [
+      "大政殿与十王亭",
+      "宫殿建筑与陈设",
+      "清初历史展陈"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "建筑观赏",
+      "历史展陈参观",
+      "摄影"
+    ],
+    "transportNotes": "位于沈阳市沈河区，可乘地铁、公交至故宫周边后步行进入；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/shenyang-imperial-palace-1.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-1.webp",
+        "alt": "沈阳故宫内陈设",
+        "credit": "Pauloleong2002 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_02.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：沈阳故宫",
+      "url": "https://zh.wikipedia.org/wiki/%E6%B2%88%E9%98%B3%E6%95%85%E5%AE%AB",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：身份、始建年份与坐标经中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "harbin-central-street",
+    "name": "哈尔滨中央大街",
+    "province": "黑龙江省",
+    "city": "哈尔滨市",
+    "district": "道里区",
+    "location": {
+      "lat": 45.7698,
+      "lng": 126.6135,
+      "coordSystem": "WGS-84"
+    },
+    "type": "urban",
+    "themes": [
+      "historic",
+      "family",
+      "photography"
+    ],
+    "summary": "哈尔滨主要商业步行街之一，南起新阳广场、北至松花江边防洪纪念塔广场，全长1450米，由面包石铺成。",
+    "highlights": [
+      "面包石铺就的步行街",
+      "欧式历史建筑立面",
+      "防洪纪念塔广场"
+    ],
+    "bestSeasons": [
+      "winter",
+      "summer"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "街区漫步",
+      "建筑观赏",
+      "摄影"
+    ],
+    "transportNotes": "位于哈尔滨市道里区，可乘公交、地铁至中央大街周边后步行；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/harbin-central-street-1.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-1.webp",
+        "alt": "哈尔滨中央大街牌坊",
+        "credit": "Jonashtand / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_02.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：中央大街",
+      "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E5%A4%A7%E8%A1%97",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：长度与起止点经中文维基百科核验，坐标经 Wikidata（Q10875064）核验，待正式评审。"
+  },
+  {
+    "id": "suzhou-humble-garden",
+    "name": "苏州拙政园",
+    "province": "江苏省",
+    "city": "苏州市",
+    "district": "姑苏区",
+    "location": {
+      "lat": 31.3261,
+      "lng": 120.6239,
+      "coordSystem": "WGS-84"
+    },
+    "type": "cultural",
+    "themes": [
+      "historic",
+      "family",
+      "photography"
+    ],
+    "summary": "始建于明正德年间的江南私家园林，中国四大名园之一，苏州古典园林世界遗产的组成部分，以水景与建筑布局见长。",
+    "highlights": [
+      "中部水景与建筑布局",
+      "东部田园与西部山林分区",
+      "江南园林造景"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "园林游览",
+      "建筑观赏",
+      "摄影"
+    ],
+    "transportNotes": "位于苏州市姑苏区东北街，可乘公交、地铁至拙政园周边后步行；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/suzhou-humble-garden-1.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-1.webp",
+        "alt": "苏州拙政园池塘与垂柳",
+        "credit": "King of Hearts / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_001.jpg"
+      }
+    ],
+    "source": {
+      "name": "UNESCO：苏州古典园林",
+      "url": "https://whc.unesco.org/en/list/813",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：园林身份与坐标经 UNESCO 与中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "shapotou",
+    "name": "沙坡头",
+    "province": "宁夏回族自治区",
+    "city": "中卫市",
+    "district": "沙坡头区",
+    "location": {
+      "lat": 37.5169,
+      "lng": 105.1738,
+      "coordSystem": "WGS-84"
+    },
+    "type": "desert",
+    "themes": [
+      "nature",
+      "photography",
+      "grassland-desert"
+    ],
+    "summary": "黄河与腾格里沙漠交汇地带的景区，可观沙丘、黄河与绿洲景观，兼具沙漠活动与黄河观光。",
+    "highlights": [
+      "沙丘与黄河交汇景观",
+      "沙漠观光活动区",
+      "黄河沿岸视野"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "沙漠观光",
+      "摄影",
+      "黄河游览"
+    ],
+    "transportNotes": "可乘火车或长途车至中卫后转乘景区交通；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/shapotou-1.webp",
+        "thumb": "assets/img/thumb/shapotou-1.webp",
+        "alt": "沙坡头黄河与沙丘",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260809_Yellow_River_at_Shapotou.jpg"
+      }
+    ],
+    "source": {
+      "name": "Wikipedia：Shapotou, Zhongwei",
+      "url": "https://en.wikipedia.org/wiki/Shapotou,_Zhongwei",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：身份与坐标经英文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "qingdao-badaguan-zhanqiao",
+    "name": "青岛八大关与栈桥",
+    "province": "山东省",
+    "city": "青岛市",
+    "district": "市南区",
+    "location": {
+      "lat": 36.06,
+      "lng": 120.3148,
+      "coordSystem": "WGS-84"
+    },
+    "type": "coastal",
+    "themes": [
+      "coastal",
+      "historic",
+      "family"
+    ],
+    "summary": "青岛市南滨海一带的组合游览：栈桥为伸入海中的标志性建筑，八大关为近代别墅建筑区，两者同属滨海风貌带。",
+    "highlights": [
+      "栈桥与回澜阁海景",
+      "八大关近代别墅建筑",
+      "滨海步行道"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "海滨漫步",
+      "建筑观赏",
+      "摄影"
+    ],
+    "transportNotes": "位于青岛市市南区，可乘公交、地铁至栈桥或八大关周边后步行；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/qingdao-badaguan-zhanqiao-1.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-1.webp",
+        "alt": "青岛栈桥与回澜阁",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240729_Zhanqiao_01.jpg"
+      }
+    ],
+    "source": {
+      "name": "Wikipedia：Zhanqiao Pier",
+      "url": "https://en.wikipedia.org/wiki/Zhanqiao_Pier",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：栈桥坐标经英文维基百科核验，组合口径（栈桥+八大关）已在简介中说明，待正式评审。"
+  },
+  {
+    "id": "wuzhen",
+    "name": "乌镇",
+    "province": "浙江省",
+    "city": "嘉兴市",
+    "district": "桐乡市",
+    "location": {
+      "lat": 30.7428,
+      "lng": 120.4878,
+      "coordSystem": "WGS-84"
+    },
+    "type": "rural",
+    "themes": [
+      "ancient-town",
+      "family",
+      "photography"
+    ],
+    "summary": "江南著名水乡古镇，河道与民居沿水展开，东西栅片区各具风貌，适合水乡漫步与夜景游览。",
+    "highlights": [
+      "水乡河道与石桥",
+      "临水民居与作坊",
+      "夜景灯光"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "水乡漫步",
+      "乘船游览",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至桐乡站后转乘公交或班车前往；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/wuzhen-1.webp",
+        "thumb": "assets/img/thumb/wuzhen-1.webp",
+        "alt": "乌镇水乡民居倒影",
+        "credit": "Carsten Ullrich from Shanghai, China / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_picture_from_China_every_day_061.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：乌镇镇",
+      "url": "https://zh.wikipedia.org/wiki/%E4%B9%8C%E9%95%87%E9%95%87",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：身份与坐标经中英文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "mount-emei",
+    "name": "峨眉山",
+    "province": "四川省",
+    "city": "峨眉山市",
+    "district": "",
+    "location": {
+      "lat": 29.5197,
+      "lng": 103.3325,
+      "coordSystem": "WGS-84"
+    },
+    "type": "mountain",
+    "themes": [
+      "mountains",
+      "historic",
+      "hiking"
+    ],
+    "summary": "四川佛教名山，景区面积154平方公里，金顶海拔3077米，与乐山大佛同为世界遗产，有“峨眉天下秀”之誉。",
+    "highlights": [
+      "金顶与云海日出",
+      "报国寺一带寺庙",
+      "山间步道与猴群观赏"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 2,
+      "max": 2
+    },
+    "activities": [
+      "登山徒步",
+      "寺庙参观",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至峨眉山站后转乘景区交通；高海拔路段注意体力与天气，以当日公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/mount-emei-1.webp",
+        "thumb": "assets/img/thumb/mount-emei-1.webp",
+        "alt": "峨眉山报国寺山门",
+        "credit": "Siyuwj / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baoguo_Temple,_Emei,_2017-09-19_01.jpg"
+      }
+    ],
+    "source": {
+      "name": "UNESCO：峨眉山—乐山大佛",
+      "url": "https://whc.unesco.org/en/list/779",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：世界遗产身份、面积与金顶海拔经 UNESCO 与中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "xijiang-miao-village",
+    "name": "西江千户苗寨",
+    "province": "贵州省",
+    "city": "黔东南苗族侗族自治州",
+    "district": "雷山县",
+    "location": {
+      "lat": 26.4967,
+      "lng": 108.17,
+      "coordSystem": "WGS-84"
+    },
+    "type": "rural",
+    "themes": [
+      "ancient-town",
+      "family",
+      "photography"
+    ],
+    "summary": "坐落于雷公山麓、白水河畔，由10余个依山而建的自然村寨连片构成，是中国现存最大的苗族聚居村寨。",
+    "highlights": [
+      "层叠的苗寨吊脚楼群",
+      "观景台俯瞰寨全景",
+      "苗族歌舞与服饰"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "村寨漫步",
+      "民俗观赏",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至凯里南站后转乘班车前往；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/xijiang-miao-village-1.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-1.webp",
+        "alt": "西江千户苗寨全景",
+        "credit": "Hhhh2 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village1.jpg"
+      }
+    ],
+    "source": {
+      "name": "维基百科：西江千户苗寨",
+      "url": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A8",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：村寨构成与规模经中文维基百科初步核验，待正式评审。"
+  },
+  {
+    "id": "hongcun",
+    "name": "宏村",
+    "province": "安徽省",
+    "city": "黄山市",
+    "district": "黟县",
+    "location": {
+      "lat": 30.0033,
+      "lng": 117.9905,
+      "coordSystem": "WGS-84"
+    },
+    "type": "rural",
+    "themes": [
+      "ancient-town",
+      "historic",
+      "photography"
+    ],
+    "summary": "黄山脚下的明清古村落，以完善水系与“牛”形布局著称，是徽州民居的典型代表，皖南古村落世界遗产之一。",
+    "highlights": [
+      "南湖与月沼水景",
+      "徽派民居与祠堂",
+      "牛形村落布局"
+    ],
+    "bestSeasons": [
+      "spring",
+      "autumn"
+    ],
+    "suggestedDays": {
+      "min": 1,
+      "max": 1
+    },
+    "activities": [
+      "村落漫步",
+      "建筑观赏",
+      "摄影"
+    ],
+    "transportNotes": "可乘高铁至黄山北站后转乘班车前往黟县；以当日交通公告为准。",
+    "images": [
+      {
+        "src": "assets/img/full/hongcun-1.webp",
+        "thumb": "assets/img/thumb/hongcun-1.webp",
+        "alt": "宏村祠堂内景",
+        "credit": "\nGiovanni Boccardi / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0 igo",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Villages_in_Southern_Anhui_%E2%80%93_Xidi_and_Hongcun-114145.jpg"
+      }
+    ],
+    "source": {
+      "name": "UNESCO：皖南古村落—西递、宏村",
+      "url": "https://whc.unesco.org/en/list/1002",
+      "retrievedAt": "2026-10-24"
+    },
+    "verifiedAt": "2026-10-24",
+    "status": "draft",
+    "verificationNote": "draft：世界遗产身份与坐标经 UNESCO 与中英文维基百科初步核验，待正式评审。"
+  }
+]
