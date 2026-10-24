@@ -16,9 +16,18 @@
     }
     const fav = CTA.store.isFavorite(d.id);
     const imgs = (d.images || []).filter(i => i && i.src);
+    /* 横向画廊：第一张优先加载，其余懒加载；srcset 两档（缩略图 640w / 原图 1600w） */
     const hero = imgs.length
-      ? '<img class="detail-hero" src="' + esc(imgs[0].src) + '" alt="' + esc(imgs[0].alt || d.name) + '" width="1200" height="675" onerror="CTA.imgErr(this,\'hero\')">' +
-        '<p class="img-credit">图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</p>'
+      ? '<div class="gallery" data-gallery><div class="gallery-track">' +
+        imgs.map((im, i) =>
+          '<figure class="slide"><img class="slide-img" src="' + esc(im.src) + '"' +
+          (im.thumb ? ' srcset="' + esc(im.thumb) + ' 640w, ' + esc(im.src) + ' 1600w" sizes="(max-width: 720px) 100vw, 1080px"' : '') +
+          ' alt="' + esc(im.alt || d.name) + '" width="1600" height="1000" ' +
+          (i === 0 ? 'fetchpriority="high"' : 'loading="lazy"') +
+          ' onerror="CTA.galleryImgErr(this)"></figure>').join('') +
+        '</div><div class="gallery-bar"><span class="gallery-count" data-count>1 / ' + imgs.length + '</span>' +
+        '<span class="img-credit" data-credit>图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</span>' +
+        '<button type="button" class="gallery-zoom" data-zoom>⤢ 放大</button></div></div>'
       : '<div class="detail-hero hero-placeholder">图片待补充（须有明确授权后才上线）</div>';
     el.innerHTML =
       '<article class="detail">' + hero +
@@ -36,6 +45,78 @@
       '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
       '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
       '</article>';
+
+    /* 画廊行为：滚动计数、仅预加载下一张、放大查看 */
+    const gallery = el.querySelector('[data-gallery]');
+    if (gallery && imgs.length) {
+      const track = gallery.querySelector('.gallery-track');
+      const countEl = gallery.querySelector('[data-count]');
+      const creditEl = gallery.querySelector('[data-credit]');
+      let cur = 0;
+      const promoted = new Set([0]);
+      function promote(i) {
+        if (i < 0 || i >= imgs.length || promoted.has(i)) return;
+        promoted.add(i);
+        const img = track.children[i] && track.children[i].querySelector('img');
+        if (img) img.loading = 'eager';
+      }
+      function setCur(i) {
+        if (i === cur) { promote(cur + 1); return; }
+        cur = i;
+        countEl.textContent = (cur + 1) + ' / ' + imgs.length;
+        creditEl.textContent = '图片：' + (imgs[cur].credit || '') + '（' + (imgs[cur].license || '') + '）';
+        promote(cur + 1);
+      }
+      let ticking = false;
+      track.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+          if (i !== cur && i >= 0 && i < imgs.length) setCur(i);
+        });
+      }, { passive: true });
+      promote(1);
+      /* 大图查看层 */
+      const lb = document.createElement('div');
+      lb.className = 'lightbox'; lb.hidden = true;
+      lb.innerHTML = '<button type="button" class="lb-close" aria-label="关闭">✕</button>' +
+        '<button type="button" class="lb-prev" aria-label="上一张">‹</button>' +
+        '<img class="lb-img" alt="">' +
+        '<button type="button" class="lb-next" aria-label="下一张">›</button>' +
+        '<p class="lb-caption"></p><p class="lb-count"></p>';
+      document.body.appendChild(lb);
+      const lbImg = lb.querySelector('.lb-img');
+      function showLb(i) {
+        cur = Math.max(0, Math.min(imgs.length - 1, i));
+        lbImg.src = imgs[cur].src;
+        lbImg.alt = imgs[cur].alt || d.name;
+        lb.querySelector('.lb-caption').textContent = '图片：' + (imgs[cur].credit || '') + '（' + (imgs[cur].license || '') + '）';
+        lb.querySelector('.lb-count').textContent = (cur + 1) + ' / ' + imgs.length;
+        countEl.textContent = (cur + 1) + ' / ' + imgs.length;
+        creditEl.textContent = lb.querySelector('.lb-caption').textContent;
+        track.scrollTo({ left: cur * track.clientWidth, behavior: 'smooth' });
+        promote(cur + 1);
+      }
+      function openLb() { lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb-close').focus(); document.addEventListener('keydown', onKey); }
+      function closeLb() { lb.hidden = true; document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); }
+      function onKey(e) {
+        if (e.key === 'Escape') closeLb();
+        else if (e.key === 'ArrowRight') showLb(cur + 1);
+        else if (e.key === 'ArrowLeft') showLb(cur - 1);
+      }
+      lb.querySelector('.lb-close').addEventListener('click', closeLb);
+      lb.querySelector('.lb-prev').addEventListener('click', () => showLb(cur - 1));
+      lb.querySelector('.lb-next').addEventListener('click', () => showLb(cur + 1));
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+      gallery.querySelector('[data-zoom]').addEventListener('click', () => { showLb(cur); openLb(); });
+      track.addEventListener('click', e => { if (e.target.closest('img')) { showLb(cur); openLb(); } });
+      /* 路由切换时清理大图层与键盘监听 */
+      window.addEventListener('hashchange', function cleanup() {
+        closeLb(); lb.remove(); window.removeEventListener('hashchange', cleanup);
+      });
+    }
 
     const box = el.querySelector('#weather-box');
     if (!CTA.config.features.weatherEnabled) { box.innerHTML = '<h3>天气</h3>' + CTA.ui.errorBox('WEATHER_UNAVAILABLE'); return; }

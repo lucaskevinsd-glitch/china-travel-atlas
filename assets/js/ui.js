@@ -18,10 +18,12 @@
     div.textContent = kind === 'hero' ? '图片加载失败' : '🏞️';
     img.replaceWith(div);
   }
-  function destCard(d) {
+  function destCard(d, opts) {
     const fav = CTA.store.isFavorite(d.id);
+    /* 首屏首张卡片可优先加载（fetchpriority=high 且不懒加载）；其余维持懒加载 */
+    const prio = opts && opts.priority;
     const img = d.coverThumb
-      ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '" loading="lazy" width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
+      ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '"' + (prio ? ' fetchpriority="high"' : ' loading="lazy"') + ' width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
       : '<div class="card-img card-img-placeholder" aria-hidden="true">🏞️</div>';
     const themes = (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('');
     return '<article class="dest-card">' +
@@ -40,6 +42,26 @@
     btn.setAttribute('aria-pressed', now);
     btn.textContent = now ? '⭐ 已收藏' : '☆ 收藏';
   });
+  /* 画廊图片失败：占位块 + 重试按钮（不让详情页白屏，重试用原地址重新加载） */
+  function galleryImgErr(img) {
+    const ph = document.createElement('div');
+    ph.className = 'slide-img slide-ph';
+    const label = document.createElement('span');
+    label.textContent = '图片加载失败';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'retry-btn';
+    btn.textContent = '重试';
+    btn.addEventListener('click', () => {
+      const fresh = img.cloneNode();
+      fresh.onerror = () => CTA.galleryImgErr(fresh);
+      ph.replaceWith(fresh);
+    });
+    ph.appendChild(label);
+    ph.appendChild(btn);
+    img.replaceWith(ph);
+  }
   CTA.ui = { esc, emptyState, errorBox, destCard };
   CTA.imgErr = imgErr;
+  CTA.galleryImgErr = galleryImgErr;
 })();

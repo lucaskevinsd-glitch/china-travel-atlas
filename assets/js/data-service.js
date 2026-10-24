@@ -1,5 +1,5 @@
 /* 数据服务层：页面只能经这里按 ID/条件读目的地。筛选/搜索为纯函数，可在 Node 单测。
- * 数据形状：index 为轻量条目 {id,name,province,city,type,themes,bestSeasons,suggestedDays,summary,coverThumb,shard}
+ * 数据形状：index 为轻量条目 {id,name,province,city,type,themes,bestSeasons,suggestedDays,summary,coverThumb,coverFull,shard}
  * 详情分片 data/destinations/<shard>.json 为完整记录数组。 */
 (function () {
   window.CTA = window.CTA || {};

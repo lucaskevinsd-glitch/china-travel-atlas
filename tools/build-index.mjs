@@ -23,7 +23,8 @@ for (const f of files) {
     index.push({
       id: d.id, name: d.name, province: d.province, city: d.city, district: d.district || null,
       type: d.type, themes: d.themes, bestSeasons: d.bestSeasons, suggestedDays: d.suggestedDays,
-      summary: d.summary, coverThumb: d.images && d.images[0] ? d.images[0].thumb : null, shard,
+      summary: d.summary, coverThumb: d.images && d.images[0] ? d.images[0].thumb : null,
+      coverFull: d.images && d.images[0] ? d.images[0].src : null, shard,
     });
   }
 }
