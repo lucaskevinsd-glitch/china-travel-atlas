@@ -46,7 +46,7 @@
 
 ## 提交
 
-- 本轮提交：`git log` 见最终提交（内容仅为 batch2-drafts.json 呼伦贝尔 verificationNote 更新 + 本报告）。
+- 本轮提交：`ac5043f`（内容仅为 batch2-drafts.json 呼伦贝尔 verificationNote 更新 + 本报告）。
 - 历史未重写；工作区提交后干净。
 
 **声明：本轮未推送、未部署、未公开候选目的地、未将任何 draft 改为 published。**
