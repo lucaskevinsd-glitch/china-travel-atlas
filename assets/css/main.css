@@ -105,3 +105,13 @@ h2{font-size:var(--fs-xl);margin:6px 0 10px} h3{margin:22px 0 8px}
   .card-grid{grid-template-columns:1fr}
   .hero{min-height:300px}
 }
+
+/* 行程编辑：按钮组与插入行（窄屏可换行，触摸目标 ≥44px） */
+.plan-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.plan-actions button{min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;font-size:var(--fs-base)}
+.plan-actions button:disabled{opacity:.45;cursor:default}
+.plan-insert{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:end}
+.plan-insert label{display:flex;flex-direction:column;gap:4px;font-size:var(--fs-sm);flex:1 1 220px}
+.plan-insert select{min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:var(--fs-base);background:#fff;width:100%}
+.plan-insert button{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--brand);color:var(--brand-ink);cursor:pointer;font-size:var(--fs-base)}
+.plan-insert[hidden]{display:none}

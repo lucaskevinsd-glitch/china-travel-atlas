@@ -27,15 +27,90 @@
       });
     } catch (e) { result.innerHTML = CTA.ui.errorBox('DATA_LOAD_FAILED'); return; }
 
-    const draft = CTA.store.getPlanDraft();
-    if (draft && draft.plan && draft.plan.ok) renderPlan(draft.plan);
+    let currentPlan = null;
+    let currentFrom = '';
 
-    function renderPlan(plan) {
-      result.innerHTML = '<h3>行程草案（' + plan.days + ' 天，自 ' + esc(plan.startDate) + '）</h3>' +
-        '<ol>' + plan.itinerary.map(day =>
-          '<li>' + esc(day.date) + '：<a href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
-          (day.activities && day.activities.length ? ' — ' + day.activities.map(esc).join('、') : '') + '</li>').join('') + '</ol>' +
-        '<p class="muted">草案已保存在本机，可在收藏页外随时回此页查看。出发地、人数与预算仅作记录与排序权重，不生成交通票价信息。</p>';
+    function timeLabel(iso) {
+      try { return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; }
+    }
+    function destOptions(selected) {
+      return '<option value="">请选择目的地</option>' + index.map(d =>
+        '<option value="' + esc(d.id) + '"' + (d.id === selected ? ' selected' : '') + '>' + esc(d.name) + '</option>').join('');
+    }
+    function saveEdited(plan) {
+      const now = new Date().toISOString();
+      const ok = CTA.store.setPlanDraft({ savedAt: now, from: currentFrom, plan: plan, edited: true, editedAt: now });
+      currentPlan = plan;
+      renderPlan(plan, ok ? '已保存 ' + timeLabel(now) : null, ok ? null : 'PLAN_SAVE_FAILED');
+    }
+    function renderPlan(plan, savedText, errorCode) {
+      const days = plan.itinerary || [];
+      let html = '<h3>行程草案（' + days.length + ' 天，自 ' + esc(plan.startDate) + '）</h3>';
+      if (errorCode) html += CTA.ui.errorBox(errorCode);
+      else if (savedText) html += '<p class="muted" id="plan-status">' + esc(savedText) + '</p>';
+      if (!days.length) {
+        html += '<p class="muted">还没有行程安排：可以从下方新增一天，或填写上方表单重新生成。</p>' +
+          '<div class="plan-insert"><label>新增一天<select id="add-end-select" aria-label="新增一天的目的地">' + destOptions('') + '</select></label>' +
+          '<button type="button" data-act="add-end">新增一天</button></div>';
+      } else {
+        html += '<ol id="plan-list">' + days.map((day, i) =>
+          '<li data-day="' + i + '">' + esc(day.date) + '：<a href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
+          (day.activities && day.activities.length ? ' — ' + day.activities.map(esc).join('、') : '') +
+          '<div class="plan-actions">' +
+          '<button type="button" data-act="up" data-i="' + i + '"' + (i === 0 ? ' disabled' : '') + ' aria-label="第' + (i + 1) + '天上移">↑上移</button>' +
+          '<button type="button" data-act="down" data-i="' + i + '"' + (i === days.length - 1 ? ' disabled' : '') + ' aria-label="第' + (i + 1) + '天下移">↓下移</button>' +
+          '<button type="button" data-act="insert" data-i="' + i + '" aria-label="在第' + (i + 1) + '天后插入一天">＋后插一天</button>' +
+          '<button type="button" data-act="remove" data-i="' + i + '" aria-label="删除第' + (i + 1) + '天">✕删除</button>' +
+          '</div>' +
+          '<div class="plan-insert" data-insert-form="' + i + '" hidden><label>插入目的地<select data-insert-select="' + i + '" aria-label="在第' + (i + 1) + '天后插入的目的地">' + destOptions('') + '</select></label>' +
+          '<button type="button" data-act="confirm-insert" data-i="' + i + '">确认插入</button></div>' +
+          '</li>').join('') + '</ol>' +
+          '<div class="plan-insert"><label>末尾新增一天<select id="add-end-select" aria-label="末尾新增一天的目的地">' + destOptions('') + '</select></label>' +
+          '<button type="button" data-act="add-end">新增一天</button></div>';
+      }
+      html += '<p class="muted">草案已保存在本机，可在收藏页外随时回此页查看。出发地、人数与预算仅作记录与排序权重，不生成交通票价信息。</p>';
+      result.innerHTML = html;
+    }
+
+    result.addEventListener('click', function (e) {
+      const btn = e.target.closest('button[data-act]');
+      if (!btn || !currentPlan) return;
+      const act = btn.getAttribute('data-act');
+      const i = parseInt(btn.getAttribute('data-i'), 10);
+      const edit = CTA.plannerEdit;
+      if (!edit) return;
+      if (act === 'insert') {
+        const form = result.querySelector('[data-insert-form="' + i + '"]');
+        if (form) form.hidden = !form.hidden;
+        return;
+      }
+      let res = null;
+      if (act === 'up') res = edit.moveDay(currentPlan.itinerary, i, -1);
+      else if (act === 'down') res = edit.moveDay(currentPlan.itinerary, i, 1);
+      else if (act === 'remove') res = edit.removeDay(currentPlan.itinerary, i);
+      else if (act === 'confirm-insert') {
+        const sel = result.querySelector('[data-insert-select="' + i + '"]');
+        const dest = sel ? index.filter(d => d.id === sel.value)[0] : null;
+        if (!dest) return;
+        res = edit.insertDay(currentPlan.itinerary, i, dest);
+      } else if (act === 'add-end') {
+        const sel = result.querySelector('#add-end-select');
+        const dest = sel ? index.filter(d => d.id === sel.value)[0] : null;
+        if (!dest) return;
+        res = edit.insertDay(currentPlan.itinerary, currentPlan.itinerary.length - 1, dest, currentPlan.startDate);
+      }
+      if (!res || !res.ok) return;
+      const plan = Object.assign({}, currentPlan, { itinerary: res.itinerary, days: res.itinerary.length, totalDays: res.itinerary.length });
+      saveEdited(plan);
+    });
+
+    const draft = CTA.store.getPlanDraft();
+    if (draft && draft.plan && draft.plan.ok && Array.isArray(draft.plan.itinerary)) {
+      currentPlan = draft.plan;
+      currentFrom = draft.from || '';
+      renderPlan(draft.plan, draft.savedAt ? '草案已保存（' + timeLabel(draft.savedAt) + '）' : null, null);
+    } else {
+      result.innerHTML = '<p class="muted">还没有行程草案，填写上方表单生成。</p>';
     }
 
     el.querySelector('#plan-form').addEventListener('submit', function (e) {
@@ -53,8 +128,10 @@
         result.innerHTML = CTA.ui.errorBox(plan.error === 'EMPTY_RESULT' ? 'EMPTY_RESULT' : 'INVALID_INPUT');
         return;
       }
-      CTA.store.setPlanDraft({ savedAt: new Date().toISOString(), from: el.querySelector('#p-from').value, plan });
-      renderPlan(plan);
+      currentFrom = el.querySelector('#p-from').value;
+      const ok = CTA.store.setPlanDraft({ savedAt: new Date().toISOString(), from: currentFrom, plan: plan });
+      currentPlan = plan;
+      renderPlan(plan, ok ? '已保存 ' + timeLabel(new Date().toISOString()) : null, ok ? null : 'PLAN_SAVE_FAILED');
     });
   };
 })();

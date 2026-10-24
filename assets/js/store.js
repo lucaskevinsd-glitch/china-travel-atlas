@@ -19,7 +19,7 @@
     } catch (e) { return emptyState(); }
   }
   let state = load();
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* 存储不可用时仅内存保留 */ } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); return true; } catch (e) { /* 存储不可用时仅内存保留 */ return false; } }
   CTA.store = {
     getFavorites() { return state.favorites.slice(); },
     isFavorite(id) { return state.favorites.indexOf(id) !== -1; },
@@ -30,7 +30,7 @@
       return state.favorites.indexOf(id) !== -1;
     },
     getPlanDraft() { return state.planDraft; },
-    setPlanDraft(plan) { state.planDraft = plan; save(); },
+    setPlanDraft(plan) { state.planDraft = plan; return save(); },
     /* 发现页状态（筛选 + 滚动位置）：局部更新合并保存，供详情返回时恢复；损坏或缺失时返回 null。 */
     getDiscoverState() { return state.discover ? Object.assign({}, state.discover) : null; },
     setDiscoverState(patch) {

@@ -9,6 +9,7 @@
     NETWORK_OFFLINE: '当前处于离线状态，显示的是已缓存内容。',
     INVALID_INPUT: '输入不完整或不符合要求，请检查标红项。',
     EMPTY_RESULT: '没有符合条件的目的地，试试放宽筛选条件。',
+    PLAN_SAVE_FAILED: '保存失败，仅本次会话有效，请检查浏览器存储设置后重试。',
     UNKNOWN: '出现未知问题，请刷新页面重试。',
   };
   class AppError extends Error {
