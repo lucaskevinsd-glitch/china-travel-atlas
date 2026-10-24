@@ -134,6 +134,22 @@
         "credit": "MSK / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_in_Jiuzhaigou.jpg"
+      },
+      {
+        "src": "assets/img/full/jiuzhaigou-2.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-2.webp",
+        "alt": "九寨沟诺日朗瀑布",
+        "credit": "chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_nuorilang_falls_2011.jpg"
+      },
+      {
+        "src": "assets/img/full/jiuzhaigou-3.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-3.webp",
+        "alt": "九寨沟五花海与水中枯木",
+        "credit": "Chensiyuan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg"
       }
     ],
     "source": {
@@ -191,6 +207,22 @@
         "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY 2.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount-huangshan_53319729912.jpg"
+      },
+      {
+        "src": "assets/img/full/huangshan-2.webp",
+        "thumb": "assets/img/thumb/huangshan-2.webp",
+        "alt": "黄山云海与峰林",
+        "credit": "颐园新居 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huangshan-%E4%BA%91%E6%B5%B7_20141109.JPG"
+      },
+      {
+        "src": "assets/img/full/huangshan-3.webp",
+        "thumb": "assets/img/thumb/huangshan-3.webp",
+        "alt": "黄山松树与云瀑",
+        "credit": "颐园居 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huangshan-%E4%BA%91%E7%80%91_20141109.jpg"
       }
     ],
     "source": {
@@ -302,6 +334,22 @@
         "credit": "Pazakui / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanas_Lake_Winter.jpg"
+      },
+      {
+        "src": "assets/img/full/kanas-lake-2.webp",
+        "thumb": "assets/img/thumb/kanas-lake-2.webp",
+        "alt": "喀纳斯湖畔草甸与骑马人",
+        "credit": "Muye Ma muyema / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanas_Lake,_Altay,_China_(Unsplash).jpg"
+      },
+      {
+        "src": "assets/img/full/kanas-lake-3.webp",
+        "thumb": "assets/img/thumb/kanas-lake-3.webp",
+        "alt": "喀纳斯月亮湾",
+        "credit": "Wang Xiaozhe and Meng Jie / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Moon_Bay_on_the_River_Burqin.jpg"
       }
     ],
     "source": {
@@ -576,6 +624,22 @@
         "credit": "Reinhold Möller Ermell / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beijing_Forbidden_City_Hall_of_Central_Harmony_terraces-20071018-RM-143736.jpg"
+      },
+      {
+        "src": "assets/img/full/forbidden-city-2.webp",
+        "thumb": "assets/img/thumb/forbidden-city-2.webp",
+        "alt": "故宫角楼与护城河",
+        "credit": "CNHowey / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corner_Tower_of_Forbidden_City_(20240627).jpg"
+      },
+      {
+        "src": "assets/img/full/forbidden-city-3.webp",
+        "thumb": "assets/img/thumb/forbidden-city-3.webp",
+        "alt": "故宫午门正面",
+        "credit": "Morio / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meridian_Gate_(Forbidden_City)_2010_April.jpg"
       }
     ],
     "source": {
@@ -684,6 +748,22 @@
         "credit": "Zhangzhugang / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg"
+      },
+      {
+        "src": "assets/img/full/mogao-caves-2.webp",
+        "thumb": "assets/img/thumb/mogao-caves-2.webp",
+        "alt": "莫高窟九层楼",
+        "credit": "Zhangzhugang / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg"
+      },
+      {
+        "src": "assets/img/full/mogao-caves-3.webp",
+        "thumb": "assets/img/thumb/mogao-caves-3.webp",
+        "alt": "莫高窟崖壁全景与大泉河河床",
+        "credit": "Hiroki Ogawa / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mogao_Caves_Dunhuang_Gansu_China_%E6%95%A6%E7%85%8C_%E8%8E%AB%E9%AB%98%E7%AA%9F_-_panoramio.jpg"
       }
     ],
     "source": {

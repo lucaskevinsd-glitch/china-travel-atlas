@@ -1,5 +1,5 @@
 {
-  "evaluatedAt": "2026-10-22",
+  "evaluatedAt": "2026-10-24",
   "items": [
     {
       "artist": "Kuruman from Tokyo, Japan",
@@ -910,6 +910,200 @@
       "license": "CC0",
       "status": "rejected",
       "reason": "2026-10-22 目检排除：打卡指示牌与游客为画面主体"
+    },
+    {
+      "artist": "CNHowey",
+      "destId": "forbidden-city",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Corner_Tower_of_Forbidden_City_(20240627).jpg",
+      "fileTitle": "File:Corner Tower of Forbidden City (20240627).jpg",
+      "height": 4311,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 5129,
+      "visualReview": "2026-10-24 预览审看：角楼隔护城河全景，与现有太和殿近景视角互补，批准",
+      "localized": {
+        "full": "assets/img/full/forbidden-city-2.webp",
+        "thumb": "assets/img/thumb/forbidden-city-2.webp"
+      },
+      "alt": "故宫角楼与护城河"
+    },
+    {
+      "artist": "Morio",
+      "destId": "forbidden-city",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Meridian_Gate_(Forbidden_City)_2010_April.jpg",
+      "fileTitle": "File:Meridian Gate (Forbidden City) 2010 April.jpg",
+      "height": 1920,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 3840,
+      "visualReview": "2026-10-24 预览审看：午门正面晴日，与现有图视角互补，批准",
+      "localized": {
+        "full": "assets/img/full/forbidden-city-3.webp",
+        "thumb": "assets/img/thumb/forbidden-city-3.webp"
+      },
+      "alt": "故宫午门正面"
+    },
+    {
+      "artist": "EditQ",
+      "destId": "forbidden-city",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Meridian_Gate_(Forbidden_City)_1.jpg",
+      "fileTitle": "File:Meridian Gate (Forbidden City) 1.jpg",
+      "height": 3000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 4000,
+      "visualReview": "2026-10-24 预览审看：同为午门正面但阴天且与 fc-2 重复视角，拒绝（备选）"
+    },
+    {
+      "artist": "颐园新居",
+      "destId": "huangshan",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangshan-%E4%BA%91%E6%B5%B7_20141109.JPG",
+      "fileTitle": "File:Huangshan-云海 20141109.JPG",
+      "height": 1600,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 2560,
+      "visualReview": "2026-10-24 预览审看：云海覆峰林，代表性景观，批准",
+      "localized": {
+        "full": "assets/img/full/huangshan-2.webp",
+        "thumb": "assets/img/thumb/huangshan-2.webp"
+      },
+      "alt": "黄山云海与峰林"
+    },
+    {
+      "artist": "颐园居",
+      "destId": "huangshan",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Huangshan-%E4%BA%91%E7%80%91_20141109.jpg",
+      "fileTitle": "File:Huangshan-云瀑 20141109.jpg",
+      "height": 1920,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 2560,
+      "visualReview": "2026-10-24 预览审看：松间云瀑与观景台，与云海图构图不同，批准",
+      "localized": {
+        "full": "assets/img/full/huangshan-3.webp",
+        "thumb": "assets/img/thumb/huangshan-3.webp"
+      },
+      "alt": "黄山松树与云瀑"
+    },
+    {
+      "artist": "chensiyuan",
+      "destId": "jiuzhaigou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_nuorilang_falls_2011.jpg",
+      "fileTitle": "File:1 jiuzhaigou valley nuorilang falls 2011.jpg",
+      "height": 2832,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4256,
+      "visualReview": "2026-10-24 预览审看：诺日朗瀑布全景秋色，批准",
+      "localized": {
+        "full": "assets/img/full/jiuzhaigou-2.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-2.webp"
+      },
+      "alt": "九寨沟诺日朗瀑布"
+    },
+    {
+      "artist": "Chensiyuan",
+      "destId": "jiuzhaigou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg",
+      "fileTitle": "File:1 jiuzhaigou valley wu hua hai 2011b.jpg",
+      "height": 2781,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4180,
+      "visualReview": "2026-10-24 预览审看：五花海清澈湖水与水中枯木，标志性，批准",
+      "localized": {
+        "full": "assets/img/full/jiuzhaigou-3.webp",
+        "thumb": "assets/img/thumb/jiuzhaigou-3.webp"
+      },
+      "alt": "九寨沟五花海与水中枯木"
+    },
+    {
+      "artist": "Muye Ma muyema",
+      "destId": "kanas-lake",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Kanas_Lake,_Altay,_China_(Unsplash).jpg",
+      "fileTitle": "File:Kanas Lake, Altay, China (Unsplash).jpg",
+      "height": 2726,
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0",
+      "status": "approved",
+      "width": 4096,
+      "visualReview": "2026-10-24 预览审看：湖畔草甸、泰加林与骑马人，雾晨氛围，批准",
+      "localized": {
+        "full": "assets/img/full/kanas-lake-2.webp",
+        "thumb": "assets/img/thumb/kanas-lake-2.webp"
+      },
+      "alt": "喀纳斯湖畔草甸与骑马人"
+    },
+    {
+      "artist": "Wang Xiaozhe and Meng Jie",
+      "destId": "kanas-lake",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:The_Moon_Bay_on_the_River_Burqin.jpg",
+      "fileTitle": "File:The Moon Bay on the River Burqin.jpg",
+      "height": 1536,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 2048,
+      "visualReview": "2026-10-24 预览审看：月亮湾 S 形河湾俯瞰，景区标志点位，批准",
+      "localized": {
+        "full": "assets/img/full/kanas-lake-3.webp",
+        "thumb": "assets/img/thumb/kanas-lake-3.webp"
+      },
+      "alt": "喀纳斯月亮湾"
+    },
+    {
+      "artist": "Fanghong",
+      "destId": "kanas-lake",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:LakeKanas.jpg",
+      "fileTitle": "File:LakeKanas.jpg",
+      "height": 1920,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2560,
+      "visualReview": "2026-10-24 预览审看：湖畔夏景合格，但本批优先月亮湾与草甸视角的多样性，拒绝（备选）"
+    },
+    {
+      "artist": "Zhangzhugang",
+      "destId": "mogao-caves",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg",
+      "fileTitle": "File:Dunhuang Mogao Ku 2013.12.31 12-30-18.jpg",
+      "height": 3648,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 5472,
+      "visualReview": "2026-10-24 预览审看：九层楼正面，莫高窟标志建筑，批准",
+      "localized": {
+        "full": "assets/img/full/mogao-caves-2.webp",
+        "thumb": "assets/img/thumb/mogao-caves-2.webp"
+      },
+      "alt": "莫高窟九层楼"
+    },
+    {
+      "artist": "Hiroki Ogawa",
+      "destId": "mogao-caves",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mogao_Caves_Dunhuang_Gansu_China_%E6%95%A6%E7%85%8C_%E8%8E%AB%E9%AB%98%E7%AA%9F_-_panoramio.jpg",
+      "fileTitle": "File:Mogao Caves Dunhuang Gansu China 敦煌 莫高窟 - panoramio.jpg",
+      "height": 1500,
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "status": "approved",
+      "width": 2400,
+      "visualReview": "2026-10-24 预览审看：崖壁全景与大泉河河床，环境交代完整，批准",
+      "localized": {
+        "full": "assets/img/full/mogao-caves-3.webp",
+        "thumb": "assets/img/thumb/mogao-caves-3.webp"
+      },
+      "alt": "莫高窟崖壁全景与大泉河河床"
     }
   ],
   "note": "图片候选登记表。来源 Wikimedia Commons，许可元数据经官方 API（imageinfo/extmetadata）于 2026-10-22 读取。status: license-ok-pending-visual=许可门槛通过、待人工目检内容；rejected=已排除。任何图片在 approved 与本地化完成前不得写入目的地正式数据。"
