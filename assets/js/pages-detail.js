@@ -44,7 +44,20 @@
       '<div class="detail-actions"><button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
       '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
       '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
+      '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
       '</article>';
+
+    /* 相关目的地：同省+3、每个共同主题+2、同类型+1；不足时按得分补齐，无结果则整段隐藏 */
+    (async () => {
+      try {
+        const index = await CTA.dataService.loadIndex();
+        const rel = CTA.pages._relatedFor(index, d.id, 4);
+        if (!rel.length) return;
+        const box2 = el.querySelector('#related-box');
+        box2.querySelector('[data-related]').innerHTML = rel.map(e => CTA.ui.destCard(e)).join('');
+        box2.hidden = false;
+      } catch (e) { /* 索引不可用时静默降级，不影响详情主体 */ }
+    })();
 
     /* 画廊行为：滚动计数、仅预加载下一张、放大查看 */
     const gallery = el.querySelector('[data-gallery]');
@@ -135,4 +148,20 @@
     }
   };
   CTA.pages._weatherText = weatherText;
+  /* 纯函数：相关目的地排序（可单测）。entries 为索引条目（含 province/themes/type）。 */
+  CTA.pages._relatedFor = function (entries, currentId, limit) {
+    const cur = (entries || []).find(e => e.id === currentId);
+    if (!cur) return [];
+    const curThemes = new Set(cur.themes || []);
+    return (entries || [])
+      .filter(e => e.id !== currentId)
+      .map((e, i) => {
+        const shared = (e.themes || []).filter(t => curThemes.has(t)).length;
+        const score = (e.province === cur.province ? 3 : 0) + shared * 2 + (e.type === cur.type ? 1 : 0);
+        return { e, i, score };
+      })
+      .sort((a, b) => b.score - a.score || a.i - b.i)
+      .slice(0, limit || 4)
+      .map(x => x.e);
+  };
 })();

@@ -2,7 +2,7 @@
 window.CTA = window.CTA || {};
 CTA.config = {
   version: '0.1.0',
-  assetV: '20261024a', // 静态资源缓存版本：改任何 CSS/JS/数据后必须与 index.html、sw.js 同步递增
+  assetV: '20261024b', // 静态资源缓存版本：改任何 CSS/JS/数据后必须与 index.html、sw.js 同步递增
   dataVersion: '2026-10-22',
   nav: [
     { id: 'home', label: '首页', route: '#/', icon: '🧭' },
