@@ -44,6 +44,22 @@
         "credit": "そらみみ / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Former_Residence_of_Xu_Shuqiang_in_Wudadao_Area.jpg"
+      },
+      {
+        "src": "assets/img/full/wudadao-tianjin-2.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-2.webp",
+        "alt": "天津五大道浅色洋楼",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Five_Great_Avenues_21393-Tianjin_(49063741486).jpg"
+      },
+      {
+        "src": "assets/img/full/wudadao-tianjin-3.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-3.webp",
+        "alt": "五大道街景马车雕塑",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Five_Great_Avenues_21401-Tianjin_(49063954262).jpg"
       }
     ],
     "source": {
@@ -100,6 +116,22 @@
         "credit": "takwing.kwong / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 2.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_1.jpg"
+      },
+      {
+        "src": "assets/img/full/chengde-mountain-resort-2.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-2.webp",
+        "alt": "承德避暑山庄湖区木桥游船",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_22608-Chengde_(44045920444).jpg"
+      },
+      {
+        "src": "assets/img/full/chengde-mountain-resort-3.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-3.webp",
+        "alt": "承德避暑山庄湖面全景与远山",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_22630-Chengde_(42954495010).jpg"
       }
     ],
     "source": {
@@ -156,6 +188,22 @@
         "credit": "Emmazzye / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hulun_Buir.jpg"
+      },
+      {
+        "src": "assets/img/full/hulunbuir-grassland-2.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-2.webp",
+        "alt": "呼伦贝尔草原河畔马群",
+        "credit": "Sergio Tittarini / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hulunbuir_Grasslands,_Inner_Mongolia.jpg"
+      },
+      {
+        "src": "assets/img/full/hulunbuir-grassland-3.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-3.webp",
+        "alt": "呼伦贝尔草原骆驼与湖泊",
+        "credit": "Sergio Tittarini / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hulunbuir_Grasslands,_Inner_Mongolia_-_9758628436.jpg"
       }
     ],
     "source": {
@@ -165,7 +213,7 @@
     },
     "verifiedAt": "2026-10-24",
     "status": "draft",
-    "verificationNote": "draft：坐标为 Nominatim 河流点位初步核实（陈巴尔虎旗境内），范围表述已收窄至莫日格勒河一带，待正式评审。"
+    "verificationNote": "draft：地图标记为莫日格勒河上游河曲代表观景点（陈巴尔虎旗境内），非景区入口；本条目为草原区域游览，范围已收窄至莫日格勒河一带。注意：本轮二次核验时 Nominatim 未返回该河名及观景台条目，坐标未能以第二来源复现，仍为初步核实状态，发布前须以地图实测或官方景区点位复核。待正式评审。"
   },
   {
     "id": "shenyang-imperial-palace",
@@ -211,6 +259,22 @@
         "credit": "Pauloleong2002 / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_02.jpg"
+      },
+      {
+        "src": "assets/img/full/shenyang-imperial-palace-2.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-2.webp",
+        "alt": "沈阳故宫航拍全景",
+        "credit": "Techyan / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_drone_view_5_(cropped_%26_rotated).jpg"
+      },
+      {
+        "src": "assets/img/full/shenyang-imperial-palace-3.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-3.webp",
+        "alt": "沈阳故宫大政殿外观",
+        "credit": "xiquinhosilva / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenyang_Imperial_Palace_Museum_24367-Shenyang_(49052231446).jpg"
       }
     ],
     "source": {
@@ -267,6 +331,22 @@
         "credit": "Jonashtand / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_02.jpg"
+      },
+      {
+        "src": "assets/img/full/harbin-central-street-2.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-2.webp",
+        "alt": "哈尔滨中央大街夜景面包石路",
+        "credit": "Jonashtand / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:201906_Harbin_Central_Street_at_night_02.jpg"
+      },
+      {
+        "src": "assets/img/full/harbin-central-street-3.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-3.webp",
+        "alt": "哈尔滨中央大街白天街景与历史建筑",
+        "credit": "Jonashtand / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_04.jpg"
       }
     ],
     "source": {
@@ -323,6 +403,22 @@
         "credit": "King of Hearts / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_001.jpg"
+      },
+      {
+        "src": "assets/img/full/suzhou-humble-garden-2.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-2.webp",
+        "alt": "苏州拙政园池塘秋色",
+        "credit": "King of Hearts / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_001.jpg"
+      },
+      {
+        "src": "assets/img/full/suzhou-humble-garden-3.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-3.webp",
+        "alt": "苏州拙政园临水亭阁",
+        "credit": "Chainwit. / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_(2024)_-_img_01.jpg"
       }
     ],
     "source": {
@@ -341,8 +437,8 @@
     "city": "中卫市",
     "district": "沙坡头区",
     "location": {
-      "lat": 37.5169,
-      "lng": 105.1738,
+      "lat": 37.4659,
+      "lng": 104.9954,
       "coordSystem": "WGS-84"
     },
     "type": "desert",
@@ -379,6 +475,22 @@
         "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260809_Yellow_River_at_Shapotou.jpg"
+      },
+      {
+        "src": "assets/img/full/shapotou-2.webp",
+        "thumb": "assets/img/thumb/shapotou-2.webp",
+        "alt": "沙坡头沙漠边缘植被与远处沙丘",
+        "credit": "Matthew Summerton / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(10).jpg"
+      },
+      {
+        "src": "assets/img/full/shapotou-3.webp",
+        "thumb": "assets/img/thumb/shapotou-3.webp",
+        "alt": "沙坡头蒙古大营入口门楼",
+        "credit": "Matthew Summerton / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(14).jpg"
       }
     ],
     "source": {
@@ -388,7 +500,7 @@
     },
     "verifiedAt": "2026-10-24",
     "status": "draft",
-    "verificationNote": "draft：身份与坐标经英文维基百科初步核验，待正式评审。"
+    "verificationNote": "draft：坐标已更正。原坐标 37.5169,105.1738 实为沙坡头区行政点位；新坐标 37.4659,104.9954 取自 OpenStreetMap Nominatim“沙坡头旅游区”点位，并与中科院沙坡头沙漠试验研究站代表坐标（DEIMS：37.4601,105.0001）及景区站区坐标（104°57′E, 37°27′N）交叉验证，三者互差约 5 公里内，均指向中卫市区以西约 16 公里景区一带。待正式评审。"
   },
   {
     "id": "qingdao-badaguan-zhanqiao",
@@ -435,6 +547,22 @@
         "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240729_Zhanqiao_01.jpg"
+      },
+      {
+        "src": "assets/img/full/qingdao-badaguan-zhanqiao-2.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-2.webp",
+        "alt": "青岛八大关白墙红顶别墅",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20151212_Badaguan_02.jpg"
+      },
+      {
+        "src": "assets/img/full/qingdao-badaguan-zhanqiao-3.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-3.webp",
+        "alt": "青岛八大关石砌别墅",
+        "credit": "Windmemories / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20151212_Badaguan_03.jpg"
       }
     ],
     "source": {
@@ -463,7 +591,7 @@
       "family",
       "photography"
     ],
-    "summary": "江南著名水乡古镇，河道与民居沿水展开，东西栅片区各具风貌，适合水乡漫步与夜景游览。",
+    "summary": "江南水乡古镇，位于浙江省桐乡市，河道与民居沿水展开，东西栅片区各具风貌，适合水乡漫步与夜景游览。",
     "highlights": [
       "水乡河道与石桥",
       "临水民居与作坊",
@@ -491,6 +619,22 @@
         "credit": "Carsten Ullrich from Shanghai, China / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 2.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_picture_from_China_every_day_061.jpg"
+      },
+      {
+        "src": "assets/img/full/wuzhen-2.webp",
+        "thumb": "assets/img/thumb/wuzhen-2.webp",
+        "alt": "乌镇河道与乌篷船",
+        "credit": "Jakub Hałun / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20090913_Wuzhen_5020.jpg"
+      },
+      {
+        "src": "assets/img/full/wuzhen-3.webp",
+        "thumb": "assets/img/thumb/wuzhen-3.webp",
+        "alt": "乌镇石桥与双船",
+        "credit": "Jakub Hałun / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20090913_Wuzhen_5046.jpg"
       }
     ],
     "source": {
@@ -547,6 +691,22 @@
         "credit": "Siyuwj / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baoguo_Temple,_Emei,_2017-09-19_01.jpg"
+      },
+      {
+        "src": "assets/img/full/mount-emei-2.webp",
+        "thumb": "assets/img/thumb/mount-emei-2.webp",
+        "alt": "峨眉山金顶普贤金像",
+        "credit": "Martin Wettig / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emei_shan_-_Golden_Summit_1.jpg"
+      },
+      {
+        "src": "assets/img/full/mount-emei-3.webp",
+        "thumb": "assets/img/thumb/mount-emei-3.webp",
+        "alt": "峨眉山金顶云雾中的白象",
+        "credit": "Truthven / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emei_summit_elephants.JPG"
       }
     ],
     "source": {
@@ -600,6 +760,22 @@
         "src": "assets/img/full/xijiang-miao-village-1.webp",
         "thumb": "assets/img/thumb/xijiang-miao-village-1.webp",
         "alt": "西江千户苗寨全景",
+        "credit": "Hhhh2 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village1.jpg"
+      },
+      {
+        "src": "assets/img/full/xijiang-miao-village-2.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-2.webp",
+        "alt": "西江千户苗寨夜景灯光",
+        "credit": "Hhhh2 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village_night_view.jpg"
+      },
+      {
+        "src": "assets/img/full/xijiang-miao-village-3.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-3.webp",
+        "alt": "西江千户苗寨日间全景",
         "credit": "Hhhh2 / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village1.jpg"
@@ -659,6 +835,22 @@
         "credit": "\nGiovanni Boccardi / Wikimedia Commons（本站已缩放并转 WebP）",
         "license": "CC BY-SA 3.0 igo",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Villages_in_Southern_Anhui_%E2%80%93_Xidi_and_Hongcun-114145.jpg"
+      },
+      {
+        "src": "assets/img/full/hongcun-2.webp",
+        "thumb": "assets/img/thumb/hongcun-2.webp",
+        "alt": "宏村南湖倒影与石桥",
+        "credit": "颐园新居 / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hongcun_South_Lake_20141110.JPG"
+      },
+      {
+        "src": "assets/img/full/hongcun-3.webp",
+        "thumb": "assets/img/thumb/hongcun-3.webp",
+        "alt": "宏村月沼倒影与民居",
+        "credit": "Luo Shaoyang from Beijing, China / Wikimedia Commons（本站已缩放并转 WebP）",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hong_Village_-_%E5%AE%8F%E6%9D%91_-_Flickr_-_Luo_Shaoyang.jpg"
       }
     ],
     "source": {

@@ -2219,6 +2219,666 @@
       "status": "rejected",
       "width": 6000,
       "visualReview": "2026-10-24 第三轮预览审看：简介牌特写，非街景"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "wudadao-tianjin",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Five_Great_Avenues_21393-Tianjin_(49063741486).jpg",
+      "fileTitle": "File:Five Great Avenues 21393-Tianjin (49063741486).jpg",
+      "height": 2000,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/wudadao-tianjin-2.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-2.webp"
+      },
+      "alt": "天津五大道浅色洋楼"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "wudadao-tianjin",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Five_Great_Avenues_21401-Tianjin_(49063954262).jpg",
+      "fileTitle": "File:Five Great Avenues 21401-Tianjin (49063954262).jpg",
+      "height": 2421,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/wudadao-tianjin-3.webp",
+        "thumb": "assets/img/thumb/wudadao-tianjin-3.webp"
+      },
+      "alt": "五大道街景马车雕塑"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "chengde-mountain-resort",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_22608-Chengde_(44045920444).jpg",
+      "fileTitle": "File:Chengde Mountain Resort 22608-Chengde (44045920444).jpg",
+      "height": 2000,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/chengde-mountain-resort-2.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-2.webp"
+      },
+      "alt": "承德避暑山庄湖区木桥游船"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "chengde-mountain-resort",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_22630-Chengde_(42954495010).jpg",
+      "fileTitle": "File:Chengde Mountain Resort 22630-Chengde (42954495010).jpg",
+      "height": 1844,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/chengde-mountain-resort-3.webp",
+        "thumb": "assets/img/thumb/chengde-mountain-resort-3.webp"
+      },
+      "alt": "承德避暑山庄湖面全景与远山"
+    },
+    {
+      "artist": "Sergio Tittarini",
+      "destId": "hulunbuir-grassland",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hulunbuir_Grasslands,_Inner_Mongolia.jpg",
+      "fileTitle": "File:Hulunbuir Grasslands, Inner Mongolia.jpg",
+      "height": 833,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 1600,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/hulunbuir-grassland-2.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-2.webp"
+      },
+      "alt": "呼伦贝尔草原河畔马群"
+    },
+    {
+      "artist": "Sergio Tittarini",
+      "destId": "hulunbuir-grassland",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hulunbuir_Grasslands,_Inner_Mongolia_-_9758628436.jpg",
+      "fileTitle": "File:Hulunbuir Grasslands, Inner Mongolia - 9758628436.jpg",
+      "height": 1067,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 1600,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/hulunbuir-grassland-3.webp",
+        "thumb": "assets/img/thumb/hulunbuir-grassland-3.webp"
+      },
+      "alt": "呼伦贝尔草原骆驼与湖泊"
+    },
+    {
+      "artist": "Techyan",
+      "destId": "shenyang-imperial-palace",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_drone_view_5_(cropped_%26_rotated).jpg",
+      "fileTitle": "File:Mukden Palace drone view 5 (cropped & rotated).jpg",
+      "height": 1351,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 2915,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/shenyang-imperial-palace-2.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-2.webp"
+      },
+      "alt": "沈阳故宫航拍全景"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "shenyang-imperial-palace",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shenyang_Imperial_Palace_Museum_24367-Shenyang_(49052231446).jpg",
+      "fileTitle": "File:Shenyang Imperial Palace Museum 24367-Shenyang (49052231446).jpg",
+      "height": 2023,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/shenyang-imperial-palace-3.webp",
+        "thumb": "assets/img/thumb/shenyang-imperial-palace-3.webp"
+      },
+      "alt": "沈阳故宫大政殿外观"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201906_Harbin_Central_Street_at_night_02.jpg",
+      "fileTitle": "File:201906 Harbin Central Street at night 02.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/harbin-central-street-2.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-2.webp"
+      },
+      "alt": "哈尔滨中央大街夜景面包石路"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_04.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 04.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/harbin-central-street-3.webp",
+        "thumb": "assets/img/thumb/harbin-central-street-3.webp"
+      },
+      "alt": "哈尔滨中央大街白天街景与历史建筑"
+    },
+    {
+      "artist": "King of Hearts",
+      "destId": "suzhou-humble-garden",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_001.jpg",
+      "fileTitle": "File:Humble Administrator's Garden Suzhou November 2017 001.jpg",
+      "height": 3720,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 5580,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/suzhou-humble-garden-2.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-2.webp"
+      },
+      "alt": "苏州拙政园池塘秋色"
+    },
+    {
+      "artist": "Chainwit.",
+      "destId": "suzhou-humble-garden",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_(2024)_-_img_01.jpg",
+      "fileTitle": "File:Humble Administrator's Garden Suzhou (2024) - img 01.jpg",
+      "height": 3024,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "status": "approved",
+      "width": 4032,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/suzhou-humble-garden-3.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-3.webp"
+      },
+      "alt": "苏州拙政园临水亭阁"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(10).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (10).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/shapotou-2.webp",
+        "thumb": "assets/img/thumb/shapotou-2.webp"
+      },
+      "alt": "沙坡头沙漠边缘植被与远处沙丘"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(14).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (14).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/shapotou-3.webp",
+        "thumb": "assets/img/thumb/shapotou-3.webp"
+      },
+      "alt": "沙坡头蒙古大营入口门楼"
+    },
+    {
+      "artist": "Windmemories",
+      "destId": "qingdao-badaguan-zhanqiao",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20151212_Badaguan_02.jpg",
+      "fileTitle": "File:20151212 Badaguan 02.jpg",
+      "height": 1200,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 1800,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/qingdao-badaguan-zhanqiao-2.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-2.webp"
+      },
+      "alt": "青岛八大关白墙红顶别墅"
+    },
+    {
+      "artist": "Windmemories",
+      "destId": "qingdao-badaguan-zhanqiao",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20151212_Badaguan_03.jpg",
+      "fileTitle": "File:20151212 Badaguan 03.jpg",
+      "height": 1200,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 1800,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/qingdao-badaguan-zhanqiao-3.webp",
+        "thumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-3.webp"
+      },
+      "alt": "青岛八大关石砌别墅"
+    },
+    {
+      "artist": "Jakub Hałun",
+      "destId": "wuzhen",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20090913_Wuzhen_5020.jpg",
+      "fileTitle": "File:20090913 Wuzhen 5020.jpg",
+      "height": 2000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 3008,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/wuzhen-2.webp",
+        "thumb": "assets/img/thumb/wuzhen-2.webp"
+      },
+      "alt": "乌镇河道与乌篷船"
+    },
+    {
+      "artist": "Jakub Hałun",
+      "destId": "wuzhen",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20090913_Wuzhen_5046.jpg",
+      "fileTitle": "File:20090913 Wuzhen 5046.jpg",
+      "height": 2000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 3008,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/wuzhen-3.webp",
+        "thumb": "assets/img/thumb/wuzhen-3.webp"
+      },
+      "alt": "乌镇石桥与双船"
+    },
+    {
+      "artist": "Martin Wettig",
+      "destId": "mount-emei",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Emei_shan_-_Golden_Summit_1.jpg",
+      "fileTitle": "File:Emei shan - Golden Summit 1.jpg",
+      "height": 638,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 850,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/mount-emei-2.webp",
+        "thumb": "assets/img/thumb/mount-emei-2.webp"
+      },
+      "alt": "峨眉山金顶普贤金像"
+    },
+    {
+      "artist": "Truthven",
+      "destId": "mount-emei",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Emei_summit_elephants.JPG",
+      "fileTitle": "File:Emei summit elephants.JPG",
+      "height": 1354,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "approved",
+      "width": 2032,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/mount-emei-3.webp",
+        "thumb": "assets/img/thumb/mount-emei-3.webp"
+      },
+      "alt": "峨眉山金顶云雾中的白象"
+    },
+    {
+      "artist": "Hhhh2",
+      "destId": "xijiang-miao-village",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village_night_view.jpg",
+      "fileTitle": "File:Xi jiang Qianhu Miao Village night view.jpg",
+      "height": 3024,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 3024,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/xijiang-miao-village-2.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-2.webp"
+      },
+      "alt": "西江千户苗寨夜景灯光"
+    },
+    {
+      "artist": "Hhhh2",
+      "destId": "xijiang-miao-village",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Xi_jiang_Qianhu_Miao_Village1.jpg",
+      "fileTitle": "File:Xi jiang Qianhu Miao Village1.jpg",
+      "height": 3024,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 4032,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/xijiang-miao-village-3.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-3.webp"
+      },
+      "alt": "西江千户苗寨日间全景"
+    },
+    {
+      "artist": "颐园新居",
+      "destId": "hongcun",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hongcun_South_Lake_20141110.JPG",
+      "fileTitle": "File:Hongcun South Lake 20141110.JPG",
+      "height": 1600,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "approved",
+      "width": 2560,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/hongcun-2.webp",
+        "thumb": "assets/img/thumb/hongcun-2.webp"
+      },
+      "alt": "宏村南湖倒影与石桥"
+    },
+    {
+      "artist": "Luo Shaoyang from Beijing, China",
+      "destId": "hongcun",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hong_Village_-_%E5%AE%8F%E6%9D%91_-_Flickr_-_Luo_Shaoyang.jpg",
+      "fileTitle": "File:Hong Village - 宏村 - Flickr - Luo Shaoyang.jpg",
+      "height": 1357,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "approved",
+      "width": 2048,
+      "visualReview": "2026-10-24 第五轮预览审看，批准",
+      "localized": {
+        "full": "assets/img/full/hongcun-3.webp",
+        "thumb": "assets/img/thumb/hongcun-3.webp"
+      },
+      "alt": "宏村月沼倒影与民居"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "wudadao-tianjin",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Five_Great_Avenues_21410-Tianjin_(49063954752).jpg",
+      "fileTitle": "File:Five Great Avenues 21410-Tianjin (49063954752).jpg",
+      "height": 2000,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "rejected",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看：与首图同为红砖洋楼题材，优先保证视角差异"
+    },
+    {
+      "artist": "xiquinhosilva",
+      "destId": "chengde-mountain-resort",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Chengde_Mountain_Resort_22614-Chengde_(30893917748).jpg",
+      "fileTitle": "File:Chengde Mountain Resort 22614-Chengde (30893917748).jpg",
+      "height": 2000,
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "status": "rejected",
+      "width": 3000,
+      "visualReview": "2026-10-24 第五轮预览审看：与 cd2 同木桥近重复"
+    },
+    {
+      "artist": "Emmazzye",
+      "destId": "hulunbuir-grassland",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hulun_Buir.jpg",
+      "fileTitle": "File:Hulun Buir.jpg",
+      "height": 3160,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 4213,
+      "visualReview": "2026-10-24 第五轮预览审看：与首图同为草原蓝天广角，视角差异不足"
+    },
+    {
+      "artist": "Pauloleong2002",
+      "destId": "shenyang-imperial-palace",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mukden_Palace_01.jpg",
+      "fileTitle": "File:Mukden Palace 01.jpg",
+      "height": 4608,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 3456,
+      "visualReview": "2026-10-24 第五轮预览审看：器物特写为主、曝光过曝，目的地识别度弱"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_03.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 03.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看：路牌特写，非街景"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_05.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 05.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看：画面主体为巡逻车，街景识别度弱"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201907_Harbin_Central_Street_06.jpg",
+      "fileTitle": "File:201907 Harbin Central Street 06.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看：活动摊位为主，非日常街景"
+    },
+    {
+      "artist": "Jonashtand",
+      "destId": "harbin-central-street",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:201906_Harbin_Central_Street_at_night_08.jpg",
+      "fileTitle": "File:201906 Harbin Central Street at night 08.jpg",
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 6000,
+      "visualReview": "2026-10-24 第五轮预览审看：现代商场立面，非中央大街历史风貌"
+    },
+    {
+      "artist": "King of Hearts",
+      "destId": "suzhou-humble-garden",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_003.jpg",
+      "fileTitle": "File:Humble Administrator's Garden Suzhou November 2017 003.jpg",
+      "height": 3920,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 5880,
+      "visualReview": "2026-10-24 第五轮预览审看：与 sz2 同水面近重复"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio.jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio.jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：公路沿线商铺，无沙坡头主体"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(1).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (1).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：无主体公路照，无法识别为沙坡头"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(12).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (12).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：公路与远山，无沙坡头主体"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(13).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (13).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：标牌为主体，景区景观本身不突出"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(26).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (26).jpg",
+      "height": 2700,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 13963,
+      "visualReview": "2026-10-24 第五轮预览审看：农田全景，非沙坡头沙漠景观"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(15).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (15).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：与 sp4 同沙漠题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "Matthew Summerton",
+      "destId": "shapotou",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Shapotou,_Zhongwei,_Ningxia,_China_-_panoramio_(22).jpg",
+      "fileTitle": "File:Shapotou, Zhongwei, Ningxia, China - panoramio (22).jpg",
+      "height": 1936,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2592,
+      "visualReview": "2026-10-24 第五轮预览审看：与首图同黄河题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "Vanvelthem Cedric",
+      "destId": "mount-emei",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Emei_Shan,_China_-_Golden_Summit.jpg",
+      "fileTitle": "File:Emei Shan, China - Golden Summit.jpg",
+      "height": 955,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 2048,
+      "visualReview": "2026-10-24 第五轮预览审看：标题称金顶但画面仅为夜色剪影，无法核实为金顶"
+    },
+    {
+      "artist": "Jakub Hałun",
+      "destId": "wuzhen",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20090913_Wuzhen_Town_canal_5133.jpg",
+      "fileTitle": "File:20090913 Wuzhen Town canal 5133.jpg",
+      "height": 2000,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 3008,
+      "visualReview": "2026-10-24 第五轮预览审看：与 wz2/wz3 同乌篷船题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "MDRX",
+      "destId": "xijiang-miao-village",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Xijiang_Guizhou_Evening.jpeg",
+      "fileTitle": "File:Xijiang Guizhou Evening.jpeg",
+      "height": 1944,
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "status": "rejected",
+      "width": 2896,
+      "visualReview": "2026-10-24 第五轮预览审看：与 xj2 同夜景题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "EditQ",
+      "destId": "hongcun",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:South_Lake,_Hongcun.jpg",
+      "fileTitle": "File:South Lake, Hongcun.jpg",
+      "height": 3000,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "status": "rejected",
+      "width": 4000,
+      "visualReview": "2026-10-24 第五轮预览审看：与 hc2 同南湖石桥题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "M. Weitzel",
+      "destId": "qingdao-badaguan-zhanqiao",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Badaguan,_Qingdao.jpg",
+      "fileTitle": "File:Badaguan, Qingdao.jpg",
+      "height": 2048,
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "status": "rejected",
+      "width": 1536,
+      "visualReview": "2026-10-24 第五轮预览审看：与 qd2/qd3 同八大关别墅题材，已有更优两张，未选用"
     }
   ],
   "note": "图片候选登记表。来源 Wikimedia Commons，许可元数据经官方 API（imageinfo/extmetadata）于 2026-10-22 读取。status: license-ok-pending-visual=许可门槛通过、待人工目检内容；rejected=已排除。任何图片在 approved 与本地化完成前不得写入目的地正式数据。"
