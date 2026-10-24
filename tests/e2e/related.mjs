@@ -42,6 +42,11 @@ check('推荐链接均为目的地路由', hrefs.every(h => h.startsWith('#/dest
 await page.click('[data-related] .dest-card .card-link >> nth=0');
 await page.waitForTimeout(700);
 check('点击推荐可进入对应详情', await page.evaluate(() => location.hash.startsWith('#/dest/') && !!document.querySelector('article.detail h2')));
+await page.goto(BASE + '/#/dest/yalong-bay');
+await page.waitForSelector('#related-box:not([hidden])', { timeout: 8000 });
+const yCards = await page.locator('[data-related] .dest-card').count();
+const yHref = await page.evaluate(() => document.querySelector('[data-related] .dest-card .card-link')?.getAttribute('href'));
+check('弱匹配不填满：亚龙湾仅推荐 1 张（鼓浪屿）', yCards === 1 && yHref.includes('gulangyu'), yCards + ' ' + yHref);
 check('全程无未捕获页面错误', errs.length === 0, errs.join(';').slice(0, 160));
 console.log('RELATED SUMMARY: ' + results.filter(Boolean).length + '/' + results.length + ' passed (' + KIND + ')');
 await browser.close();

@@ -148,7 +148,10 @@
     }
   };
   CTA.pages._weatherText = weatherText;
-  /* 纯函数：相关目的地排序（可单测）。entries 为索引条目（含 province/themes/type）。 */
+  /* 纯函数：相关目的地排序（可单测）。entries 为索引条目（含 province/themes/type）。
+     计分：同省 +3、每个共同主题 +2、同类型 +1。仅保留 score >= 3 者（第三轮审查结论：
+     2 分档多为仅共享 family 的泛匹配，如亚龙湾→漓江/青海湖，相关性不足时宁缺毋滥，
+     宁可少于 4 张也不强行填满；30 条实测：仅亚龙湾由 4 张降为 1 张，无零结果目的地）。 */
   CTA.pages._relatedFor = function (entries, currentId, limit) {
     const cur = (entries || []).find(e => e.id === currentId);
     if (!cur) return [];
@@ -160,6 +163,7 @@
         const score = (e.province === cur.province ? 3 : 0) + shared * 2 + (e.type === cur.type ? 1 : 0);
         return { e, i, score };
       })
+      .filter(x => x.score >= 3)
       .sort((a, b) => b.score - a.score || a.i - b.i)
       .slice(0, limit || 4)
       .map(x => x.e);
