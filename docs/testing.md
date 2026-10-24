@@ -29,3 +29,5 @@
 夹具隔离注意（2026-10-23 补）：构建任何 /tmp 夹具后必须删除夹具副本中的 data/destinations/first-batch.json 再运行 build-index，否则正式集 30 条会混入夹具索引（曾导致冒烟 11/16 的假回归，隔离后恢复 16/16）。
 发现页状态恢复专项（2026-10-22 补）：tests/e2e/discover-state.mjs，夹具为 30 条 published 色块记录（/tmp/cta-state-site，CTA_FIXTURE 可覆盖）；CTA_BROWSER=firefox（http.server 8125）或 chromium（拦截）运行，断言场景 A（筛选+滚动恢复）/B（首页往返不受影响）/C（二次往返不累积错误）共 8 项。
 天气关闭降级专项（2026-10-22 补）：tests/e2e/weather-off.mjs，夹具为同上数据但 config 的 weatherEnabled 置 false（/tmp/cta-wxoff-site，http.server 8126），断言详情主体完整、天气区明确不可用、收藏与规划可用，共 6 项。
+画廊专项（2026-10-24 补）：tests/e2e/gallery.mjs，复用状态夹具（8125），但夹具中张家界记录须替换为 5 张色块图变体（fixture-zj-0..4）；断言滑动计数、仅预加载下一张、放大层打开/翻页/关闭，共 9 项，双浏览器运行。
+图片性能测量（2026-10-24 补）：tests/e2e/perf-images.mjs，CTA_PERF_BASE/CTA_PERF_SITE 指向被测站点副本（http.server 8130，390px 视口、冷缓存、回环无节流）；统计各路由图片请求数与字节（按文件大小）及首图完成时间，仅用于同环境前后对比。
