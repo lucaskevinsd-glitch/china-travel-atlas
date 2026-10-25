@@ -62,13 +62,28 @@
       list = CTA.dataService.filterDestinations(list, filters);
       results.innerHTML = list.length
         ? '<p class="muted">共 ' + list.length + ' 个目的地</p><div class="card-grid">' + list.map(CTA.ui.destCard).join('') + '</div>'
-        : CTA.ui.emptyState('没有符合条件的目的地', '试试清除某个筛选条件，或等待更多目的地发布。');
+        : CTA.ui.emptyState('没有符合条件的目的地', '试试清除某个筛选条件，或等待更多目的地发布。') +
+          '<p><button type="button" class="btn" data-clear-filters>清除全部筛选</button></p>';
     }
     el.querySelector('#discover-form').addEventListener('submit', function (e) { e.preventDefault(); render(); persist(); });
     ['#f-province', '#f-theme', '#f-season'].forEach(sel => {
       el.querySelector(sel).addEventListener('change', persist);
     });
-    kwEl.addEventListener('input', persist);
+    /* 关键词输入即时筛选（200ms 去抖），不必每次都按“筛选”；回车提交仍立即渲染 */
+    let kwTimer = null;
+    kwEl.addEventListener('input', function () {
+      persist();
+      if (kwTimer) clearTimeout(kwTimer);
+      kwTimer = setTimeout(function () { kwTimer = null; render(); }, 200);
+    });
+    results.addEventListener('click', function (e) {
+      if (!e.target.closest('[data-clear-filters]')) return;
+      kwEl.value = '';
+      el.querySelector('#f-province').value = '';
+      el.querySelector('#f-theme').value = '';
+      el.querySelector('#f-season').value = '';
+      render(); persist();
+    });
     render();
     persist();
     /* 滚动位置保存：仅在发现页路由下记录；滚动停稳 150ms 后才写入，

@@ -35,14 +35,14 @@
       '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + (d.district ? ' · ' + esc(d.district) : '') + '</p>' +
       '<p>' + esc(d.summary) + '</p>' +
       '<div class="chip-row">' + (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('') + '</div>' +
+      '<div class="detail-actions"><button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
+      '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
       '<h3>主要特色</h3><ul>' + (d.highlights || []).map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>' +
       '<h3>推荐活动</h3><ul>' + (d.activities || []).map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
       '<h3>建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
       (d.seasonNotes ? '；' + esc(d.seasonNotes) : '') + '</p>' +
       '<h3>交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
       '<p class="muted">数据来源：' + esc(d.source && d.source.name ? d.source.name : '') + ' · 最近核验：' + esc(d.verifiedAt || '') + '</p>' +
-      '<div class="detail-actions"><button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
-      '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
       '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
       '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
       '</article>';

@@ -34,7 +34,9 @@ if (KIND === 'chromium') {
 const errs = [];
 page.on('pageerror', e => errs.push(String(e)));
 const dayTexts = async () => page.evaluate(() => [...document.querySelectorAll('#plan-list li')].map(li => li.textContent.replace(/\s+/g, ' ').trim()));
-const dayDates = async () => page.evaluate(() => [...document.querySelectorAll('#plan-list li')].map(li => li.textContent.split('：')[0].trim()));
+/* 本轮后每日卡片结构：日期与名称分置 .plan-date / .plan-name（原“日期：名称”纯文本已不存在） */
+const dayDates = async () => page.evaluate(() => [...document.querySelectorAll('#plan-list li .plan-date')].map(el => el.textContent.trim()));
+const dayNames = async () => page.evaluate(() => [...document.querySelectorAll('#plan-list li .plan-name')].map(el => el.textContent.trim()));
 
 await page.goto(BASE + '/#/planner');
 await page.waitForSelector('#plan-form');
@@ -55,11 +57,13 @@ check('首日上移按钮禁用、末日下移按钮禁用', await page.evaluate
 }));
 
 // 上移第 2 天（data-i=1 的 up）
-const before = rows.slice();
+const beforeNames = await dayNames();
 await page.click('button[data-act="up"][data-i="1"]');
 await page.waitForTimeout(300);
 rows = await dayTexts();
-check('上移第 2 天：与第 1 天交换目的地，日期序列不变', rows[0].includes(before[1].split('：')[1].split(' — ')[0].trim().slice(0, 8)) && rows[1].includes(before[0].split('：')[1].split(' — ')[0].trim().slice(0, 8)) && rows[0].startsWith('2026-11-02'), rows.join(' | '));
+const afterNames = await dayNames();
+const afterDates = await dayDates();
+check('上移第 2 天：与第 1 天交换目的地，日期序列不变', afterNames[0] === beforeNames[1] && afterNames[1] === beforeNames[0] && afterDates[0] === '2026-11-02', afterNames.join(' | '));
 check('编辑后显示已保存提示', (await page.textContent('#plan-result')).includes('已保存'));
 
 // 刷新后仍为编辑后顺序

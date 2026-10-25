@@ -5,7 +5,7 @@
     const esc = CTA.ui.esc;
     const today = new Date().toISOString().slice(0, 10);
     el.innerHTML =
-      '<h2>旅行规划（规则版）</h2><p class="muted">按主题、季节与建议天数从已发布目的地中生成逐日草案；AI 规划为二期功能，当前未启用。</p>' +
+      '<h2>旅行规划</h2><p class="muted">按主题、季节与建议天数从已发布目的地中生成逐日草案；AI 规划为二期功能，当前未启用。</p>' +
       '<form id="plan-form" class="filter-form">' +
       '<label>出发地<input type="text" id="p-from" placeholder="如：上海"></label>' +
       '<label>出发日期<input type="date" id="p-date" value="' + today + '" required></label>' +
@@ -54,7 +54,7 @@
           '<button type="button" data-act="add-end">新增一天</button></div>';
       } else {
         html += '<ol id="plan-list">' + days.map((day, i) =>
-          '<li data-day="' + i + '">' + esc(day.date) + '：<a href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
+          '<li class="plan-day" data-day="' + i + '"><span class="plan-date">' + esc(day.date) + '</span><a class="plan-name" href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
           (day.activities && day.activities.length ? ' — ' + day.activities.map(esc).join('、') : '') +
           '<div class="plan-actions">' +
           '<button type="button" data-act="up" data-i="' + i + '"' + (i === 0 ? ' disabled' : '') + ' aria-label="第' + (i + 1) + '天上移">↑上移</button>' +

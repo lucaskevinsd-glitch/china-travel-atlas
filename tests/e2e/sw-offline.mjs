@@ -7,7 +7,12 @@
  */
 import { firefox } from 'playwright-core';
 import { execSync } from 'node:child_process';
+import fs from 'node:fs';
 const FIXTURE = process.env.CTA_FIXTURE || '/tmp/cta-state-site';
+/* 版本取自夹具 config.js 的 assetV（产品版本号递增后测试仍有效）；升级目标为其后加 'u' 的测试用版本 */
+const VER = (fs.readFileSync(`${FIXTURE}/assets/js/config.js`, 'utf8').match(/assetV:\s*'([^']+)'/) || [])[1];
+if (!VER) throw new Error('无法从夹具 config.js 读取 assetV');
+const NEXT = VER + 'u';
 const BASE = 'http://127.0.0.1:8125';
 const results = [];
 function check(name, ok, extra = '') { results.push(ok); console.log((ok ? 'PASS ' : 'FAIL ') + name + (extra ? ' — ' + extra : '')); }
@@ -21,15 +26,15 @@ page.on('pageerror', e => errs.push(String(e)));
 await page.goto(BASE + '/#/planner');
 await page.waitForSelector('#plan-form');
 await page.evaluate(async () => { await navigator.serviceWorker.ready; });
-const swState = await page.evaluate(async () => {
+const swState = await page.evaluate(async (ver) => {
   const keys = await caches.keys();
-  const cache = await caches.open('cta-v1-20261024d');
-  const hasEdit = !!(await cache.match('./assets/js/services/planner-edit.js?v=20261024d'));
-  const hasCore = !!(await cache.match('./assets/js/config.js?v=20261024d'));
-  const hasData = !!(await cache.match('./data/destinations-index.json?v=20261024d'));
+  const cache = await caches.open('cta-v1-' + ver);
+  const hasEdit = !!(await cache.match('./assets/js/services/planner-edit.js?v=' + ver));
+  const hasCore = !!(await cache.match('./assets/js/config.js?v=' + ver));
+  const hasData = !!(await cache.match('./data/destinations-index.json?v=' + ver));
   return { keys, hasEdit, hasCore, hasData };
-});
-check('SW 已安装激活且缓存键为当前版本', swState.keys.includes('cta-v1-20261024d'), swState.keys.join(','));
+}, VER);
+check('SW 已安装激活且缓存键为当前版本', swState.keys.includes('cta-v1-' + VER), swState.keys.join(','));
 check('预缓存含 planner-edit.js（路径与版本一致）', swState.hasEdit);
 check('预缓存含核心脚本与索引数据', swState.hasCore && swState.hasData);
 await page.fill('#p-date', '2026-11-02');
@@ -51,14 +56,15 @@ check('离线重开首页仍渲染', (await page.textContent('#app')).includes('
 await page.goto(BASE + '/#/planner');
 await page.waitForSelector('#plan-list li', { timeout: 8000 });
 check('离线重开规划页且草案恢复', (await page.locator('#plan-list li').count()) === 3);
-const beforeEdit = await page.evaluate(() => [...document.querySelectorAll('#plan-list li')].map(li => li.textContent.split('：')[1] || ''));
+const planNames = () => page.evaluate(() => [...document.querySelectorAll('#plan-list li .plan-name')].map(el => el.textContent.trim()));
+const beforeEdit = await planNames();
 await page.click('button[data-act="up"][data-i="1"]');
 await page.waitForTimeout(300);
-const afterEdit = await page.evaluate(() => [...document.querySelectorAll('#plan-list li')].map(li => li.textContent.split('：')[1] || ''));
-check('离线行程编辑按钮工作（上移交换）', beforeEdit[0] !== afterEdit[0] && afterEdit[0].includes(beforeEdit[1].slice(0, 6)), beforeEdit.join('|') + ' -> ' + afterEdit.join('|'));
+const afterEdit = await planNames();
+check('离线行程编辑按钮工作（上移交换）', beforeEdit[0] !== afterEdit[0] && afterEdit[0] === beforeEdit[1], beforeEdit.join('|') + ' -> ' + afterEdit.join('|'));
 await page.reload();
 await page.waitForSelector('#plan-list li', { timeout: 8000 });
-const afterReload = await page.evaluate(() => [...document.querySelectorAll('#plan-list li')].map(li => li.textContent.split('：')[1] || ''));
+const afterReload = await planNames();
 check('离线刷新后编辑结果仍在（localStorage 草案）', afterReload.join('|') === afterEdit.join('|'));
 await page.goto(BASE + '/#/dest/zhangjiajie-national-forest-park');
 await page.waitForTimeout(1000);
@@ -69,17 +75,17 @@ console.log('INFO 离线详情图片 naturalWidth=' + offlineImg + '（在线时
 
 // C 恢复联网 + 版本升级
 await ctx.setOffline(false);
-execSync(`grep -rl '20261024d' ${FIXTURE}/index.html ${FIXTURE}/assets/js/config.js ${FIXTURE}/sw.js | xargs sed -i 's/20261024d/20261024e/g'`);
+execSync(`grep -rl '${VER}' ${FIXTURE}/index.html ${FIXTURE}/assets/js/config.js ${FIXTURE}/sw.js | xargs sed -i 's/${VER}/${NEXT}/g'`);
 await page.goto(BASE + '/#/');
 await page.waitForTimeout(500);
 await page.reload();
 try {
-  await page.waitForFunction(async () => (await caches.keys()).includes('cta-v1-20261024e'), { timeout: 10000 });
+  await page.waitForFunction(async (next) => (await caches.keys()).includes('cta-v1-' + next), NEXT, { timeout: 10000 });
 } catch { /* 超时则以实际 keys 为准 */ }
 await page.waitForTimeout(1000);
 const keysAfter = await page.evaluate(() => caches.keys());
-check('版本升级后旧缓存已清理、新缓存生效', keysAfter.includes('cta-v1-20261024e') && !keysAfter.includes('cta-v1-20261024d'), keysAfter.join(','));
-const newEdit = await page.evaluate(async () => { const c = await caches.open('cta-v1-20261024e'); return !!(await c.match('./assets/js/services/planner-edit.js?v=20261024e')); });
+check('版本升级后旧缓存已清理、新缓存生效', keysAfter.includes('cta-v1-' + NEXT) && !keysAfter.includes('cta-v1-' + VER), keysAfter.join(','));
+const newEdit = await page.evaluate(async (next) => { const c = await caches.open('cta-v1-' + next); return !!(await c.match('./assets/js/services/planner-edit.js?v=' + next)); }, NEXT);
 check('新缓存含新版 planner-edit.js，无旧版脚本混用', newEdit);
 check('全程无未捕获页面错误', errs.length === 0, errs.join(' | '));
 

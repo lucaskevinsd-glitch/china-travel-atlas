@@ -5,7 +5,7 @@
     el.innerHTML = '<h2>我的收藏</h2><div id="fav-body"><p class="muted">加载中…</p></div>';
     const body = el.querySelector('#fav-body');
     const favIds = CTA.store.getFavorites();
-    if (!favIds.length) { body.innerHTML = CTA.ui.emptyState('还没有收藏', '在发现页或详情页点“收藏”即可把目的地存到这里（保存在本机浏览器）。'); return; }
+    if (!favIds.length) { body.innerHTML = CTA.ui.emptyState('还没有收藏', '在发现页或详情页点“收藏”即可把目的地存到这里（保存在本机浏览器）。') + '<p><a class="btn" href="#/discover">去发现目的地</a></p>'; return; }
     try {
       const index = await CTA.dataService.loadIndex();
       const list = index.filter(d => favIds.indexOf(d.id) !== -1);
