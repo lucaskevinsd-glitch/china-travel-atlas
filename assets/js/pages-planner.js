@@ -47,7 +47,7 @@
       const days = plan.itinerary || [];
       let html = '<h3>行程草案（' + days.length + ' 天，自 ' + esc(plan.startDate) + '）</h3>';
       if (errorCode) html += CTA.ui.errorBox(errorCode);
-      else if (savedText) html += '<p class="muted" id="plan-status">' + esc(savedText) + '</p>';
+      else if (savedText) html += '<p class="plan-status" id="plan-status">✓ ' + esc(savedText) + '</p>';
       if (!days.length) {
         html += '<p class="muted">还没有行程安排：可以从下方新增一天，或填写上方表单重新生成。</p>' +
           '<div class="plan-insert"><label>新增一天<select id="add-end-select" aria-label="新增一天的目的地">' + destOptions('') + '</select></label>' +

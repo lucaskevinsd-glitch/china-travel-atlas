@@ -98,14 +98,28 @@
       };
     }
     function persist() { CTA.store.setDiscoverState(currentFilters()); }
+    /* 当前筛选状态条：逐项可见、可单项清除，避免用户不知道启用了哪些条件。
+       标签文本取自真实数据（省份名、主题 label、季节 label），不编造。 */
+    function activeFiltersHtml(filters, hasResults) {
+      const items = [];
+      if (filters.keyword) items.push({ key: 'keyword', label: '关键词“' + filters.keyword + '”' });
+      if (filters.province) items.push({ key: 'province', label: filters.province });
+      if (filters.theme) items.push({ key: 'theme', label: (CTA.themeLabels || {})[filters.theme] || filters.theme });
+      if (filters.season) items.push({ key: 'season', label: CTA.ui.seasonLabel(filters.season) });
+      if (!items.length) return '';
+      return '<div class="active-filters" aria-label="当前筛选条件"><span class="active-filters-label">当前筛选：</span>' +
+        items.map(it => '<button type="button" class="filter-chip" data-clear-key="' + it.key + '" aria-label="清除筛选：' + esc(it.label) + '">' + esc(it.label) + ' ✕</button>').join('') +
+        /* 无结果时空态已有“清除全部筛选”按钮，此处不再重复，避免同一屏出现两个相同操作。 */
+        (hasResults ? '<button type="button" class="filter-chip filter-chip-clear" data-clear-filters>清除全部</button>' : '') + '</div>';
+    }
     function render() {
       const filters = currentFilters();
       let list = CTA.dataService.searchDestinations(index, filters.keyword);
       list = CTA.dataService.filterDestinations(list, filters);
-      results.innerHTML = list.length
+      results.innerHTML = activeFiltersHtml(filters, list.length > 0) + (list.length
         ? '<p class="muted">共 ' + list.length + ' 个目的地</p><div class="card-grid">' + list.map(CTA.ui.destCard).join('') + '</div>'
         : CTA.ui.emptyState('没有符合条件的目的地', '试试清除某个筛选条件，或等待更多目的地发布。') +
-          '<p><button type="button" class="btn" data-clear-filters>清除全部筛选</button></p>';
+          '<p><button type="button" class="btn" data-clear-filters>清除全部筛选</button></p>');
     }
     el.querySelector('#discover-form').addEventListener('submit', function (e) { e.preventDefault(); render(); persist(); syncUrl(currentFilters(), 'push'); });
     /* 下拉改动即时渲染并入历史（与关键词即时筛选一致；URL 始终与结果集对应）。 */
@@ -120,6 +134,16 @@
       kwTimer = setTimeout(function () { kwTimer = null; render(); syncUrl(currentFilters(), 'replace'); }, 200);
     });
     results.addEventListener('click', function (e) {
+      const single = e.target.closest('[data-clear-key]');
+      if (single) {
+        const key = single.getAttribute('data-clear-key');
+        if (key === 'keyword') kwEl.value = '';
+        else if (key === 'province') el.querySelector('#f-province').value = '';
+        else if (key === 'theme') el.querySelector('#f-theme').value = '';
+        else if (key === 'season') el.querySelector('#f-season').value = '';
+        render(); persist(); syncUrl(currentFilters(), 'push');
+        return;
+      }
       if (!e.target.closest('[data-clear-filters]')) return;
       kwEl.value = '';
       el.querySelector('#f-province').value = '';

@@ -58,6 +58,8 @@
       const doc = await fetchJson('data/themes.json?v=' + V);
       CTA.themeLabels = {};
       (doc.themes || []).forEach(t => { CTA.themeLabels[t.id] = t.label; });
+      CTA.typeLabels = {};
+      (doc.types || []).forEach(t => { CTA.typeLabels[t.id] = t.label; });
       return doc;
     } catch (e) { throw new CTA.AppError('DATA_LOAD_FAILED', e); }
   }

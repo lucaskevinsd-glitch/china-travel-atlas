@@ -17,7 +17,7 @@
         (featured && featured.coverFull
           ? '<img class="hero-img" src="' + esc(featured.coverFull) + '" srcset="' + esc(featured.coverThumb) + ' 640w, ' + esc(featured.coverFull) + ' 1600w" sizes="100vw" alt="' + esc(featured.name) + '" fetchpriority="high" width="1600" height="900" onerror="CTA.imgErr(this,\'hero\')">'
           : '') +
-        '<div class="hero-overlay"><h2>发现中国值得去的地方</h2>' +
+        '<div class="hero-overlay"><p class="hero-eyebrow">China Travel Atlas · ' + index.length + ' 个目的地 · 覆盖 ' + new Set(index.map(d => d.province)).size + ' 省</p><h2>发现中国值得去的地方</h2>' +
         '<p>按自然风景、季节与主题找目的地，再生成你的行程草案。</p>' +
         '<form class="hero-search" id="home-search"><input type="search" id="home-q" placeholder="搜索目的地，如古城、海岛" aria-label="搜索目的地">' +
         '<button type="submit">搜索</button></form>' +

@@ -12,6 +12,25 @@
     if (focus === 'bottom') return 'center 90%';
     return 'center 50%';
   }
+  /* 季节/类型标签：纯 UI 文案映射，与发现页下拉选项逐字一致，不改变数据。 */
+  const SEASON_LABELS = { spring: '春季', summer: '夏季', autumn: '秋季', winter: '冬季' };
+  function seasonLabel(id) { return SEASON_LABELS[id] || id; }
+  function cardMeta(d) {
+    const parts = [];
+    if (d.suggestedDays) parts.push('建议 ' + d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天');
+    if (d.bestSeasons && d.bestSeasons.length) parts.push('适游' + d.bestSeasons.map(seasonLabel).join('、'));
+    return parts.length ? '<p class="card-meta">' + esc(parts.join(' · ')) + '</p>' : '';
+  }
+  /* 收藏反馈 Toast：纯 DOM + CSS 过渡，aria-live 供读屏播报；不引入动画库。 */
+  let toastTimer = null;
+  function toast(msg) {
+    let el = document.querySelector('.toast');
+    if (!el) { el = document.createElement('div'); el.className = 'toast'; el.setAttribute('aria-live', 'polite'); document.body.appendChild(el); }
+    el.textContent = msg;
+    el.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2200);
+  }
   function emptyState(title, hint) {
     return '<div class="empty-state"><p class="empty-title">' + esc(title) + '</p>' +
       (hint ? '<p class="empty-hint">' + esc(hint) + '</p>' : '') + '</div>';
@@ -38,7 +57,7 @@
       '<a class="card-link" href="#/dest/' + encodeURIComponent(d.id) + '">' + img +
       '<div class="card-body"><h3>' + esc(d.name) + '</h3>' +
       '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + '</p>' +
-      '<p class="card-summary">' + esc(d.summary || '') + '</p>' +
+      '<p class="card-summary">' + esc(d.summary || '') + '</p>' + cardMeta(d) +
       '<div class="chip-row">' + themes + '</div></div></a>' +
       '<button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
       '</article>';
@@ -49,6 +68,7 @@
     const now = CTA.store.toggleFavorite(btn.getAttribute('data-fav'));
     btn.setAttribute('aria-pressed', now);
     btn.textContent = now ? '⭐ 已收藏' : '☆ 收藏';
+    toast(now ? '已收藏' : '已取消收藏');
   });
   /* 画廊图片失败：占位块 + 重试按钮（不让详情页白屏，重试用原地址重新加载） */
   function galleryImgErr(img) {
@@ -69,7 +89,7 @@
     ph.appendChild(btn);
     img.replaceWith(ph);
   }
-  CTA.ui = { esc, emptyState, errorBox, destCard, focusPos };
+  CTA.ui = { esc, emptyState, errorBox, destCard, focusPos, seasonLabel, cardMeta, toast };
   CTA.imgErr = imgErr;
   CTA.galleryImgErr = galleryImgErr;
 })();

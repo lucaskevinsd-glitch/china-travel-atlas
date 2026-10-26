@@ -30,24 +30,40 @@
         '<span class="img-credit" data-credit>图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</span>' +
         '<button type="button" class="gallery-zoom" data-zoom>⤢ 放大</button></div></div>'
       : '<div class="detail-hero hero-placeholder">图片待补充（须有明确授权后才上线）</div>';
+    /* 事实条与页内导航：全部取自已有数据字段（地区/类型/适游季节/建议天数），缺失项不渲染、不编造。 */
+    const factItems = [];
+    factItems.push('<div><dt>地区</dt><dd>' + esc(d.province) + ' · ' + esc(d.city) + (d.district ? ' · ' + esc(d.district) : '') + '</dd></div>');
+    if (d.type) factItems.push('<div><dt>类型</dt><dd>' + esc((CTA.typeLabels || {})[d.type] || d.type) + '</dd></div>');
+    if (d.bestSeasons && d.bestSeasons.length) factItems.push('<div><dt>适游季节</dt><dd>' + esc(d.bestSeasons.map(s => CTA.ui.seasonLabel(s)).join('、')) + '</dd></div>');
+    if (d.suggestedDays) factItems.push('<div><dt>建议游玩</dt><dd>' + esc(d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') + '</dd></div>');
     el.innerHTML =
       '<article class="detail">' + hero +
       '<h2>' + esc(d.name) + '</h2>' +
       '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + (d.district ? ' · ' + esc(d.district) : '') + '</p>' +
       '<p>' + esc(d.summary) + '</p>' +
+      '<dl class="fact-strip">' + factItems.join('') + '</dl>' +
       '<div class="chip-row">' + (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('') + '</div>' +
       '<div class="detail-actions"><button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
       '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
-      '<h3>主要特色</h3><ul>' + (d.highlights || []).map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>' +
-      '<h3>推荐活动</h3><ul>' + (d.activities || []).map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
-      '<h3>建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
+      '<nav class="detail-nav" aria-label="页面内导航"><button type="button" data-scroll-to="sec-highlights">主要特色</button><button type="button" data-scroll-to="sec-activities">推荐活动</button><button type="button" data-scroll-to="sec-plan">建议游玩</button><button type="button" data-scroll-to="sec-transport">交通说明</button><button type="button" data-scroll-to="related-box" data-nav-related hidden>相关目的地</button></nav>' +
+      '<h3 id="sec-highlights">主要特色</h3><ul>' + (d.highlights || []).map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>' +
+      '<h3 id="sec-activities">推荐活动</h3><ul>' + (d.activities || []).map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
+      '<h3 id="sec-plan">建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
       (d.seasonNotes ? '；' + esc(d.seasonNotes) : '') + '</p>' +
-      '<h3>交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
+      '<h3 id="sec-transport">交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
       '<p class="muted">数据来源：' + esc(d.source && d.source.name ? d.source.name : '') + ' · 最近核验：' + esc(d.verifiedAt || '') + '</p>' +
       '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
       '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
       '</article>';
 
+    /* 页内导航：按钮 + scrollIntoView，不用 #sec-* 锚点（Hash 路由会把裸锚点当成未知路由）。
+       相关目的地按钮仅在有相关结果时显示，避免无效控件。 */
+    el.querySelector('.detail-nav').addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-scroll-to]');
+      if (!btn) return;
+      const target = el.querySelector('#' + btn.getAttribute('data-scroll-to'));
+      if (target) target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    });
     /* 相关目的地：同省+3、每个共同主题+2、同类型+1；不足时按得分补齐，无结果则整段隐藏 */
     (async () => {
       try {
@@ -57,6 +73,8 @@
         const box2 = el.querySelector('#related-box');
         box2.querySelector('[data-related]').innerHTML = rel.map(e => CTA.ui.destCard(e)).join('');
         box2.hidden = false;
+        const navRel = el.querySelector('[data-nav-related]');
+        if (navRel) navRel.hidden = false;
       } catch (e) { /* 索引不可用时静默降级，不影响详情主体 */ }
     })();
 
