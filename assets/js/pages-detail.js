@@ -22,6 +22,7 @@
         imgs.map((im, i) =>
           '<figure class="slide"><img class="slide-img" src="' + esc(im.src) + '"' +
           (im.thumb ? ' srcset="' + esc(im.thumb) + ' 640w, ' + esc(im.src) + ' 1600w" sizes="(max-width: 720px) 100vw, 1080px"' : '') +
+          (im.focus ? ' style="object-position:' + esc(CTA.ui.focusPos(im.focus)) + '"' : '') +
           ' alt="' + esc(im.alt || d.name) + '" width="1600" height="1000" ' +
           (i === 0 ? 'fetchpriority="high"' : 'loading="lazy"') +
           ' onerror="CTA.galleryImgErr(this)"></figure>').join('') +

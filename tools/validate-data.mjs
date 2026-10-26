@@ -67,6 +67,7 @@ function validateDestination(d, where) {
     if (d.status === 'published' && d.images.length < 1) err(at, 'published 必须至少 1 张图片');
     for (const img of d.images) {
       for (const k of ['src', 'thumb', 'alt', 'credit', 'license', 'sourceUrl']) if (!img[k]) err(at, `图片缺少 ${k}`);
+      if (img.focus != null && !['top', 'center', 'bottom'].includes(img.focus)) err(at, `图片 focus「${img.focus}」非法，须为 top/center/bottom`);
       if (img.src && !existsSync(join(root, img.src))) err(at, `图片文件不存在: ${img.src}`);
       if (img.thumb && !existsSync(join(root, img.thumb))) err(at, `缩略图文件不存在: ${img.thumb}`);
       if (img.isIllustration) warn(at, '图片为示意图，页面必须明示');

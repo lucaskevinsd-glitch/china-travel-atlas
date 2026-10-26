@@ -4,6 +4,14 @@
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
+  /* 图片焦点：画廊 object-fit: cover 居中裁切时，竖构图等主体偏上/偏下的图片会被切掉关键部位。
+     focus 仅接受 top/center/bottom 三档（数据层可选字段，缺省 center）；映射为 object-position 的 Y 值：
+     top=10% 时裁切带落在图片上部约 7–34%（桌面 2.08 框）/ 6–48%（手机 1.6 框），可容纳顶部主体；bottom=90% 对称取下部。 */
+  function focusPos(focus) {
+    if (focus === 'top') return 'center 10%';
+    if (focus === 'bottom') return 'center 90%';
+    return 'center 50%';
+  }
   function emptyState(title, hint) {
     return '<div class="empty-state"><p class="empty-title">' + esc(title) + '</p>' +
       (hint ? '<p class="empty-hint">' + esc(hint) + '</p>' : '') + '</div>';
@@ -61,7 +69,7 @@
     ph.appendChild(btn);
     img.replaceWith(ph);
   }
-  CTA.ui = { esc, emptyState, errorBox, destCard };
+  CTA.ui = { esc, emptyState, errorBox, destCard, focusPos };
   CTA.imgErr = imgErr;
   CTA.galleryImgErr = galleryImgErr;
 })();
