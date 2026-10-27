@@ -1072,21 +1072,21 @@
       "visualReview": "2026-10-24 预览审看：湖畔夏景合格，但本批优先月亮湾与草甸视角的多样性，拒绝（备选）"
     },
     {
-      "artist": "Zhangzhugang",
+      "artist": "Hiroki Ogawa",
       "destId": "mogao-caves",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg",
-      "fileTitle": "File:Dunhuang Mogao Ku 2013.12.31 12-30-18.jpg",
-      "height": 3648,
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Mogao_Caves_Dunhuang_Gansu_China_敦煌_莫高窟_-_panoramio_(10).jpg",
+      "fileTitle": "File:Mogao Caves Dunhuang Gansu China 敦煌 莫高窟 - panoramio (10).jpg",
+      "height": 1800,
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
       "status": "approved",
-      "width": 5472,
-      "visualReview": "2026-10-24 预览审看：九层楼正面，莫高窟标志建筑，批准",
+      "width": 2400,
+      "visualReview": "2026-10-27 替换重复图审看：莫高窟崖壁栈道与游人，与图1九层楼正面、图3崖壁全景场景不同，批准",
       "localized": {
         "full": "assets/img/full/mogao-caves-2.webp",
         "thumb": "assets/img/thumb/mogao-caves-2.webp"
       },
-      "alt": "莫高窟九层楼"
+      "alt": "莫高窟崖壁栈道与游人"
     },
     {
       "artist": "Hiroki Ogawa",
@@ -1106,21 +1106,21 @@
       "alt": "莫高窟崖壁全景与大泉河河床"
     },
     {
-      "artist": "Yumeto",
+      "artist": "Jonashtand",
       "destId": "hongya-cave",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20250521_Hongyadong_(223216).jpg",
-      "fileTitle": "File:20250521 Hongyadong (223216).jpg",
-      "height": 3072,
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:202308_Hongya_Cave_at_night_from_Qiansimen_Bridge.jpg",
+      "fileTitle": "File:202308 Hongya Cave at night from Qiansimen Bridge.jpg",
+      "height": 2160,
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "status": "approved",
-      "width": 4096,
-      "visualReview": "2026-10-24 第三轮预览审看，批准",
+      "width": 3840,
+      "visualReview": "2026-10-27 替换重复图审看：洪崖洞夜景全景（千厮门大桥方向），与图1、图3场景不同，批准",
       "localized": {
         "full": "assets/img/full/hongya-cave-2.webp",
         "thumb": "assets/img/thumb/hongya-cave-2.webp"
       },
-      "alt": "洪崖洞夜景近景与现代楼宇"
+      "alt": "洪崖洞夜景（千厮门大桥方向远眺）"
     },
     {
       "artist": "DvTor8303",
