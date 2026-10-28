@@ -8,7 +8,7 @@
   --fs-base:16px; --fs-sm:14px; --fs-lg:20px; --fs-xl:26px; --fs-display:clamp(34px,6vw,64px);
   --font-latin:"Avenir Next","Segoe UI",system-ui,sans-serif;
   --t-fast:150ms ease; --t-med:250ms ease;
-  --maxw:1080px; --tabbar-h:60px;
+  --maxw:1120px; --tabbar-h:60px;
 }
 *{box-sizing:border-box}
 html{font-size:var(--fs-base)}
@@ -26,9 +26,9 @@ a{color:var(--brand)}
 .muted{color:var(--muted)} .warn{color:var(--warn-ink)}
 h2{font-size:var(--fs-xl);margin:6px 0 10px} h3{margin:22px 0 8px}
 /* 首页主视觉：通栏 + 双向渐变（顶部暗角与底部暗角），搜索卡负边距压在主视觉底边 */
-.hero{position:relative;border-radius:0;overflow:hidden;background:#20312B;min-height:560px;margin-left:-18px;margin-right:-18px;margin-bottom:8px}
+.hero{position:relative;border-radius:0;overflow:hidden;background:#20312B;min-height:560px;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);margin-bottom:8px}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:26px 22px;color:#fff;background:linear-gradient(180deg,rgba(16,28,24,.62) 0%,rgba(16,28,24,.25) 22%,rgba(16,28,24,0) 40%,rgba(16,28,24,.55) 72%,rgba(16,28,24,.82) 100%)}
+.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;width:100%;padding:26px max(18px, calc(50vw - 542px));color:#fff;background:linear-gradient(180deg,rgba(16,28,24,.62) 0%,rgba(16,28,24,.25) 22%,rgba(16,28,24,0) 40%,rgba(16,28,24,.55) 72%,rgba(16,28,24,.82) 100%)}
 .hero-eyebrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-family:var(--font-latin);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}
 .hero-eyebrow span+span:before{content:"· "}
 .hero-overlay h2{font-size:var(--fs-display);margin:0 0 6px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
@@ -217,8 +217,8 @@ h2{font-size:var(--fs-xl);margin:6px 0 10px} h3{margin:22px 0 8px}
   .plan-form button[type="submit"]{grid-column:1;justify-self:stretch}
   .plan-day-body{flex-direction:column}
   .plan-thumb{width:100%}
-  .plan-actions{display:grid;grid-template-columns:1fr 1fr}
-  .plan-actions button{width:100%}
+  #plan-list .plan-actions{display:grid;grid-template-columns:1fr 1fr}
+  #plan-list .plan-actions button{width:100%}
 }
 
 /* 行程编辑：按钮组与插入行（窄屏可换行，触摸目标 ≥44px） */

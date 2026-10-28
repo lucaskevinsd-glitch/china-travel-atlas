@@ -51,8 +51,10 @@
     const prio = opts && opts.priority;
     const no = opts && opts.no;
     const featured = !!(opts && opts.featured);
-    const img = d.coverThumb
-      ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '"' + (prio ? ' fetchpriority="high"' : ' loading="lazy"') + ' width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
+    /* 主推卡用 1600w 原图（不得用 thumb 放大）；普通卡用 thumb */
+    const cardSrc = (featured && d.coverFull) ? d.coverFull : d.coverThumb;
+    const img = cardSrc
+      ? '<img class="card-img" src="' + esc(cardSrc) + '" alt="' + esc(d.name) + '"' + (prio ? ' fetchpriority="high"' : ' loading="lazy"') + ' width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
       : '<div class="card-img card-img-placeholder" aria-hidden="true">🏞️</div>';
     /* 角标：编号（中性深绿）与主推标记纵向排列；主推仅首页首张可用（调用方控制） */
     const badges = (no || featured) ? '<div class="card-badges">' +
