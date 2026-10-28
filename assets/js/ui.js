@@ -42,7 +42,7 @@
   function imgErr(img, kind) {
     const div = document.createElement('div');
     div.className = img.className + (kind === 'hero' ? ' hero-placeholder' : ' card-img-placeholder');
-    div.textContent = kind === 'hero' ? '图片加载失败' : '🏞️';
+    div.textContent = '图片加载失败';
     img.replaceWith(div);
   }
   function destCard(d, opts) {
@@ -59,7 +59,7 @@
       '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + '</p>' +
       '<p class="card-summary">' + esc(d.summary || '') + '</p>' + cardMeta(d) +
       '<div class="chip-row">' + themes + '</div></div></a>' +
-      '<button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
+      '<button class="fav-btn fav-icon" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '" aria-label="' + (fav ? '已收藏，点击取消收藏' : '收藏') + '">' + (fav ? '★' : '☆') + '</button>' +
       '</article>';
   }
   document.addEventListener('click', function (e) {
@@ -67,7 +67,12 @@
     if (!btn) return;
     const now = CTA.store.toggleFavorite(btn.getAttribute('data-fav'));
     btn.setAttribute('aria-pressed', now);
-    btn.textContent = now ? '⭐ 已收藏' : '☆ 收藏';
+    if (btn.classList.contains('fav-icon')) {
+      btn.textContent = now ? '★' : '☆';
+      btn.setAttribute('aria-label', now ? '已收藏，点击取消收藏' : '收藏');
+    } else {
+      btn.textContent = now ? '⭐ 已收藏' : '☆ 收藏';
+    }
     toast(now ? '已收藏' : '已取消收藏');
   });
   /* 画廊图片失败：占位块 + 重试按钮（不让详情页白屏，重试用原地址重新加载） */

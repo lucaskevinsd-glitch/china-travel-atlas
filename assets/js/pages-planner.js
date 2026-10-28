@@ -6,7 +6,7 @@
     const today = new Date().toISOString().slice(0, 10);
     el.innerHTML =
       '<h2>旅行规划</h2><p class="muted">按主题、季节与建议天数从已发布目的地中生成逐日草案；AI 规划为二期功能，当前未启用。</p>' +
-      '<form id="plan-form" class="filter-form">' +
+      '<form id="plan-form" class="filter-form plan-form">' +
       '<label>出发地<input type="text" id="p-from" placeholder="如：上海"></label>' +
       '<label>出发日期<input type="date" id="p-date" value="' + today + '" required></label>' +
       '<label>天数<input type="number" id="p-days" min="1" max="30" value="3" required></label>' +
@@ -48,13 +48,19 @@
       let html = '<h3>行程草案（' + days.length + ' 天，自 ' + esc(plan.startDate) + '）</h3>';
       if (errorCode) html += CTA.ui.errorBox(errorCode);
       else if (savedText) html += '<p class="plan-status" id="plan-status">✓ ' + esc(savedText) + '</p>';
+      /* 草案来源说明：本地浏览器存储 + 上次保存时间 + 标题日期为准（消除旧草案困惑） */
+      const provTime = savedText ? savedText.replace(/^草案已保存（/, '上次保存 ').replace(/^已保存 /, '上次保存 ').replace(/）$/, '') : '';
+      html += '<p class="plan-prov">本草案保存在当前浏览器中' + (provTime ? ' · ' + esc(provTime) : '') + ' · 草案标题日期为准。</p>';
       if (!days.length) {
         html += '<p class="muted">还没有行程安排：可以从下方新增一天，或填写上方表单重新生成。</p>' +
           '<div class="plan-insert"><label>新增一天<select id="add-end-select" aria-label="新增一天的目的地">' + destOptions('') + '</select></label>' +
           '<button type="button" data-act="add-end">新增一天</button></div>';
       } else {
-        html += '<ol id="plan-list">' + days.map((day, i) =>
-          '<li class="plan-day" data-day="' + i + '"><span class="plan-date">' + esc(day.date) + '</span><a class="plan-name" href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
+        html += '<ol id="plan-list">' + days.map((day, i) => {
+          const entry = index.filter(x => x.id === day.destinationId)[0];
+          const thumb = entry && entry.coverThumb ? '<img class="plan-thumb" src="' + esc(entry.coverThumb) + '" alt="' + esc(day.destinationName) + '" loading="lazy">' : '';
+          return '<li class="plan-day" data-day="' + i + '"><div class="plan-day-head"><span class="plan-dayno">DAY ' + String(i + 1).padStart(2, '0') + '</span><span class="plan-date">' + esc(day.date) + '</span></div>' +
+          '<div class="plan-day-body">' + thumb + '<div class="plan-day-main"><a class="plan-name" href="#/dest/' + encodeURIComponent(day.destinationId) + '">' + esc(day.destinationName) + '</a>' +
           (day.activities && day.activities.length ? ' — ' + day.activities.map(esc).join('、') : '') +
           '<div class="plan-actions">' +
           '<button type="button" data-act="up" data-i="' + i + '"' + (i === 0 ? ' disabled' : '') + ' aria-label="第' + (i + 1) + '天上移">↑上移</button>' +
@@ -64,7 +70,8 @@
           '</div>' +
           '<div class="plan-insert" data-insert-form="' + i + '" hidden><label>插入目的地<select data-insert-select="' + i + '" aria-label="在第' + (i + 1) + '天后插入的目的地">' + destOptions('') + '</select></label>' +
           '<button type="button" data-act="confirm-insert" data-i="' + i + '">确认插入</button></div>' +
-          '</li>').join('') + '</ol>' +
+          '</div></div></li>';
+        }).join('') + '</ol>' +
           '<div class="plan-insert"><label>末尾新增一天<select id="add-end-select" aria-label="末尾新增一天的目的地">' + destOptions('') + '</select></label>' +
           '<button type="button" data-act="add-end">新增一天</button></div>';
       }

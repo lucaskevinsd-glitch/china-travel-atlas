@@ -37,9 +37,17 @@
         html += '<section><div class="section-head"><h3>季节推荐</h3></div><div class="chip-row big">' +
           seasons.map(s => '<a class="chip link-chip" href="#/discover?season=' + encodeURIComponent(s.id) + '">' + esc(s.label) + '</a>').join('') + '</div></section>';
       }
-      html += '<section><div class="section-head"><h3>按省份浏览</h3></div><div class="chip-scroll">' +
-        provincesDoc.provinces.map(p => '<a class="chip link-chip" href="#/discover?province=' + encodeURIComponent(p.name) + '">' + esc(p.name) + '</a>').join('') + '</div></section>';
+      html += '<section><div class="section-head"><h3>按省份浏览</h3></div><div class="province-wrap" id="province-wrap">' +
+        provincesDoc.provinces.map(p => '<a class="chip link-chip" href="#/discover?province=' + encodeURIComponent(p.name) + '">' + esc(p.name) + '</a>').join('') + '</div>' +
+        '<button type="button" class="province-toggle" id="province-toggle" aria-expanded="false">＋ 展开全部 ' + provincesDoc.provinces.length + ' 省</button></section>';
       body.innerHTML = html;
+      const provToggle = body.querySelector('#province-toggle');
+      const provWrap = body.querySelector('#province-wrap');
+      if (provToggle && provWrap) provToggle.addEventListener('click', function () {
+        const open = provWrap.classList.toggle('open');
+        provToggle.setAttribute('aria-expanded', open);
+        provToggle.textContent = open ? '收起' : '＋ 展开全部 ' + provincesDoc.provinces.length + ' 省';
+      });
       const form = body.querySelector('#home-search');
       if (form) form.addEventListener('submit', e => {
         e.preventDefault();

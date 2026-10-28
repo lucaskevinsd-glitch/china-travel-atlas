@@ -18,7 +18,7 @@
     const imgs = (d.images || []).filter(i => i && i.src);
     /* 横向画廊：第一张优先加载，其余懒加载；srcset 两档（缩略图 640w / 原图 1600w） */
     const hero = imgs.length
-      ? '<div class="gallery" data-gallery><div class="gallery-track">' +
+      ? '<div class="gallery" data-gallery><div class="gallery-stage"><div class="gallery-track">' +
         imgs.map((im, i) =>
           '<figure class="slide"><img class="slide-img" src="' + esc(im.src) + '"' +
           (im.thumb ? ' srcset="' + esc(im.thumb) + ' 640w, ' + esc(im.src) + ' 1600w" sizes="(max-width: 720px) 100vw, 1080px"' : '') +
@@ -26,6 +26,12 @@
           ' alt="' + esc(im.alt || d.name) + '" width="1600" height="1000" ' +
           (i === 0 ? 'fetchpriority="high"' : 'loading="lazy"') +
           ' onerror="CTA.galleryImgErr(this)"></figure>').join('') +
+        '</div><button type="button" class="gallery-prev" data-prev aria-label="上一张">‹</button>' +
+        '<button type="button" class="gallery-next" data-next aria-label="下一张">›</button></div>' +
+        '<div class="gallery-thumbs" role="group" aria-label="图片缩略图">' +
+        imgs.map((im, i) =>
+          '<button type="button" data-thumb="' + i + '" class="' + (i === 0 ? 'active' : '') + '" aria-label="第' + (i + 1) + '张图片">' +
+          '<img src="' + esc(im.thumb || im.src) + '" alt="" loading="lazy"></button>').join('') +
         '</div><div class="gallery-bar"><span class="gallery-count" data-count>1 / ' + imgs.length + '</span>' +
         '<span class="img-credit" data-credit>图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</span>' +
         '<button type="button" class="gallery-zoom" data-zoom>⤢ 放大</button></div></div>'
@@ -39,7 +45,6 @@
     el.innerHTML =
       '<article class="detail">' + hero +
       '<h2>' + esc(d.name) + '</h2>' +
-      '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + (d.district ? ' · ' + esc(d.district) : '') + '</p>' +
       '<p>' + esc(d.summary) + '</p>' +
       '<dl class="fact-strip">' + factItems.join('') + '</dl>' +
       '<div class="chip-row">' + (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('') + '</div>' +
@@ -84,7 +89,12 @@
       const track = gallery.querySelector('.gallery-track');
       const countEl = gallery.querySelector('[data-count]');
       const creditEl = gallery.querySelector('[data-credit]');
+      const thumbBtns = gallery.querySelectorAll('[data-thumb]');
       let cur = 0;
+      function goTo(i) {
+        const t = Math.max(0, Math.min(imgs.length - 1, i));
+        track.scrollTo({ left: t * track.clientWidth, behavior: 'smooth' });
+      }
       const promoted = new Set([0]);
       function promote(i) {
         if (i < 0 || i >= imgs.length || promoted.has(i)) return;
@@ -97,6 +107,7 @@
         cur = i;
         countEl.textContent = (cur + 1) + ' / ' + imgs.length;
         creditEl.textContent = '图片：' + (imgs[cur].credit || '') + '（' + (imgs[cur].license || '') + '）';
+        thumbBtns.forEach((b, j) => b.classList.toggle('active', j === cur));
         promote(cur + 1);
       }
       let ticking = false;
@@ -109,6 +120,12 @@
           if (i !== cur && i >= 0 && i < imgs.length) setCur(i);
         });
       }, { passive: true });
+      /* 画廊箭头与缩略图：滚动事件会经 setCur 同步计数、署名与激活态 */
+      const prevBtn = gallery.querySelector('[data-prev]');
+      const nextBtn = gallery.querySelector('[data-next]');
+      if (prevBtn) prevBtn.addEventListener('click', () => goTo(cur - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => goTo(cur + 1));
+      thumbBtns.forEach(b => b.addEventListener('click', () => goTo(parseInt(b.getAttribute('data-thumb'), 10))));
       promote(1);
       /* 大图查看层 */
       const lb = document.createElement('div');
@@ -128,6 +145,7 @@
         lb.querySelector('.lb-count').textContent = (cur + 1) + ' / ' + imgs.length;
         countEl.textContent = (cur + 1) + ' / ' + imgs.length;
         creditEl.textContent = lb.querySelector('.lb-caption').textContent;
+        thumbBtns.forEach((b, j) => b.classList.toggle('active', j === cur));
         track.scrollTo({ left: cur * track.clientWidth, behavior: 'smooth' });
         promote(cur + 1);
       }
@@ -151,7 +169,7 @@
     }
 
     const box = el.querySelector('#weather-box');
-    if (!CTA.config.features.weatherEnabled) { box.innerHTML = '<h3>天气</h3>' + CTA.ui.errorBox('WEATHER_UNAVAILABLE'); return; }
+    if (!CTA.config.features.weatherEnabled) { box.innerHTML = '<h3>天气</h3><p class="weather-off">' + esc(CTA.errorMessage('WEATHER_UNAVAILABLE')) + '</p>'; return; }
     try {
       const w = await CTA.weatherService.getWeather(d);
       const rows = (w.daily || []).map(day =>
@@ -163,7 +181,7 @@
         '<table class="weather-table"><thead><tr><th>日期</th><th>天气</th><th>低温/高温</th><th>降水概率</th></tr></thead><tbody>' + rows + '</tbody></table>' +
         '<p class="muted">更新于 ' + esc(w.updatedAt) + ' · 数据来源：' + (w.provider === 'open-meteo' ? 'Open-Meteo（CC BY 4.0）' : esc(w.provider)) + '</p>';
     } catch (e) {
-      box.innerHTML = '<h3>天气</h3>' + CTA.ui.errorBox('WEATHER_UNAVAILABLE');
+      box.innerHTML = '<h3>天气</h3><p class="weather-off">' + esc(CTA.errorMessage('WEATHER_UNAVAILABLE')) + '</p>';
     }
   };
   CTA.pages._weatherText = weatherText;
