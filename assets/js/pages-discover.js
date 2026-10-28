@@ -41,7 +41,7 @@
       else history.replaceState(f, '', target);
     }
     el.innerHTML =
-      '<h2>发现目的地</h2>' +
+      '<h2><span class="sec-no">01</span>发现目的地</h2>' +
       '<form id="discover-form" class="filter-form">' +
       '<label>关键词<input type="search" id="f-keyword" placeholder="目的地 / 省 / 市" value="' + esc(init.keyword) + '"></label>' +
       '<label>省份<select id="f-province"><option value="">全部</option></select></label>' +
@@ -116,10 +116,21 @@
       const filters = currentFilters();
       let list = CTA.dataService.searchDestinations(index, filters.keyword);
       list = CTA.dataService.filterDestinations(list, filters);
-      results.innerHTML = activeFiltersHtml(filters, list.length > 0) + (list.length
-        ? '<p class="muted">共 ' + list.length + ' 个目的地</p><div class="card-grid">' + list.map(CTA.ui.destCard).join('') + '</div>'
+      /* 编号：按完整索引位置计算，筛选后同一目的地编号不变 */
+      const noOf = d => index.findIndex(x => x.id === d.id) + 1;
+      /* 头图条：固定取当前结果集第一条封面（不轮换），结果为空时隐藏 */
+      const band = list.length ? '<div class="disc-band"><img src="' + esc(list[0].coverFull || list[0].coverThumb || '') + '" alt="' + esc(list[0].name) + '"><p class="disc-band-cap">图：' + esc(list[0].name) + ' · ' + esc(list[0].province) + '</p></div>' : '';
+      /* 低结果承接区：结果 ≤1 条时给出正式索引中的其他目的地（真实条目 + 真实编号） */
+      let more = '';
+      if (list.length <= 1) {
+        const rest = index.filter(d => !list.some(x => x.id === d.id)).slice(0, 4);
+        if (rest.length) more = '<aside class="disc-more"><h3>' + (list.length === 1 ? '仅剩 1 条时看看' : '没有符合条件时看看') + '</h3><p class="muted">以下为正式索引中的其他目的地：</p><ul>' +
+          rest.map(d => '<li><a href="#/dest/' + encodeURIComponent(d.id) + '">No.' + String(noOf(d)).padStart(2, '0') + ' ' + esc(d.name) + ' · ' + esc(d.province) + '</a></li>').join('') + '</ul></aside>';
+      }
+      results.innerHTML = band + activeFiltersHtml(filters, list.length > 0) + (list.length
+        ? '<p class="muted">共 ' + list.length + ' 个目的地</p><div class="card-grid">' + list.map(d => CTA.ui.destCard(d, { no: noOf(d) })).join('') + '</div>' + more
         : CTA.ui.emptyState('没有符合条件的目的地', '试试清除某个筛选条件，或等待更多目的地发布。') +
-          '<p><button type="button" class="btn" data-clear-filters>清除全部筛选</button></p>');
+          '<p><button type="button" class="btn" data-clear-filters>清除全部筛选</button></p>' + more);
     }
     el.querySelector('#discover-form').addEventListener('submit', function (e) { e.preventDefault(); render(); persist(); syncUrl(currentFilters(), 'push'); });
     /* 下拉改动即时渲染并入历史（与关键词即时筛选一致；URL 始终与结果集对应）。 */

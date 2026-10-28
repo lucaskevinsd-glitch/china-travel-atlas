@@ -11,7 +11,7 @@
       const list = index.filter(d => favIds.indexOf(d.id) !== -1);
       const missing = favIds.filter(id => !index.some(d => d.id === id));
       body.innerHTML = (list.length
-        ? '<div class="card-grid">' + list.map(CTA.ui.destCard).join('') + '</div>'
+        ? '<div class="card-grid">' + list.map(d => CTA.ui.destCard(d, { no: index.findIndex(x => x.id === d.id) + 1 })).join('') + '</div>'
         : CTA.ui.emptyState('收藏的目的地尚未发布', '收藏记录仍保存在本机，待目的地发布后会自动出现在这里。')) +
         (missing.length ? '<p class="muted">另有 ' + missing.length + ' 条收藏对应的目的地当前未发布。</p>' : '');
     } catch (e) { body.innerHTML = CTA.ui.errorBox('DATA_LOAD_FAILED'); }

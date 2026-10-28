@@ -49,11 +49,21 @@
     const fav = CTA.store.isFavorite(d.id);
     /* 首屏首张卡片可优先加载（fetchpriority=high 且不懒加载）；其余维持懒加载 */
     const prio = opts && opts.priority;
+    const no = opts && opts.no;
+    const featured = !!(opts && opts.featured);
     const img = d.coverThumb
       ? '<img class="card-img" src="' + esc(d.coverThumb) + '" alt="' + esc(d.name) + '"' + (prio ? ' fetchpriority="high"' : ' loading="lazy"') + ' width="640" height="400" onerror="CTA.imgErr(this,\'card\')">'
       : '<div class="card-img card-img-placeholder" aria-hidden="true">🏞️</div>';
-    const themes = (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('');
-    return '<article class="dest-card">' +
+    /* 角标：编号（中性深绿）与主推标记纵向排列；主推仅首页首张可用（调用方控制） */
+    const badges = (no || featured) ? '<div class="card-badges">' +
+      (no ? '<span class="dest-no">No.' + String(no).padStart(2, '0') + '</span>' : '') +
+      (featured ? '<span class="featured-tag">本期主推</span>' : '') + '</div>' : '';
+    /* 主题标签上限 3 个，超出记 +N（不改变数据，只控制展示） */
+    const shownThemes = (d.themes || []).slice(0, 3);
+    const extraThemes = (d.themes || []).length - shownThemes.length;
+    const themes = shownThemes.map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('') +
+      (extraThemes > 0 ? '<span class="chip chip-more">+' + extraThemes + '</span>' : '');
+    return '<article class="dest-card' + (featured ? ' featured' : '') + '">' + badges +
       '<a class="card-link" href="#/dest/' + encodeURIComponent(d.id) + '">' + img +
       '<div class="card-body"><h3>' + esc(d.name) + '</h3>' +
       '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + '</p>' +

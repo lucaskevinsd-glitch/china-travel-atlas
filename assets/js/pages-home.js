@@ -12,32 +12,40 @@
       const seasons = (themesDoc.seasons || []);
       const featured = index[0];
       let html = '';
-      /* 主视觉：第一条精选目的地的实景图（原图 1600w/缩略图 640w 两档）+ 搜索入口 */
+      /* 主视觉图注署名：取详情分片首图 credit/license；取不到时退回名称+省份，不阻塞首页 */
+      let heroCaption = featured ? '图：' + esc(featured.name) + ' · ' + esc(featured.province) : '';
+      if (featured) {
+        try {
+          const full = await CTA.dataService.getById(featured.id);
+          if (full && full.images && full.images[0]) heroCaption = '图：' + esc(featured.name) + ' · ' + esc(featured.province) + ' ｜ ' + esc(full.images[0].credit || '') + '（' + esc(full.images[0].license || '') + '）';
+        } catch (e) { /* 忽略，保留退回图注 */ }
+      }
+      /* 主视觉：通栏 + 双向渐变；搜索卡以负边距压在主视觉底边（不在 overlay 内） */
       html += '<section class="hero">' +
         (featured && featured.coverFull
           ? '<img class="hero-img" src="' + esc(featured.coverFull) + '" srcset="' + esc(featured.coverThumb) + ' 640w, ' + esc(featured.coverFull) + ' 1600w" sizes="100vw" alt="' + esc(featured.name) + '" fetchpriority="high" width="1600" height="900" onerror="CTA.imgErr(this,\'hero\')">'
           : '') +
-        '<div class="hero-overlay"><p class="hero-eyebrow">China Travel Atlas · ' + index.length + ' 个目的地 · 覆盖 ' + new Set(index.map(d => d.province)).size + ' 省</p><h2>发现中国值得去的地方</h2>' +
+        '<div class="hero-overlay"><p class="hero-eyebrow"><span>China Travel Atlas</span><span>' + index.length + ' 个目的地 · 覆盖 ' + new Set(index.map(d => d.province)).size + ' 省</span></p><h2>发现中国值得去的地方</h2>' +
         '<p>按自然风景、季节与主题找目的地，再生成你的行程草案。</p>' +
+        (featured ? '<p class="hero-caption">' + heroCaption + '</p>' : '') +
+        '</div></section>' +
         '<form class="hero-search" id="home-search"><input type="search" id="home-q" placeholder="搜索目的地，如古城、海岛" aria-label="搜索目的地">' +
-        '<button type="submit">搜索</button></form>' +
-        (featured ? '<p class="hero-caption">图：' + esc(featured.name) + ' · ' + esc(featured.province) + '</p>' : '') +
-        '</div></section>';
+        '<button type="submit">搜索</button></form>';
       /* 主题横滑模块 */
-      html += '<section><div class="section-head"><h3>旅行主题</h3></div><div class="theme-scroll">' +
+      html += '<section><div class="section-head"><h3><span class="sec-no">01</span>旅行主题</h3></div><div class="theme-scroll">' +
         themesDoc.themes.map(t => '<a class="theme-card" href="#/discover?theme=' + encodeURIComponent(t.id) + '">' + esc(t.label) + '</a>').join('') + '</div></section>';
       /* 目的地先行：首屏后尽快看到内容；季节与省份入口后置，避免 31 个省份 chip 把卡片顶出首屏 */
-      html += '<section><div class="section-head"><h3>已发布目的地（' + index.length + '）</h3><a class="section-more" href="#/discover">查看全部 →</a></div>';
+      html += '<section><div class="section-head"><h3><span class="sec-no">02</span>已发布目的地（' + index.length + '）</h3><a class="section-more" href="#/discover">查看全部 →</a></div>';
       html += index.length
-        ? '<div class="card-grid">' + index.slice(0, 6).map((d, i) => CTA.ui.destCard(d, i === 0 ? { priority: true } : undefined)).join('') + '</div>'
+        ? '<div class="card-grid home-grid">' + index.slice(0, 6).map((d, i) => CTA.ui.destCard(d, { priority: i === 0, featured: i === 0, no: i + 1 })).join('') + '</div>'
         : CTA.ui.emptyState('目的地数据正在核验录入中', '首批目的地经来源与坐标核验后才会发布，当前没有已发布条目。数据更新：' + esc(meta.updated || ''));
       html += '</section>';
       /* 季节推荐 */
       if (seasons.length) {
-        html += '<section><div class="section-head"><h3>季节推荐</h3></div><div class="chip-row big">' +
+        html += '<section><div class="section-head"><h3><span class="sec-no">03</span>季节推荐</h3></div><div class="chip-row big">' +
           seasons.map(s => '<a class="chip link-chip" href="#/discover?season=' + encodeURIComponent(s.id) + '">' + esc(s.label) + '</a>').join('') + '</div></section>';
       }
-      html += '<section><div class="section-head"><h3>按省份浏览</h3></div><div class="province-wrap" id="province-wrap">' +
+      html += '<section><div class="section-head"><h3><span class="sec-no">04</span>按省份浏览</h3></div><div class="province-wrap" id="province-wrap">' +
         provincesDoc.provinces.map(p => '<a class="chip link-chip" href="#/discover?province=' + encodeURIComponent(p.name) + '">' + esc(p.name) + '</a>').join('') + '</div>' +
         '<button type="button" class="province-toggle" id="province-toggle" aria-expanded="false">＋ 展开全部 ' + provincesDoc.provinces.length + ' 省</button></section>';
       body.innerHTML = html;

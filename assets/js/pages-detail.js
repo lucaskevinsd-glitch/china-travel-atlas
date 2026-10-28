@@ -42,8 +42,12 @@
     if (d.type) factItems.push('<div><dt>类型</dt><dd>' + esc((CTA.typeLabels || {})[d.type] || d.type) + '</dd></div>');
     if (d.bestSeasons && d.bestSeasons.length) factItems.push('<div><dt>适游季节</dt><dd>' + esc(d.bestSeasons.map(s => CTA.ui.seasonLabel(s)).join('、')) + '</dd></div>');
     if (d.suggestedDays) factItems.push('<div><dt>建议游玩</dt><dd>' + esc(d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') + '</dd></div>');
+    /* 规格表追加行：数据来源与最近核验（原页面底部的来源行移入规格表，不重复出现） */
+    if (d.source && d.source.name) factItems.push('<div><dt>数据来源</dt><dd>' + esc(d.source.name) + '</dd></div>');
+    if (d.verifiedAt) factItems.push('<div><dt>最近核验</dt><dd>' + esc(d.verifiedAt) + '</dd></div>');
     el.innerHTML =
       '<article class="detail">' + hero +
+      '<p class="detail-eyebrow" data-detail-no></p>' +
       '<h2>' + esc(d.name) + '</h2>' +
       '<p>' + esc(d.summary) + '</p>' +
       '<dl class="fact-strip">' + factItems.join('') + '</dl>' +
@@ -56,7 +60,6 @@
       '<h3 id="sec-plan">建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
       (d.seasonNotes ? '；' + esc(d.seasonNotes) : '') + '</p>' +
       '<h3 id="sec-transport">交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
-      '<p class="muted">数据来源：' + esc(d.source && d.source.name ? d.source.name : '') + ' · 最近核验：' + esc(d.verifiedAt || '') + '</p>' +
       '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
       '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
       '</article>';
@@ -73,10 +76,20 @@
     (async () => {
       try {
         const index = await CTA.dataService.loadIndex();
+        /* 详情眉题编号：按完整索引位置计算（与卡片角标一致）；类型标签缺失时不写原始 id */
+        const eyebrow = el.querySelector('[data-detail-no]');
+        const pos = index.findIndex(e => e.id === d.id);
+        if (eyebrow && pos >= 0) {
+          const parts = ['No.' + String(pos + 1).padStart(2, '0')];
+          const typeLabel = (CTA.typeLabels || {})[d.type];
+          if (typeLabel) parts.push(typeLabel);
+          parts.push(d.province, d.city);
+          eyebrow.textContent = parts.join(' · ');
+        }
         const rel = CTA.pages._relatedFor(index, d.id, 4);
         if (!rel.length) return;
         const box2 = el.querySelector('#related-box');
-        box2.querySelector('[data-related]').innerHTML = rel.map(e => CTA.ui.destCard(e)).join('');
+        box2.querySelector('[data-related]').innerHTML = rel.map(e => CTA.ui.destCard(e, { no: index.findIndex(x => x.id === e.id) + 1 })).join('');
         box2.hidden = false;
         const navRel = el.querySelector('[data-nav-related]');
         if (navRel) navRel.hidden = false;

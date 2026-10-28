@@ -5,7 +5,7 @@
     const esc = CTA.ui.esc;
     const today = new Date().toISOString().slice(0, 10);
     el.innerHTML =
-      '<h2>旅行规划</h2><p class="muted">按主题、季节与建议天数从已发布目的地中生成逐日草案；AI 规划为二期功能，当前未启用。</p>' +
+      '<h2><span class="sec-no">01</span>旅行规划</h2><p class="muted">按主题、季节与建议天数从已发布目的地中生成逐日草案；AI 规划为二期功能，当前未启用。</p>' +
       '<form id="plan-form" class="filter-form plan-form">' +
       '<label>出发地<input type="text" id="p-from" placeholder="如：上海"></label>' +
       '<label>出发日期<input type="date" id="p-date" value="' + today + '" required></label>' +
