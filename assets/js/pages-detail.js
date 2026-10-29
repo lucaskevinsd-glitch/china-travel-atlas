@@ -143,6 +143,7 @@
       /* 大图查看层 */
       const lb = document.createElement('div');
       lb.className = 'lightbox'; lb.hidden = true;
+      lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', '图片查看器');
       lb.innerHTML = '<button type="button" class="lb-close" aria-label="关闭">✕</button>' +
         '<button type="button" class="lb-prev" aria-label="上一张">‹</button>' +
         '<img class="lb-img" alt="">' +
@@ -162,19 +163,47 @@
         track.scrollTo({ left: cur * track.clientWidth, behavior: 'smooth' });
         promote(cur + 1);
       }
-      function openLb() { lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb-close').focus(); document.addEventListener('keydown', onKey); }
-      function closeLb() { lb.hidden = true; document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); }
+      /* 灯箱焦点管理：打开时保存触发控件并移入焦点；Tab/Shift+Tab 陷阱在灯箱内；
+         Escape/遮罩点击关闭；关闭后焦点返回触发控件（不存在则回退到放大按钮）。 */
+      let lbOpen = false, lbTrigger = null;
+      const lbFocusables = () => [lb.querySelector('.lb-close'), lb.querySelector('.lb-prev'), lb.querySelector('.lb-next')].filter(Boolean);
+      function openLb(trigger) {
+        if (lbOpen) return;
+        lbOpen = true;
+        lbTrigger = (trigger && document.contains(trigger)) ? trigger : gallery.querySelector('[data-zoom]');
+        lb.hidden = false; document.body.style.overflow = 'hidden';
+        lb.querySelector('.lb-close').focus();
+        document.addEventListener('keydown', onKey);
+      }
+      function closeLb() {
+        if (!lbOpen) return;
+        lbOpen = false;
+        lb.hidden = true; document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        const back = (lbTrigger && document.contains(lbTrigger)) ? lbTrigger : gallery.querySelector('[data-zoom]');
+        lbTrigger = null;
+        if (back && back.focus) back.focus();
+      }
       function onKey(e) {
-        if (e.key === 'Escape') closeLb();
-        else if (e.key === 'ArrowRight') showLb(cur + 1);
-        else if (e.key === 'ArrowLeft') showLb(cur - 1);
+        if (!lbOpen) return;
+        if (e.key === 'Escape') { closeLb(); return; }
+        if (e.key === 'ArrowRight') { showLb(cur + 1); return; }
+        if (e.key === 'ArrowLeft') { showLb(cur - 1); return; }
+        if (e.key === 'Tab') {
+          const f = lbFocusables();
+          if (!f.length) return;
+          const first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
       }
       lb.querySelector('.lb-close').addEventListener('click', closeLb);
       lb.querySelector('.lb-prev').addEventListener('click', () => showLb(cur - 1));
       lb.querySelector('.lb-next').addEventListener('click', () => showLb(cur + 1));
       lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-      gallery.querySelector('[data-zoom]').addEventListener('click', () => { showLb(cur); openLb(); });
-      track.addEventListener('click', e => { if (e.target.closest('img')) { showLb(cur); openLb(); } });
+      const zoomBtn = gallery.querySelector('[data-zoom]');
+      zoomBtn.addEventListener('click', e => { showLb(cur); openLb(e.currentTarget); });
+      track.addEventListener('click', e => { if (e.target.closest('img')) { showLb(cur); openLb(zoomBtn); } });
       /* 路由切换时清理大图层与键盘监听 */
       window.addEventListener('hashchange', function cleanup() {
         closeLb(); lb.remove(); window.removeEventListener('hashchange', cleanup);
