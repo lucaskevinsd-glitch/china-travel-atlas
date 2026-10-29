@@ -182,7 +182,7 @@ h2{font-size:var(--fs-xl);margin:6px 0 10px} h3{margin:22px 0 8px}
   .hero-search button{width:100%}
   .detail-nav{top:48px}
   .detail h3, .detail section{scroll-margin-top:180px}
-  .disc-band img{height:150px}
+  div.disc-band img{height:150px}
 }
 
 @media (min-width:721px){
