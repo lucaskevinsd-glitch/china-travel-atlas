@@ -2879,6 +2879,42 @@
       "status": "rejected",
       "width": 1536,
       "visualReview": "2026-10-24 第五轮预览审看：与 qd2/qd3 同八大关别墅题材，已有更优两张，未选用"
+    },
+    {
+      "artist": "Jakub Hałun",
+      "destId": "suzhou-humble-garden",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:20090905_Suzhou_Humble_Administrator%27s_Garden_4550.jpg",
+      "fileTitle": "File:20090905 Suzhou Humble Administrator's Garden 4550.jpg",
+      "height": 2000,
+      "width": 3008,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "status": "approved",
+      "visualReview": "2026-11-01 S5 目检通过：拙政园月洞门亭阁，替换与图1字节重复的旧图2",
+      "localized": {
+        "src": "assets/img/full/suzhou-humble-garden-2.webp",
+        "full": "assets/img/full/suzhou-humble-garden-2.webp",
+        "thumb": "assets/img/thumb/suzhou-humble-garden-2.webp"
+      },
+      "alt": "拙政园月洞门亭阁、假山与池塘"
+    },
+    {
+      "artist": "Popolon",
+      "destId": "xijiang-miao-village",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Xijiang_Qianhu_Miaozhai.Skyline.jpg",
+      "fileTitle": "File:Xijiang Qianhu Miaozhai.Skyline.jpg",
+      "height": 1836,
+      "width": 3264,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "status": "approved",
+      "visualReview": "2026-11-01 S5 目检通过：西江千户苗寨吊脚楼群全景，替换与图1字节重复的旧图3",
+      "localized": {
+        "src": "assets/img/full/xijiang-miao-village-3.webp",
+        "full": "assets/img/full/xijiang-miao-village-3.webp",
+        "thumb": "assets/img/thumb/xijiang-miao-village-3.webp"
+      },
+      "alt": "西江千户苗寨吊脚楼群全景"
     }
   ],
   "note": "图片候选登记表。来源 Wikimedia Commons，许可元数据经官方 API（imageinfo/extmetadata）于 2026-10-22 读取。status: license-ok-pending-visual=许可门槛通过、待人工目检内容；rejected=已排除。任何图片在 approved 与本地化完成前不得写入目的地正式数据。"
