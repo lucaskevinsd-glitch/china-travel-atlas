@@ -15,6 +15,17 @@
   /* 季节/类型标签：纯 UI 文案映射，与发现页下拉选项逐字一致，不改变数据。 */
   const SEASON_LABELS = { spring: '春季', summer: '夏季', autumn: '秋季', winter: '冬季' };
   function seasonLabel(id) { return SEASON_LABELS[id] || id; }
+  /* 许可证官方文本链接：标准 CC  deed 地址（事实性常量，非编造）；Public domain 无 deed 链接。 */
+  const LICENSE_URLS = {
+    'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/',
+    'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+    'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/',
+    'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/',
+    'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/',
+    'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/',
+  };
+  function licenseUrl(name) { return LICENSE_URLS[name] || ''; }
   function cardMeta(d) {
     const parts = [];
     if (d.suggestedDays) parts.push('建议 ' + d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天');
@@ -106,7 +117,7 @@
     ph.appendChild(btn);
     img.replaceWith(ph);
   }
-  CTA.ui = { esc, emptyState, errorBox, destCard, focusPos, seasonLabel, cardMeta, toast };
+  CTA.ui = { esc, emptyState, errorBox, destCard, focusPos, seasonLabel, cardMeta, toast, licenseUrl };
   CTA.imgErr = imgErr;
   CTA.galleryImgErr = galleryImgErr;
 })();

@@ -1,4 +1,4 @@
-/* Hash 路由：#/ 首页，#/discover，#/dest/<id>，#/planner，#/favorites。未知路由显示未找到页，不白屏。 */
+/* Hash 路由：#/ 首页，#/discover，#/dest/<id>，#/planner，#/favorites，#/credits。未知路由显示未找到页，不白屏。 */
 (function () {
   window.CTA = window.CTA || {};
   function parseHash() {
@@ -19,12 +19,15 @@
     const main = document.getElementById('app');
     const { parts, params } = parseHash();
     window.scrollTo(0, 0);
+    /* 首页沉浸轮播时隐藏全局顶栏（顶栏在首屏之后以页内导航形式出现）；其他路由恢复 */
+    document.body.classList.remove('home-hero');
     try {
       if (parts.length === 0) { setActive('home'); await CTA.pages.home(main); }
       else if (parts[0] === 'discover') { setActive('discover'); await CTA.pages.discover(main, params); }
       else if (parts[0] === 'dest' && parts[1]) { setActive('discover'); await CTA.pages.detail(main, { id: decodeURIComponent(parts[1]) }); }
       else if (parts[0] === 'planner') { setActive('planner'); await CTA.pages.planner(main, params); }
       else if (parts[0] === 'favorites') { setActive('favorites'); await CTA.pages.favorites(main); }
+      else if (parts[0] === 'credits') { setActive(''); await CTA.pages.credits(main, params); }
       else {
         setActive('');
         main.innerHTML = '<h2>页面未找到</h2>' + CTA.ui.errorBox('DATA_NOT_FOUND') + '<p><a href="#/">返回首页</a></p>';

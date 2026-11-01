@@ -119,7 +119,8 @@
       /* 编号：按完整索引位置计算，筛选后同一目的地编号不变 */
       const noOf = d => index.findIndex(x => x.id === d.id) + 1;
       /* 头图条：固定取当前结果集第一条封面（不轮换），结果为空时隐藏 */
-      const band = list.length ? '<div class="disc-band"><img src="' + esc(list[0].coverFull || list[0].coverThumb || '') + '" alt="' + esc(list[0].name) + '"><p class="disc-band-cap">图：' + esc(list[0].name) + ' · ' + esc(list[0].province) + '</p></div>' : '';
+      /* 2.2：头图条不再叠加图注文字（图片版权统一见 #/credits） */
+      const band = list.length ? '<div class="disc-band"><img src="' + esc(list[0].coverFull || list[0].coverThumb || '') + '" alt="' + esc(list[0].name) + '"></div>' : '';
       /* 低结果承接区：结果 ≤1 条时给出正式索引中的其他目的地（真实条目 + 真实编号） */
       let more = '';
       if (list.length <= 1) {

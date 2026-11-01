@@ -33,7 +33,7 @@
           '<button type="button" data-thumb="' + i + '" class="' + (i === 0 ? 'active' : '') + '" aria-label="第' + (i + 1) + '张图片">' +
           '<img src="' + esc(im.thumb || im.src) + '" alt="" loading="lazy"></button>').join('') +
         '</div><div class="gallery-bar"><span class="gallery-count" data-count>1 / ' + imgs.length + '</span>' +
-        '<span class="img-credit" data-credit>图片：' + esc(imgs[0].credit || '') + '（' + esc(imgs[0].license || '') + '）</span>' +
+        '<a class="img-info" data-imginfo href="#/credits?dest=' + encodeURIComponent(d.id) + '&img=0">ⓘ 图片信息</a>' +
         '<button type="button" class="gallery-zoom" data-zoom>⤢ 放大</button></div></div>'
       : '<div class="detail-hero hero-placeholder">图片待补充（须有明确授权后才上线）</div>';
     /* 事实条与页内导航：全部取自已有数据字段（地区/类型/适游季节/建议天数），缺失项不渲染、不编造。 */
@@ -42,9 +42,7 @@
     if (d.type) factItems.push('<div><dt>类型</dt><dd>' + esc((CTA.typeLabels || {})[d.type] || d.type) + '</dd></div>');
     if (d.bestSeasons && d.bestSeasons.length) factItems.push('<div><dt>适游季节</dt><dd>' + esc(d.bestSeasons.map(s => CTA.ui.seasonLabel(s)).join('、')) + '</dd></div>');
     if (d.suggestedDays) factItems.push('<div><dt>建议游玩</dt><dd>' + esc(d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') + '</dd></div>');
-    /* 规格表追加行：数据来源与最近核验（原页面底部的来源行移入规格表，不重复出现） */
-    if (d.source && d.source.name) factItems.push('<div><dt>数据来源</dt><dd>' + esc(d.source.name) + '</dd></div>');
-    if (d.verifiedAt) factItems.push('<div><dt>最近核验</dt><dd>' + esc(d.verifiedAt) + '</dd></div>');
+    /* 2.2：移除“数据来源/最近核验”展示行（访客无用；数据保留在 JSON 中，图片版权见 #/credits） */
     el.innerHTML =
       '<article class="detail">' + hero +
       '<p class="detail-eyebrow" data-detail-no></p>' +
@@ -60,7 +58,6 @@
       '<h3 id="sec-plan">建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
       (d.seasonNotes ? '；' + esc(d.seasonNotes) : '') + '</p>' +
       '<h3 id="sec-transport">交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
-      '<section id="weather-box"><h3>天气</h3><p class="muted">加载中…</p></section>' +
       '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
       '</article>';
 
@@ -101,7 +98,7 @@
     if (gallery && imgs.length) {
       const track = gallery.querySelector('.gallery-track');
       const countEl = gallery.querySelector('[data-count]');
-      const creditEl = gallery.querySelector('[data-credit]');
+      const infoLink = gallery.querySelector('[data-imginfo]');
       const thumbBtns = gallery.querySelectorAll('[data-thumb]');
       let cur = 0;
       function goTo(i) {
@@ -119,7 +116,7 @@
         if (i === cur) { promote(cur + 1); return; }
         cur = i;
         countEl.textContent = (cur + 1) + ' / ' + imgs.length;
-        creditEl.textContent = '图片：' + (imgs[cur].credit || '') + '（' + (imgs[cur].license || '') + '）';
+        if (infoLink) infoLink.href = '#/credits?dest=' + encodeURIComponent(d.id) + '&img=' + cur;
         thumbBtns.forEach((b, j) => b.classList.toggle('active', j === cur));
         promote(cur + 1);
       }
@@ -148,17 +145,18 @@
         '<button type="button" class="lb-prev" aria-label="上一张">‹</button>' +
         '<img class="lb-img" alt="">' +
         '<button type="button" class="lb-next" aria-label="下一张">›</button>' +
-        '<p class="lb-caption"></p><p class="lb-count"></p>';
+        '<p class="lb-caption"><a class="lb-info" data-lbinfo href="#">ⓘ 图片信息</a></p><p class="lb-count"></p>';
       document.body.appendChild(lb);
       const lbImg = lb.querySelector('.lb-img');
       function showLb(i) {
         cur = Math.max(0, Math.min(imgs.length - 1, i));
         lbImg.src = imgs[cur].src;
         lbImg.alt = imgs[cur].alt || d.name;
-        lb.querySelector('.lb-caption').textContent = '图片：' + (imgs[cur].credit || '') + '（' + (imgs[cur].license || '') + '）';
+        const lbInfo = lb.querySelector('[data-lbinfo]');
+        if (lbInfo) lbInfo.href = '#/credits?dest=' + encodeURIComponent(d.id) + '&img=' + cur;
         lb.querySelector('.lb-count').textContent = (cur + 1) + ' / ' + imgs.length;
         countEl.textContent = (cur + 1) + ' / ' + imgs.length;
-        creditEl.textContent = lb.querySelector('.lb-caption').textContent;
+        if (infoLink) infoLink.href = '#/credits?dest=' + encodeURIComponent(d.id) + '&img=' + cur;
         thumbBtns.forEach((b, j) => b.classList.toggle('active', j === cur));
         track.scrollTo({ left: cur * track.clientWidth, behavior: 'smooth' });
         promote(cur + 1);
@@ -210,21 +208,7 @@
       });
     }
 
-    const box = el.querySelector('#weather-box');
-    if (!CTA.config.features.weatherEnabled) { box.innerHTML = '<h3>天气</h3><p class="weather-off">' + esc(CTA.errorMessage('WEATHER_UNAVAILABLE')) + '</p>'; return; }
-    try {
-      const w = await CTA.weatherService.getWeather(d);
-      const rows = (w.daily || []).map(day =>
-        '<tr><td>' + esc(day.date) + '</td><td>' + esc(weatherText(day.weatherCode)) + '</td><td>' +
-        esc(day.tempMin) + '° / ' + esc(day.tempMax) + '°</td><td>' + (day.precipProb == null ? '—' : esc(day.precipProb) + '%') + '</td></tr>').join('');
-      box.innerHTML = '<h3>天气</h3>' +
-        (w.stale ? '<p class="warn">' + esc(CTA.errorMessage('WEATHER_STALE')) + '</p>' : '') +
-        '<p>现在：' + esc(weatherText(w.current.weatherCode)) + ' ' + esc(w.current.temp) + '°C（体感 ' + esc(w.current.feelsLike) + '°C），湿度 ' + esc(w.current.humidity) + '%</p>' +
-        '<table class="weather-table"><thead><tr><th>日期</th><th>天气</th><th>低温/高温</th><th>降水概率</th></tr></thead><tbody>' + rows + '</tbody></table>' +
-        '<p class="muted">更新于 ' + esc(w.updatedAt) + ' · 数据来源：' + (w.provider === 'open-meteo' ? 'Open-Meteo（CC BY 4.0）' : esc(w.provider)) + '</p>';
-    } catch (e) {
-      box.innerHTML = '<h3>天气</h3><p class="weather-off">' + esc(CTA.errorMessage('WEATHER_UNAVAILABLE')) + '</p>';
-    }
+    /* 2.2：天气区块已整体移除（功能关闭，对访客无用；天气服务模块保留，待正式接入时再恢复） */
   };
   CTA.pages._weatherText = weatherText;
   /* 纯函数：相关目的地排序（可单测）。entries 为索引条目（含 province/themes/type）。

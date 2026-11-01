@@ -230,3 +230,121 @@ h2{font-size:var(--fs-xl);margin:6px 0 10px} h3{margin:22px 0 8px}
 .plan-insert select{min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:var(--fs-base);background:#fff;width:100%}
 .plan-insert button{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--brand);color:var(--brand-ink);cursor:pointer;font-size:var(--fs-base)}
 .plan-insert[hidden]{display:none}
+
+/* ================= 2.2 视觉重构（方案 A 沉浸风景 + B 的眉题/省份索引） ================= */
+/* 首页沉浸模式：隐藏全局顶栏，页内导航在首屏之后出现；主容器顶部不留白 */
+body.home-hero .topbar { display: none; }
+body.home-hero .app-main { padding-top: 0; }
+
+/* —— 首屏纯风景轮播 —— */
+.car { position: relative; height: 100vh; height: 100svh; min-height: 540px; overflow: hidden; background: #141210;
+  width: 100vw; margin-left: calc(50% - 50vw); }
+.car-track { position: absolute; inset: 0; }
+.car-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; pointer-events: none; }
+.car-slide.on { opacity: 1; z-index: 1; pointer-events: auto; }
+.car-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (prefers-reduced-motion: reduce) { .car-slide { transition: none; } }
+.car-ctl { position: absolute; right: 28px; bottom: 28px; display: flex; gap: 10px; z-index: 3; }
+.car-ctl button { width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(255,255,255,.55); background: rgba(20,18,15,.38); color: #fff; font-size: 20px; line-height: 1; cursor: pointer; }
+.car-ctl button:hover { background: rgba(20,18,15,.62); }
+/* S4-V1 修复：指示器放左下，与右下控制组拉开距离，避免 390px 拥挤 */
+.car-dots { position: absolute; left: 28px; bottom: 44px; display: flex; gap: 8px; z-index: 3; }
+.car-dot { width: 26px; height: 4px; border: 0; border-radius: 2px; background: rgba(255,255,255,.45); cursor: pointer; padding: 0; }
+.car-dot.on { background: #fff; }
+
+/* —— 页内粘性导航 —— */
+.home-nav { position: sticky; top: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; background: rgba(250,246,238,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.home-nav .brand { font-weight: 800; font-size: 18px; color: var(--ink); text-decoration: none; }
+.home-nav nav { display: flex; gap: 24px; }
+.home-nav nav a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
+
+/* —— 通用区块 —— */
+.wrap { max-width: 1120px; margin: 0 auto; padding: 64px 24px; }
+.kicker { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: #9A4E18; font-weight: 700; margin: 0 0 10px; }
+.sec-title { font-size: 30px; font-weight: 800; margin: 0 0 8px; letter-spacing: .01em; }
+.sec-sub { color: var(--ink-soft); margin: 0 0 28px; }
+
+/* —— 旅行主题：不对称摄影网格 —— */
+.theme-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: 300px 240px; gap: 16px; }
+.theme-grid .tc1 { grid-row: span 2; }
+.theme-card { position: relative; overflow: hidden; border-radius: 10px; display: block; color: #fff; text-decoration: none; }
+.theme-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+.theme-card:hover img { transform: scale(1.04); }
+.theme-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,.62), rgba(8,8,8,0) 55%); }
+.theme-t { position: absolute; left: 20px; bottom: 16px; right: 20px; z-index: 1; }
+.theme-t b { display: block; font-size: 22px; }
+.theme-t span { font-size: 13px; opacity: .88; }
+
+/* —— 精选目的地：1 大 + 2 卡 —— */
+.feat { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+.feat-main { position: relative; display: block; border-radius: 10px; overflow: hidden; min-height: 460px; color: #fff; text-decoration: none; }
+.feat-main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.feat-main::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,.6), rgba(8,8,8,0) 50%); }
+.feat-main-t { position: absolute; left: 26px; right: 26px; bottom: 24px; z-index: 1; }
+.feat-main-t .kicker { color: #F5C99B; }
+.feat-main-t b { display: block; font-size: 30px; margin: 6px 0; }
+.feat-main-t span:last-child { font-size: 14px; opacity: .9; }
+.feat-side { display: flex; flex-direction: column; gap: 16px; }
+.feat-card { display: grid; grid-template-columns: 180px 1fr; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--ink); }
+.feat-card img { width: 180px; height: 100%; min-height: 150px; object-fit: cover; display: block; }
+.feat-card-t { padding: 18px; display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+.feat-card-t b { font-size: 18px; }
+.feat-card-t span:last-child { font-size: 13px; color: var(--ink-soft); }
+
+/* —— 省份索引列表（吸收 B 方案） —— */
+.index-list { border-top: 2px solid var(--ink); }
+.index-list a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 17px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.index-list a:hover { background: #f4efe3; }
+.index-list a b { font-size: 17px; font-weight: 600; }
+.index-list a span { color: #9A4E18; font-size: 13px; white-space: nowrap; }
+
+/* —— 详情页眉题编辑式层级（吸收 B 方案） —— */
+.detail-eyebrow { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #9A4E18; font-weight: 700; margin: 20px 0 6px; }
+
+/* —— 图片信息低干扰入口 —— */
+.img-info, .lb-info { font-size: 13px; color: #9A4E18; text-decoration: none; white-space: nowrap; }
+.img-info:hover, .lb-info:hover { text-decoration: underline; }
+.gallery-bar { display: flex; align-items: center; gap: 14px; }
+
+/* —— 摄影版权页 —— */
+.credits-page { max-width: 860px; margin: 0 auto; padding: 40px 24px 72px; }
+.credits-page h1 { font-size: 34px; margin: 0 0 10px; }
+.credits-intro { color: var(--ink-soft); margin-bottom: 36px; max-width: 640px; }
+.credit-dest { margin-bottom: 40px; scroll-margin-top: 90px; }
+.credit-dest h2 { font-size: 22px; margin: 0 0 4px; }
+.credit-dest h2 a { color: var(--ink); text-decoration: none; }
+.credit-dest h2 a:hover { text-decoration: underline; }
+.credit-dest-prov { font-size: 14px; color: var(--ink-soft); font-weight: 400; margin-left: 10px; }
+.credit-list { list-style: none; padding: 0; margin: 16px 0 0; }
+.credit-img { display: grid; grid-template-columns: 160px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+.credit-img img { width: 160px; height: 100px; object-fit: cover; border-radius: 8px; display: block; }
+.credit-meta p { margin: 4px 0; font-size: 14px; }
+.credit-file { font-size: 12px; color: var(--ink-soft); word-break: break-all; }
+.credit-dest.flash, .credit-img.flash { animation: creditFlash 2.4s ease; }
+@keyframes creditFlash { 0%, 60% { background: #FBF3DF; } 100% { background: transparent; } }
+@media (prefers-reduced-motion: reduce) { .credit-dest.flash, .credit-img.flash { animation: none; background: #FBF3DF; } }
+
+/* —— 页脚 —— */
+.site-footer nav { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+.site-footer nav a { color: var(--ink-soft); text-decoration: none; font-size: 14px; }
+.site-footer p { text-align: center; color: var(--ink-soft); font-size: 13px; margin: 0; }
+.site-footer p a { color: #9A4E18; }
+
+/* —— 移动端 —— */
+@media (max-width: 720px) {
+  .wrap { padding: 48px 18px; }
+  .home-nav { padding: 12px 18px; }
+  .home-nav nav { gap: 18px; }
+  .car-ctl { right: 16px; bottom: 16px; }
+  .car-ctl button { width: 46px; height: 46px; font-size: 18px; }
+  .car-dots { left: 16px; bottom: 30px; }
+  .theme-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 230px 210px 210px; gap: 12px; }
+  .theme-grid .tc1 { grid-column: span 2; grid-row: auto; }
+  .feat { grid-template-columns: 1fr; }
+  .feat-main { min-height: 340px; }
+  .feat-card { grid-template-columns: 140px 1fr; }
+  .feat-card img { width: 140px; min-height: 120px; }
+  .sec-title { font-size: 24px; }
+  .credit-img { grid-template-columns: 120px 1fr; gap: 12px; }
+  .credit-img img { width: 120px; height: 80px; }
+}
