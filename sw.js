@@ -1,8 +1,8 @@
 /* China Travel Atlas — Service Worker
  * 导航请求 network-first；CSS/JS/JSON 带 ?v= 版本号 cache-first；天气等跨域请求不拦截。
  * 改任何静态资源必须同步递增 VERSION 与 AV（与 index.html、config.js 的 assetV 一致）。 */
-const VERSION = 'cta-v1-20261101a';
-const AV = '20261101a';
+const VERSION = 'cta-v1-20261101b';
+const AV = '20261101b';
 const CORE = [
   './assets/css/main.css?v=' + AV,
   './assets/js/config.js?v=' + AV, './assets/js/errors.js?v=' + AV, './assets/js/store.js?v=' + AV,
@@ -11,7 +11,7 @@ const CORE = [
   './assets/js/services/planner-edit.js?v=' + AV,
   './assets/js/pages-home.js?v=' + AV, './assets/js/pages-discover.js?v=' + AV,
   './assets/js/pages-detail.js?v=' + AV, './assets/js/pages-planner.js?v=' + AV,
-  './assets/js/pages-favorites.js?v=' + AV, './assets/js/router.js?v=' + AV, './assets/js/app.js?v=' + AV,
+  './assets/js/pages-credits.js?v=' + AV, './assets/js/pages-favorites.js?v=' + AV, './assets/js/router.js?v=' + AV, './assets/js/app.js?v=' + AV,
   './manifest.json',
 ];
 const DATA = [
