@@ -39,7 +39,7 @@ await page.waitForTimeout(600);
 check('画廊渲染 5 张幻灯片', (await page.locator('.gallery-track .slide').count()) === 5);
 check('初始计数为 1 / 5', (await page.textContent('[data-count]')).trim() === '1 / 5');
 check('第一张图真实加载', await page.evaluate(() => { const i = document.querySelector('.slide-img'); return i && i.complete && i.naturalWidth > 0; }));
-const requested = await page.evaluate(() => performance.getEntriesByType('resource').filter(e => e.name.includes('fixture-zj')).map(e => e.name.split('/').pop()));
+const requested = await page.evaluate(() => performance.getEntriesByType('resource').filter(e => e.name.includes('/full/fixture-zj')).map(e => e.name.split('/').pop()));
 check('初始仅请求首图与下一张（预加载策略）', requested.length <= 3, requested.join(','));
 await page.evaluate(() => { const t = document.querySelector('.gallery-track'); t.scrollTo({ left: t.clientWidth * 2, behavior: 'instant' }); });
 await page.waitForTimeout(500);

@@ -85,6 +85,30 @@ const gap = await p.evaluate(() => {
 ok('S4-V1 轮播控件不拥挤（间距>20px）', gap > 20, 'gap=' + gap);
 ok('触控目标≥44px', await p.evaluate(() =>
   [...document.querySelectorAll('.car-ctl button')].every(b => b.getBoundingClientRect().width >= 44)));
+/* 移动端底部标签栏不得盖住轮播控件（真实交互问题回归，2026-11-01 发现并修复） */
+const aboveTab = await p.evaluate(() => {
+  const tab = document.querySelector('.bottom-tabs').getBoundingClientRect();
+  const ctl = document.querySelector('.car-ctl').getBoundingClientRect();
+  const dots = document.querySelector('.car-dots').getBoundingClientRect();
+  const hit = sel => {
+    const e = document.querySelector(sel); const b = e.getBoundingClientRect();
+    const el = document.elementFromPoint(b.x + b.width / 2, b.y + b.height / 2);
+    return el === e || e.contains(el);
+  };
+  return {
+    ctlAbove: ctl.bottom <= tab.top, dotsAbove: dots.bottom <= tab.top,
+    hitNext: hit('.car [data-car-next]'), hitDot: hit('.car-dot'),
+  };
+});
+ok('轮播控件位于底部标签栏之上', aboveTab.ctlAbove && aboveTab.dotsAbove, JSON.stringify(aboveTab));
+ok('轮播控件真实可点击命中', aboveTab.hitNext && aboveTab.hitDot, JSON.stringify(aboveTab));
+const cur0 = await p.evaluate(() => [...document.querySelectorAll('.car-slide')].findIndex(s => s.classList.contains('on')));
+await p.click('[data-car-next]');
+await p.waitForTimeout(400);
+ok('移动端真实点击切换下一张', (await p.evaluate(() => [...document.querySelectorAll('.car-slide')].findIndex(s => s.classList.contains('on')))) === (cur0 + 1) % 5, 'from ' + cur0);
+/* 恢复轮播到原位置，避免影响后续触摸滑动测试的状态假设 */
+await p.click(`.car-dot[data-dot="${cur0}"]`);
+await p.waitForTimeout(400);
 /* 触摸滑动：合成触摸事件（handler 仅读取 touches/changedTouches 的 clientX） */
 await p.evaluate(() => {
   const root = document.querySelector('[data-carousel]');
