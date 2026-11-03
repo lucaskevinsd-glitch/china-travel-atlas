@@ -34,9 +34,9 @@ ok('主题4卡', await p.evaluate(() => document.querySelectorAll('.theme-card')
 ok('主题卡跳转真实主题筛选', await p.evaluate(() =>
   [...document.querySelectorAll('.theme-card')].every(a => /^#\/discover\?theme=(nature|historic|ancient-town|coastal)$/.test(a.getAttribute('href')))));
 ok('精选1大+2卡', await p.evaluate(() => document.querySelectorAll('.feat-main').length === 1 && document.querySelectorAll('.feat-card').length === 2));
-ok('省份24条真实数量', await p.evaluate(() => {
+ok('省份31条真实数量（A1：24→31）', await p.evaluate(() => {
   const rows = [...document.querySelectorAll('.index-list a')];
-  return rows.length === 24 && rows.every(a => /\d+ 个目的地/.test(a.textContent));
+  return rows.length === 31 && rows.every(a => /\d+ 个目的地/.test(a.textContent));
 }));
 ok('页脚无开发说明', await p.evaluate(() => {
   const t = document.querySelector('.site-footer').textContent;
@@ -146,7 +146,7 @@ for (const w of [360, 768]) {
 p = await newPage({ width: 1440, height: 900 });
 await p.goto(BASE + '/#/credits', { waitUntil: 'networkidle' });
 await p.waitForSelector('.credit-img');
-ok('版权页93张', await p.evaluate(() => document.querySelectorAll('.credit-img').length) === 93);
+ok('版权页129张（A1：93→129）', await p.evaluate(() => document.querySelectorAll('.credit-img').length) === 129);
 ok('每图有作者+来源链接+许可链接（Public domain 无官方 deed 页，显示许可名称即可）', await p.evaluate(() =>
   [...document.querySelectorAll('.credit-img')].every(li => {
     const links = [...li.querySelectorAll('a[href^="http"]')];
@@ -157,7 +157,7 @@ ok('每图有作者+来源链接+许可链接（Public domain 无官方 deed 页
     return licText.includes('作者') && hasSrc && (!needsDeed || hasDeed);
   })));
 ok('来源链接可点击（真实a标签）', await p.evaluate(() =>
-  [...document.querySelectorAll('.credit-meta a')].filter(a => a.textContent.includes('原作品')).length) === 93);
+  [...document.querySelectorAll('.credit-meta a')].filter(a => a.textContent.includes('原作品')).length) === 129);
 ok('手机端版权页可读', await p.evaluate(() => {
   const s = getComputedStyle(document.querySelector('.credit-meta p'));
   return parseFloat(s.fontSize) >= 13;
