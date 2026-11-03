@@ -1,5 +1,30 @@
 [
  {
+  "id": "hongcun",
+  "name": "宏村",
+  "province": "安徽省",
+  "city": "黄山市",
+  "district": "黟县",
+  "type": "rural",
+  "themes": [
+   "ancient-town",
+   "historic",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "黄山脚下的明清古村落，以完善水系与“牛”形布局著称，是徽州民居的典型代表，皖南古村落世界遗产之一。",
+  "coverThumb": "assets/img/thumb/hongcun-1.webp",
+  "coverFull": "assets/img/full/hongcun-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "huangshan",
   "name": "黄山风景区",
   "province": "安徽省",
@@ -221,6 +246,31 @@
   "shard": "first-batch"
  },
  {
+  "id": "xijiang-miao-village",
+  "name": "西江千户苗寨",
+  "province": "贵州省",
+  "city": "黔东南苗族侗族自治州",
+  "district": "雷山县",
+  "type": "rural",
+  "themes": [
+   "ancient-town",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "坐落于雷公山麓、白水河畔，由10余个依山而建的自然村寨连片构成，是中国现存最大的苗族聚居村寨。",
+  "coverThumb": "assets/img/thumb/xijiang-miao-village-1.webp",
+  "coverFull": "assets/img/full/xijiang-miao-village-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "yalong-bay",
   "name": "亚龙湾",
   "province": "海南省",
@@ -245,6 +295,31 @@
   "shard": "first-batch"
  },
  {
+  "id": "chengde-mountain-resort",
+  "name": "承德避暑山庄",
+  "province": "河北省",
+  "city": "承德市",
+  "district": "双桥区",
+  "type": "historic",
+  "themes": [
+   "historic",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 2
+  },
+  "summary": "清代夏宫，现存最大的皇家园林，与周围寺庙同为世界遗产，园内湖泊、宫殿与山峦景观结合。",
+  "coverThumb": "assets/img/thumb/chengde-mountain-resort-1.webp",
+  "coverFull": "assets/img/full/chengde-mountain-resort-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "longmen-grottoes",
   "name": "龙门石窟",
   "province": "河南省",
@@ -266,6 +341,31 @@
   "coverThumb": "assets/img/thumb/longmen-grottoes-1.webp",
   "coverFull": "assets/img/full/longmen-grottoes-1.webp",
   "shard": "first-batch"
+ },
+ {
+  "id": "harbin-central-street",
+  "name": "哈尔滨中央大街",
+  "province": "黑龙江省",
+  "city": "哈尔滨市",
+  "district": "道里区",
+  "type": "urban",
+  "themes": [
+   "historic",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "winter",
+   "summer"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "哈尔滨主要商业步行街之一，南起新阳广场、北至松花江边防洪纪念塔广场，全长1450米，由面包石铺成。",
+  "coverThumb": "assets/img/thumb/harbin-central-street-1.webp",
+  "coverFull": "assets/img/full/harbin-central-street-1.webp",
+  "shard": "batch2-drafts"
  },
  {
   "id": "enshi-grand-canyon",
@@ -343,6 +443,31 @@
   "shard": "first-batch"
  },
  {
+  "id": "suzhou-humble-garden",
+  "name": "苏州拙政园",
+  "province": "江苏省",
+  "city": "苏州市",
+  "district": "姑苏区",
+  "type": "cultural",
+  "themes": [
+   "historic",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "始建于明正德年间的江南私家园林，中国四大名园之一，苏州古典园林世界遗产的组成部分，以水景与建筑布局见长。",
+  "coverThumb": "assets/img/thumb/suzhou-humble-garden-1.webp",
+  "coverFull": "assets/img/full/suzhou-humble-garden-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "wuyuan-huangling",
   "name": "婺源篁岭",
   "province": "江西省",
@@ -368,6 +493,80 @@
   "shard": "first-batch"
  },
  {
+  "id": "shenyang-imperial-palace",
+  "name": "沈阳故宫",
+  "province": "辽宁省",
+  "city": "沈阳市",
+  "district": "沈河区",
+  "type": "historic",
+  "themes": [
+   "historic",
+   "family"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "始建于1625年的后金、清入关前皇宫，后为盛京行宫，占地约6万平方米，是沈阳明清旧城中心的历史建筑群。",
+  "coverThumb": "assets/img/thumb/shenyang-imperial-palace-1.webp",
+  "coverFull": "assets/img/full/shenyang-imperial-palace-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
+  "id": "hulunbuir-grassland",
+  "name": "呼伦贝尔大草原（莫日格勒河）",
+  "province": "内蒙古自治区",
+  "city": "呼伦贝尔市",
+  "district": "陈巴尔虎旗",
+  "type": "desert",
+  "themes": [
+   "nature",
+   "photography",
+   "grassland-desert"
+  ],
+  "bestSeasons": [
+   "summer",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 2,
+   "max": 3
+  },
+  "summary": "以内蒙古呼伦贝尔草原为范围，代表点位取莫日格勒河流经的草原河曲一带，可观开阔草原、河流与畜群景观。",
+  "coverThumb": "assets/img/thumb/hulunbuir-grassland-1.webp",
+  "coverFull": "assets/img/full/hulunbuir-grassland-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
+  "id": "shapotou",
+  "name": "沙坡头",
+  "province": "宁夏回族自治区",
+  "city": "中卫市",
+  "district": "沙坡头区",
+  "type": "desert",
+  "themes": [
+   "nature",
+   "photography",
+   "grassland-desert"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "黄河与腾格里沙漠交汇地带的景区，可观沙丘、黄河与绿洲景观，兼具沙漠活动与黄河观光。",
+  "coverThumb": "assets/img/thumb/shapotou-1.webp",
+  "coverFull": "assets/img/full/shapotou-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "qinghai-lake",
   "name": "青海湖",
   "province": "青海省",
@@ -390,6 +589,31 @@
   "coverThumb": "assets/img/thumb/qinghai-lake-1.webp",
   "coverFull": "assets/img/full/qinghai-lake-1.webp",
   "shard": "first-batch"
+ },
+ {
+  "id": "qingdao-badaguan-zhanqiao",
+  "name": "青岛八大关与栈桥",
+  "province": "山东省",
+  "city": "青岛市",
+  "district": "市南区",
+  "type": "coastal",
+  "themes": [
+   "coastal",
+   "historic",
+   "family"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "青岛市南滨海一带的组合游览：栈桥为伸入海中的标志性建筑，八大关为近代别墅建筑区，两者同属滨海风貌带。",
+  "coverThumb": "assets/img/thumb/qingdao-badaguan-zhanqiao-1.webp",
+  "coverFull": "assets/img/full/qingdao-badaguan-zhanqiao-1.webp",
+  "shard": "batch2-drafts"
  },
  {
   "id": "mount-tai",
@@ -539,6 +763,31 @@
   "shard": "first-batch"
  },
  {
+  "id": "mount-emei",
+  "name": "峨眉山",
+  "province": "四川省",
+  "city": "峨眉山市",
+  "district": null,
+  "type": "mountain",
+  "themes": [
+   "mountains",
+   "historic",
+   "hiking"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 2,
+   "max": 2
+  },
+  "summary": "四川佛教名山，景区面积154平方公里，金顶海拔3077米，与乐山大佛同为世界遗产，有“峨眉天下秀”之誉。",
+  "coverThumb": "assets/img/thumb/mount-emei-1.webp",
+  "coverFull": "assets/img/full/mount-emei-1.webp",
+  "shard": "batch2-drafts"
+ },
+ {
   "id": "jiuzhaigou",
   "name": "九寨沟",
   "province": "四川省",
@@ -561,6 +810,31 @@
   "coverThumb": "assets/img/thumb/jiuzhaigou-1.webp",
   "coverFull": "assets/img/full/jiuzhaigou-1.webp",
   "shard": "first-batch"
+ },
+ {
+  "id": "wudadao-tianjin",
+  "name": "五大道文化旅游区",
+  "province": "天津市",
+  "city": "天津市",
+  "district": "和平区",
+  "type": "cultural",
+  "themes": [
+   "historic",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "天津市中心偏南的民国年间高级住宅区与文化旅游区，片区内保留大量风格多样的洋楼建筑，适合步行漫游与建筑观赏。",
+  "coverThumb": "assets/img/thumb/wudadao-tianjin-1.webp",
+  "coverFull": "assets/img/full/wudadao-tianjin-1.webp",
+  "shard": "batch2-drafts"
  },
  {
   "id": "potala-palace",
@@ -733,5 +1007,30 @@
   "coverThumb": "assets/img/thumb/west-lake-hangzhou-1.webp",
   "coverFull": "assets/img/full/west-lake-hangzhou-1.webp",
   "shard": "first-batch"
+ },
+ {
+  "id": "wuzhen",
+  "name": "乌镇",
+  "province": "浙江省",
+  "city": "嘉兴市",
+  "district": "桐乡市",
+  "type": "rural",
+  "themes": [
+   "ancient-town",
+   "family",
+   "photography"
+  ],
+  "bestSeasons": [
+   "spring",
+   "autumn"
+  ],
+  "suggestedDays": {
+   "min": 1,
+   "max": 1
+  },
+  "summary": "江南水乡古镇，位于浙江省桐乡市，河道与民居沿水展开，东西栅片区各具风貌，适合水乡漫步与夜景游览。",
+  "coverThumb": "assets/img/thumb/wuzhen-1.webp",
+  "coverFull": "assets/img/full/wuzhen-1.webp",
+  "shard": "batch2-drafts"
  }
 ]
