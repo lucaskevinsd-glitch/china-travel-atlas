@@ -68,8 +68,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：身份、坐标与简介经中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "身份、坐标与简介经中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "chengde-mountain-resort",
@@ -140,8 +140,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：世界遗产身份与坐标经 UNESCO 与中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "世界遗产身份与坐标经 UNESCO 与中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "hulunbuir-grassland",
@@ -212,8 +212,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：事实核验通过（2026-10-24）。地图标记为莫日格勒河上游河曲代表观景点（陈巴尔虎旗境内），非景区入口。核验方法：以 OpenStreetMap 河道原始几何（way 673039820，莫尔格勒河，digitalGlobe 影像来源）实测，当前坐标 49.785,120.1859 距河道最近节点仅 28 米，且该处河道呈弯曲走向，与“河曲代表点”语义一致；河道走向资料（维基百科：发源于陈巴尔虎旗东北大兴安岭西麓、向西南流经陈巴尔虎旗）佐证点位落在上游河段。偏差说明：Wikidata 该河条目代表坐标（49.2333,119.3）位于下游一端，与本点位相距约 90 公里，系同一条 319 公里河流的不同河段代表点，不构成矛盾。注意：OSM 几何与 Nominatim 地理编码同源于 OSM 数据，故另以河道走向文字资料交叉佐证。坐标无需修改。"
+    "status": "published",
+    "verificationNote": "事实核验通过（2026-10-24）。地图标记为莫日格勒河上游河曲代表观景点（陈巴尔虎旗境内），非景区入口。核验方法：以 OpenStreetMap 河道原始几何（way 673039820，莫尔格勒河，digitalGlobe 影像来源）实测，当前坐标 49.785,120.1859 距河道最近节点仅 28 米，且该处河道呈弯曲走向，与“河曲代表点”语义一致；河道走向资料（维基百科：发源于陈巴尔虎旗东北大兴安岭西麓、向西南流经陈巴尔虎旗）佐证点位落在上游河段。偏差说明：Wikidata 该河条目代表坐标（49.2333,119.3）位于下游一端，与本点位相距约 90 公里，系同一条 319 公里河流的不同河段代表点，不构成矛盾。注意：OSM 几何与 Nominatim 地理编码同源于 OSM 数据，故另以河道走向文字资料交叉佐证。坐标无需修改；正式评审通过（2026-11-03）。"
   },
   {
     "id": "shenyang-imperial-palace",
@@ -283,8 +283,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：身份、始建年份与坐标经中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "身份、始建年份与坐标经中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "harbin-central-street",
@@ -355,8 +355,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：长度与起止点经中文维基百科核验，坐标经 Wikidata（Q10875064）核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "长度与起止点经中文维基百科核验，坐标经 Wikidata（Q10875064）核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "suzhou-humble-garden",
@@ -427,8 +427,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：园林身份与坐标经 UNESCO 与中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "园林身份与坐标经 UNESCO 与中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "shapotou",
@@ -499,8 +499,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：坐标已更正。原坐标 37.5169,105.1738 实为沙坡头区行政点位；新坐标 37.4659,104.9954 取自 OpenStreetMap Nominatim“沙坡头旅游区”点位，并与中科院沙坡头沙漠试验研究站代表坐标（DEIMS：37.4601,105.0001）及景区站区坐标（104°57′E, 37°27′N）交叉验证，三者互差约 5 公里内，均指向中卫市区以西约 16 公里景区一带。待正式评审。"
+    "status": "published",
+    "verificationNote": "坐标已更正。原坐标 37.5169,105.1738 实为沙坡头区行政点位；新坐标 37.4659,104.9954 取自 OpenStreetMap Nominatim“沙坡头旅游区”点位，并与中科院沙坡头沙漠试验研究站代表坐标（DEIMS：37.4601,105.0001）及景区站区坐标（104°57′E, 37°27′N）交叉验证，三者互差约 5 公里内，均指向中卫市区以西约 16 公里景区一带。正式评审通过（2026-11-03）。"
   },
   {
     "id": "qingdao-badaguan-zhanqiao",
@@ -571,8 +571,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：栈桥坐标经英文维基百科核验，组合口径（栈桥+八大关）已在简介中说明，待正式评审。"
+    "status": "published",
+    "verificationNote": "栈桥坐标经英文维基百科核验，组合口径（栈桥+八大关）已在简介中说明；正式评审通过（2026-11-03）。"
   },
   {
     "id": "wuzhen",
@@ -643,8 +643,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：身份与坐标经中英文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "身份与坐标经中英文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "mount-emei",
@@ -715,8 +715,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：世界遗产身份、面积与金顶海拔经 UNESCO 与中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "世界遗产身份、面积与金顶海拔经 UNESCO 与中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "xijiang-miao-village",
@@ -787,8 +787,8 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：村寨构成与规模经中文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "村寨构成与规模经中文维基百科初步核验；正式评审通过（2026-11-03）。"
   },
   {
     "id": "hongcun",
@@ -859,7 +859,7 @@
       "retrievedAt": "2026-10-24"
     },
     "verifiedAt": "2026-10-24",
-    "status": "draft",
-    "verificationNote": "draft：世界遗产身份与坐标经 UNESCO 与中英文维基百科初步核验，待正式评审。"
+    "status": "published",
+    "verificationNote": "世界遗产身份与坐标经 UNESCO 与中英文维基百科初步核验；正式评审通过（2026-11-03）。"
   }
 ]
