@@ -1,17 +1,20 @@
-/* 首页 2.2（方案 A 沉浸风景 + B 的眉题/省份索引列表）：
-   第一屏纯风景轮播（零可见文字）→ 粘性页内导航 → 旅行主题（不对称摄影网格）
+/* 首页 B1（沉浸式摄影首页）：
+   第一屏全屏摄影轮播（目的地信息层 + CTA）→ 粘性页内导航 → 旅行主题（不对称摄影网格）
    → 精选目的地（1 大 + 2 卡）→ 按省份探索（索引列表，真实数量）→ 页脚。
    搜索功能保留在发现页（关键词框），首页不再重复。 */
 (function () {
   window.CTA = window.CTA || {};
   CTA.pages = CTA.pages || {};
-  /* 首屏轮播：5 张真实高清大图（正式集 1600w 原图）；按 id 从索引取名称与封面，缺失则跳过 */
+  /* 首屏轮播：data/heroes.json（B1 摄影选片），按 destId 从索引取名称/省份；heroes.json 缺失时回退旧 CAROUSEL_IDS */
   const CAROUSEL_IDS = ['huangshan', 'zhangye-danxia', 'hongya-cave', 'gulangyu', 'mogao-caves'];
-  /* 主题展示：显示名 + 对应的真实数据主题 id（城市漫游取古镇古城，副文案写明对应关系） */
+  /* 主题展示：显示名 + 对应的真实数据主题 id；repId 为人工指定的代表目的地（封面经目视核实与主题匹配），
+     未指定时自动取该主题首条且未被前面卡片用过的目的地，避免两卡同图。
+     B2 修正：ancient-town 的旧标签“城市漫游”错误（古镇≠城市），改为“古镇古城”；historic 代表由宏村（祠堂内景）
+     改为故宫（宫殿，历史人文最强代表），ancient-town 代表由宏村改为乌镇（水乡外景）。 */
   const THEME_SHOW = [
     { theme: 'nature', title: '自然山水', sub: '山岳云海，走向旷野' },
-    { theme: 'historic', title: '历史人文', sub: '宫殿石窟，读懂时间' },
-    { theme: 'ancient-town', title: '城市漫游', sub: '古城街巷，漫步时光' },
+    { theme: 'historic', title: '历史人文', sub: '宫殿石窟，读懂时间', repId: 'forbidden-city' },
+    { theme: 'ancient-town', title: '古镇古城', sub: '古城街巷，漫步时光', repId: 'wuzhen' },
     { theme: 'coastal', title: '休闲度假', sub: '海岛海岸，放空度假' },
   ];
 
@@ -25,20 +28,47 @@
       const byId = {};
       index.forEach(d => { byId[d.id] = d; });
 
-      /* —— 第一屏：纯风景轮播 —— */
-      const slides = CAROUSEL_IDS.map(id => byId[id]).filter(Boolean).slice(0, 5);
-      const carSlides = slides.map((d, i) =>
-        '<a class="car-slide' + (i === 0 ? ' on' : '') + '" href="#/dest/' + encodeURIComponent(d.id) + '"' +
-        ' aria-roledescription="slide" aria-label="' + esc(d.name) + '（第' + (i + 1) + '张，共' + slides.length + '张，点击进入详情）"' +
-        (i === 0 ? '' : ' aria-hidden="true"') + ' tabindex="' + (i === 0 ? '0' : '-1') + '">' +
-        '<img class="car-img" src="' + esc(d.coverFull || d.coverThumb) + '"' +
-        ' srcset="' + esc(d.coverThumb || '') + ' 640w, ' + esc(d.coverFull || d.coverThumb || '') + ' 1600w" sizes="100vw"' +
-        ' alt=""' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') +
-        ' onerror="CTA.imgErr(this,\'hero\')"></a>').join('');
-      const carDots = slides.map((d, i) =>
-        '<button type="button" class="car-dot' + (i === 0 ? ' on' : '') + '" data-dot="' + i + '" aria-label="第' + (i + 1) + '张：' + esc(d.name) + '"></button>').join('');
+      /* —— 第一屏：沉浸式摄影轮播（含目的地信息层 + CTA） —— */
+      let heroes = [];
+      try {
+        const raw = await CTA.dataService.loadHeroes();
+        heroes = (raw || []).map(h => Object.assign({}, h, { dest: byId[h.destId] })).filter(h => h.dest && h.src);
+      } catch (e) { heroes = []; }
+      /* 回退：heroes.json 不可用时用旧封面图（无信息层） */
+      let slides;
+      if (heroes.length) {
+        slides = heroes.slice(0, 5);
+      } else {
+        slides = CAROUSEL_IDS.map(id => byId[id]).filter(Boolean).slice(0, 5).map(d => ({
+          destId: d.id, dest: d, src: d.coverFull || d.coverThumb,
+          srcset: (d.coverThumb || '') + ' 640w, ' + (d.coverFull || d.coverThumb || '') + ' 1600w',
+          alt: '', tagline: '', position: '50% 50%', credit: '', license: '', sourceUrl: ''
+        }));
+      }
+      const carSlides = slides.map((s, i) => {
+        const d = s.dest;
+        const place = esc(d.province) + (d.city && d.city !== d.province ? ' · ' + esc(d.city) : '');
+        const caption = s.tagline
+          ? '<span class="car-caption"><span class="car-kicker">' + place + '</span>' +
+            '<span class="car-title">' + esc(d.name) + '</span>' +
+            '<span class="car-sub">' + esc(s.tagline) + '</span>' +
+            '<span class="car-cta" aria-hidden="true">探索目的地<i>→</i></span></span>'
+          : '';
+        return '<a class="car-slide' + (i === 0 ? ' on' : '') + '" href="#/dest/' + encodeURIComponent(d.id) + '"' +
+          ' aria-roledescription="slide" aria-label="' + esc(d.name) + '（第' + (i + 1) + '张，共' + slides.length + '张，点击进入详情）"' +
+          (i === 0 ? '' : ' aria-hidden="true"') + ' tabindex="' + (i === 0 ? '0' : '-1') + '">' +
+          '<img class="car-img" src="' + esc(s.src) + '"' +
+          (s.srcset ? ' srcset="' + esc(s.srcset) + '" sizes="100vw"' : '') +
+          ' alt="' + esc(s.alt || d.name) + '"' +
+          (s.position && s.position !== '50% 50%' ? ' style="object-position:' + esc(s.position) + '"' : '') +
+          (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') +
+          ' onerror="CTA.imgErr(this,\'hero\')">' + caption + '</a>';
+      }).join('');
+      const carDots = slides.map((s, i) =>
+        '<button type="button" class="car-dot' + (i === 0 ? ' on' : '') + '" data-dot="' + i + '" aria-label="第' + (i + 1) + '张：' + esc(s.dest.name) + '"></button>').join('');
       let html = '<section class="car" data-carousel aria-roledescription="carousel" aria-label="中国风景轮播">' +
-        (slides.length ? '<link rel="preload" as="image" href="' + esc(slides[0].coverFull || '') + '">' : '') +
+        (slides.length ? '<link rel="preload" as="image" href="' + esc(slides[0].src) + '"' +
+          (slides[0].srcset ? ' imagesrcset="' + esc(slides[0].srcset) + '" imagesizes="100vw"' : '') + '>' : '') +
         '<div class="car-track">' + carSlides + '</div>' +
         '<div class="car-ctl"><button type="button" data-car-pause aria-label="暂停或播放轮播">❚❚</button>' +
         '<button type="button" data-car-prev aria-label="上一张">‹</button>' +
@@ -49,12 +79,15 @@
       html += '<header class="home-nav"><a class="brand" href="#/">中国旅行图鉴</a>' +
         '<nav aria-label="主导航"><a href="#/">首页</a><a href="#/discover">发现</a><a href="#/planner">规划</a><a href="#/favorites">收藏</a></nav></header>';
 
-      /* —— 第二屏：旅行主题（主题卡取该主题首条结果封面，图文严格对应） —— */
+      /* —— 第二屏：旅行主题（repId 指定代表；否则取该主题首条未被占用的目的地，杜绝两卡同图） —— */
+      const usedRep = {};
       const themeCards = THEME_SHOW.map((t, k) => {
-        const rep = index.find(d => (d.themes || []).indexOf(t.theme) !== -1);
+        let rep = (t.repId && byId[t.repId] && (byId[t.repId].themes || []).indexOf(t.theme) !== -1) ? byId[t.repId] : null;
+        if (!rep) rep = index.find(d => (d.themes || []).indexOf(t.theme) !== -1 && !usedRep[d.id]);
         if (!rep) return '';
+        usedRep[rep.id] = true;
         return '<a class="theme-card tc' + (k + 1) + '" href="#/discover?theme=' + encodeURIComponent(t.theme) + '">' +
-          '<img src="' + esc(rep.coverThumb || rep.coverFull) + '" alt="" loading="lazy" onerror="CTA.imgErr(this,\'card\')">' +
+          '<img src="' + esc(rep.coverThumb || rep.coverFull) + '" alt="' + esc(rep.name) + '" loading="lazy" onerror="CTA.imgErr(this,\'card\')">' +
           '<span class="theme-t"><b>' + esc(t.title) + '</b><span>' + esc(t.sub) + '</span></span></a>';
       }).join('');
       html += '<main><div class="wrap"><p class="kicker">Themes · 旅行主题</p><h2 class="sec-title">先选一种心情，再选目的地</h2>' +
@@ -93,7 +126,7 @@
     }
   };
 
-  /* 轮播行为：切换/圆点/暂停/触摸滑动/键盘（按钮原生可达）/减动效 */
+  /* 轮播行为：切换/圆点/暂停/触摸滑动/键盘（按钮原生可达）/减动效/页面隐藏暂停/交互后宽限重启 */
   function initCarousel(root) {
     if (!root) return;
     const slides = Array.from(root.querySelectorAll('.car-slide'));
@@ -102,7 +135,8 @@
     const next = root.querySelector('[data-car-next]');
     const pause = root.querySelector('[data-car-pause]');
     if (!slides.length) return;
-    let i = 0, timer = null;
+    let i = 0, timer = null, grace = null, userPaused = false;
+    const GRACE_MS = 12000; /* 手动交互后 12 秒再恢复自动切换，避免立即抢走用户正在看的图 */
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function go(n) {
       i = (n + slides.length) % slides.length;
@@ -113,35 +147,62 @@
       });
       dots.forEach((d2, k) => d2.classList.toggle('on', k === i));
     }
+    function updatePauseBtn() {
+      if (!pause) return;
+      /* 按钮只反映显式暂停状态；hover/focus/隐藏导致的临时停止不改变按钮 */
+      if (userPaused) { pause.textContent = '\u25B6'; pause.setAttribute('aria-label', '\u64AD\u653E\u8F6E\u64AD'); }
+      else { pause.textContent = '\u275A\u275A'; pause.setAttribute('aria-label', '\u6682\u505C\u8F6E\u64AD'); }
+    }
     function play() {
-      if (reduce || timer) return;
+      if (reduce || userPaused || timer || document.hidden) return;
       timer = setInterval(() => go(i + 1), 6000);
-      if (pause) { pause.textContent = '❚❚'; pause.setAttribute('aria-label', '暂停轮播'); }
     }
     function stop() {
       if (timer) { clearInterval(timer); timer = null; }
-      if (pause) { pause.textContent = '▶'; pause.setAttribute('aria-label', '播放轮播'); }
     }
-    if (prev) prev.addEventListener('click', () => { go(i - 1); stop(); });
-    if (next) next.addEventListener('click', () => { go(i + 1); stop(); });
-    dots.forEach((d2, k) => d2.addEventListener('click', () => { go(k); stop(); }));
-    if (pause) pause.addEventListener('click', () => { timer ? stop() : play(); });
+    function scheduleResume() {
+      if (grace) { clearTimeout(grace); grace = null; }
+      grace = setTimeout(() => { grace = null; if (!userPaused) play(); }, GRACE_MS);
+    }
+    function interact(n) { stop(); go(n); scheduleResume(); }
+    if (prev) prev.addEventListener('click', () => interact(i - 1));
+    if (next) next.addEventListener('click', () => interact(i + 1));
+    dots.forEach((d2, k) => d2.addEventListener('click', () => interact(k)));
+    if (pause) pause.addEventListener('click', () => {
+      if (userPaused) { userPaused = false; updatePauseBtn(); play(); }
+      else {
+        stop(); if (grace) { clearTimeout(grace); grace = null; }
+        userPaused = true; updatePauseBtn();
+      }
+    });
     root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', play);
+    root.addEventListener('mouseleave', () => { if (!userPaused) play(); });
     root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', play);
+    root.addEventListener('focusout', () => { if (!userPaused) play(); });
     let x0 = null;
-    root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; stop(); if (grace) { clearTimeout(grace); grace = null; } }, { passive: true });
     root.addEventListener('touchend', e => {
       if (x0 === null) return;
       const dx = e.changedTouches[0].clientX - x0;
-      if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+      if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); }
       x0 = null;
+      scheduleResume();
     }, { passive: true });
-    go(0); play();
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) { stop(); if (grace) { clearTimeout(grace); grace = null; } }
+      else if (!userPaused) play();
+    });
+    go(0); updatePauseBtn(); play();
+    /* 首屏后预加载第 2 张，避免自动切换时闪白 */
+    try {
+      const second = slides[1] && slides[1].querySelector('img');
+      const url2 = second && (second.currentSrc || second.src);
+      if (url2) { const pre = new Image(); pre.decoding = 'async'; pre.src = url2; }
+    } catch (e) { /* 预加载失败不阻塞 */ }
     /* 页面卸载时清理定时器（路由切换为整页重渲染，hashchange 时停） */
     window.addEventListener('hashchange', function cleanup() {
-      stop(); window.removeEventListener('hashchange', cleanup);
+      stop(); if (grace) { clearTimeout(grace); grace = null; }
+      window.removeEventListener('hashchange', cleanup);
     });
   }
 })();

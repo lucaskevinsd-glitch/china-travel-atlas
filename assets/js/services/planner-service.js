@@ -15,7 +15,11 @@
     return d.toISOString().slice(0, 10);
   }
 
-  function planTrip(candidates, input) {
+  /* planTrip(candidates, input, geoApi?)
+   * geoApi（可选，页面传入 CTA.plannerGeo）：提供 orderByGeography 时，在打分排序后按分数分层做地理排序；
+   * 不传或无该方法时退回原有分数+名称顺序。input.pinned（可选，目的地 ID 数组）：用户明确指定的目的地，
+   * 按给定顺序置于最前且不参与重排、不得被删除；其余候选仍按分数分层地理排序。 */
+  function planTrip(candidates, input, geoApi) {
     const days = input && input.days;
     if (!Number.isInteger(days) || days < 1 || days > 30) {
       return { ok: false, error: 'INVALID_INPUT', message: '天数须为 1–30 的整数' };
@@ -29,12 +33,31 @@
       .sort((a, b) => b.s - a.s || a.d.name.localeCompare(b.d.name, 'zh'));
     if (!ranked.length) return { ok: false, error: 'EMPTY_RESULT', message: '暂无已发布的目的地可用于规划' };
 
+    /* B4.1：地理感知排序。先抽出 pinned（用户指定顺序，不得擅自改变）；其余按分数分层地理排序；
+     * 无 geoApi 时保持原有顺序。分配逻辑不变，仍按建议天数贪心分配。 */
+    let ordered = ranked;
+    const pinnedIds = (input && Array.isArray(input.pinned)) ? input.pinned.filter(id => typeof id === 'string' && id) : [];
+    let pinned = [];
+    if (pinnedIds.length) {
+      const byId = {};
+      ranked.forEach(item => { byId[item.d.id] = item; });
+      pinned = pinnedIds.map(id => byId[id]).filter(Boolean);
+      ordered = ranked.filter(item => pinnedIds.indexOf(item.d.id) === -1);
+    }
+    if (geoApi && typeof geoApi.orderByGeography === 'function') {
+      ordered = geoApi.orderByGeography(ordered);
+    }
+    ordered = pinned.concat(ordered);
+
     // 贪心分配：按排名依次给每个目的地 min(建议天数上限, 剩余天数)，至少 1 天；剩余天数并入最后一个。
+    // pinned 必须完整保留：为每个尚未分配的 pinned 目的地预留至少 1 天（pinned 在 ordered 最前，故只影响 pinned 段）。
     const chosen = [];
     let remaining = days;
-    for (const item of ranked) {
+    for (let oi = 0; oi < ordered.length; oi++) {
       if (remaining <= 0) break;
-      const want = Math.max(1, Math.min((item.d.suggestedDays && item.d.suggestedDays.max) || 1, remaining));
+      const item = ordered[oi];
+      const pinnedAfter = oi < pinned.length ? pinned.length - 1 - oi : 0;
+      const want = Math.max(1, Math.min((item.d.suggestedDays && item.d.suggestedDays.max) || 1, remaining - pinnedAfter));
       chosen.push({ dest: item.d, days: want });
       remaining -= want;
     }

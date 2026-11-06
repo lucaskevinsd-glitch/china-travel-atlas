@@ -28,6 +28,25 @@
 
   let indexCache = null;
   const shardCache = {};
+  let heroesCache = null;
+  let newsCache = null;
+  async function loadHeroes() {
+    if (heroesCache) return heroesCache;
+    try {
+      heroesCache = await fetchJson('data/heroes.json?v=' + V);
+      return heroesCache;
+    } catch (e) { throw e instanceof CTA.AppError ? e : new CTA.AppError('DATA_LOAD_FAILED', e); }
+  }
+
+  /* B3：旅行新鲜事数据。文件缺失或损坏时返回空数组（模块隐藏），不阻塞发现页。 */
+  async function loadNews() {
+    if (newsCache) return newsCache;
+    try {
+      const doc = await fetchJson('data/news.json?v=' + V);
+      newsCache = Array.isArray(doc) ? doc : (doc && Array.isArray(doc.items) ? doc.items : []);
+      return newsCache;
+    } catch (e) { newsCache = []; return newsCache; }
+  }
 
   async function fetchJson(url) {
     const res = await fetch(url);
@@ -77,6 +96,6 @@
     return full;
   }
 
-  CTA.dataService = { loadIndex, loadMeta, loadProvinces, loadThemes, getById, searchDestinations, filterDestinations };
+  CTA.dataService = { loadIndex, loadMeta, loadProvinces, loadThemes, loadHeroes, loadNews, getById, searchDestinations, filterDestinations };
   if (typeof module !== 'undefined' && module.exports) module.exports = { searchDestinations, filterDestinations };
 })();

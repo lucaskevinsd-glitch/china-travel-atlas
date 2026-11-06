@@ -18,9 +18,18 @@
       '<div id="plan-result"></div>';
     const result = el.querySelector('#plan-result');
     let index = [];
+    let coordMap = {};
+    /* B4：地理提示的会话内状态（不持久化、不改行程数据结构）。
+       dismissedGeo：用户点“知道了”的提示键；reorderHiddenSig：用户暂不调整的重排建议对应的行程签名。 */
+    let dismissedGeo = new Set();
+    let reorderHiddenSig = null;
+    let lastReorder = null;
+    let lastSavedText = null;
     try {
       const [idx, themesDoc] = await Promise.all([CTA.dataService.loadIndex(), CTA.dataService.loadThemes()]);
       index = idx;
+      /* B4：坐标来自索引 location（B4 由 shard 坐标带入索引）；缺失则为 null，检测时标记为无法计算。 */
+      index.forEach(d => { coordMap[d.id] = CTA.plannerGeo ? CTA.plannerGeo.coordOf(d) : null; });
       const sel = el.querySelector('#p-theme');
       themesDoc.themes.forEach(t => {
         const o = document.createElement('option'); o.value = t.id; o.textContent = t.label; sel.appendChild(o);
@@ -29,6 +38,21 @@
 
     let currentPlan = null;
     let currentFrom = '';
+
+    function planSignature(plan) {
+      return (plan.itinerary || []).map(d => d.destinationId).join(',');
+    }
+    /* B4：地理提示 HTML。level 标签：info=提示、warn=注意、severe=严重。 */
+    function geoLevelLabel(level) {
+      return level === 'severe' ? '严重' : level === 'warn' ? '注意' : '提示';
+    }
+    function geoHintHtml(issue) {
+      return '<div class="geo-hint geo-' + issue.level + '" data-geo-key="' + esc(issue.key) + '">' +
+        '<span class="geo-hint-title"><span class="geo-level">' + geoLevelLabel(issue.level) + '</span>' + esc(issue.title) + '</span>' +
+        '<span class="geo-hint-detail">' + esc(issue.detail) + '</span>' +
+        '<span class="geo-hint-sugg">' + esc(issue.suggestion) + '</span>' +
+        '<button type="button" data-act="dismiss-geo" data-key="' + esc(issue.key) + '" aria-label="忽略此提示">知道了</button></div>';
+    }
 
     function timeLabel(iso) {
       try { return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; }
@@ -44,6 +68,7 @@
       renderPlan(plan, ok ? '已保存 ' + timeLabel(now) : null, ok ? null : 'PLAN_SAVE_FAILED');
     }
     function renderPlan(plan, savedText, errorCode) {
+      if (savedText) lastSavedText = savedText;
       const days = plan.itinerary || [];
       let html = '<h3>行程草案（' + days.length + ' 天，自 ' + esc(plan.startDate) + '）</h3>';
       if (errorCode) html += CTA.ui.errorBox(errorCode);
@@ -51,6 +76,29 @@
       /* 草案来源说明：本地浏览器存储 + 上次保存时间 + 标题日期为准（消除旧草案困惑） */
       const provTime = savedText ? savedText.replace(/^草案已保存（/, '上次保存 ').replace(/^已保存 /, '上次保存 ').replace(/）$/, '') : '';
       html += '<p class="plan-prov">本草案保存在当前浏览器中' + (provTime ? ' · ' + esc(provTime) : '') + ' · 草案标题日期为准。</p>';
+      /* B4：地理合理性检测（只读提示，不改行程；直线距离，不编造交通时间）。 */
+      let geoIssuesByDay = {};
+      lastReorder = null;
+      if (CTA.plannerGeo && days.length) {
+        const analysis = CTA.plannerGeo.analyzeItinerary(plan.itinerary, coordMap);
+        analysis.issues.forEach(function (issue) {
+          if (dismissedGeo.has(issue.key)) return;
+          (geoIssuesByDay[issue.dayIndex] = geoIssuesByDay[issue.dayIndex] || []).push(issue);
+        });
+        const sig = planSignature(plan);
+        if (reorderHiddenSig !== sig) {
+          lastReorder = CTA.plannerGeo.suggestOrder(plan.itinerary, coordMap);
+        }
+      }
+      if (lastReorder) {
+        const names = lastReorder.order.map(function (oi) { return esc(days[oi].destinationName); });
+        html += '<section class="geo-reorder" aria-label="顺路重排建议"><h4>顺路建议</h4>' +
+          '<p>当前行程总直线距离约 ' + lastReorder.currentKm + ' 公里。按以下顺序可省约 ' + lastReorder.savedKm + ' 公里（' + lastReorder.savedPct + '%）：</p>' +
+          '<ol class="geo-reorder-list">' + names.map(function (n, i) { return '<li>DAY ' + String(i + 1).padStart(2, '0') + ' ' + n + '</li>'; }).join('') + '</ol>' +
+          '<p class="muted">仅调整目的地顺序，日期不变。应用前请确认；不应用则行程保持原样。</p>' +
+          '<div class="geo-reorder-actions"><button type="button" data-act="apply-reorder">应用此顺序</button>' +
+          '<button type="button" data-act="dismiss-reorder">暂不调整</button></div></section>';
+      }
       if (!days.length) {
         html += '<p class="muted">还没有行程安排：可以从下方新增一天，或填写上方表单重新生成。</p>' +
           '<div class="plan-insert"><label>新增一天<select id="add-end-select" aria-label="新增一天的目的地">' + destOptions('') + '</select></label>' +
@@ -70,12 +118,14 @@
           '</div>' +
           '<div class="plan-insert" data-insert-form="' + i + '" hidden><label>插入目的地<select data-insert-select="' + i + '" aria-label="在第' + (i + 1) + '天后插入的目的地">' + destOptions('') + '</select></label>' +
           '<button type="button" data-act="confirm-insert" data-i="' + i + '">确认插入</button></div>' +
-          '</div></div></li>';
+          '</div></div>' +
+          /* B4：地理提示紧跟在相关日期之后，不遮挡编辑操作。 */
+          (geoIssuesByDay[i] ? geoIssuesByDay[i].map(geoHintHtml).join('') : '') + '</li>';
         }).join('') + '</ol>' +
           '<div class="plan-insert"><label>末尾新增一天<select id="add-end-select" aria-label="末尾新增一天的目的地">' + destOptions('') + '</select></label>' +
           '<button type="button" data-act="add-end">新增一天</button></div>';
       }
-      html += '<p class="muted">草案已保存在本机，可在收藏页外随时回此页查看。出发地、人数与预算仅作记录与排序权重，不生成交通票价信息。</p>';
+      html += '<p class="muted">草案已保存在本机，可在收藏页外随时回此页查看。出发地、人数与预算仅作记录与排序权重，不生成交通票价信息。距离为目的地之间的直线距离，不等于实际道路距离。</p>';
       result.innerHTML = html;
     }
 
@@ -84,6 +134,25 @@
       if (!btn || !currentPlan) return;
       const act = btn.getAttribute('data-act');
       const i = parseInt(btn.getAttribute('data-i'), 10);
+      /* B4：地理提示操作（不改行程数据结构；重排须用户主动点击“应用此顺序”才生效）。 */
+      if (act === 'dismiss-geo') {
+        dismissedGeo.add(btn.getAttribute('data-key') || '');
+        renderPlan(currentPlan, lastSavedText, null);
+        return;
+      }
+      if (act === 'dismiss-reorder') {
+        reorderHiddenSig = planSignature(currentPlan);
+        renderPlan(currentPlan, lastSavedText, null);
+        return;
+      }
+      if (act === 'apply-reorder') {
+        if (!CTA.plannerGeo || !lastReorder) return;
+        const reordered = CTA.plannerGeo.applyOrder(currentPlan.itinerary, lastReorder.order);
+        if (!reordered) return;
+        const plan = Object.assign({}, currentPlan, { itinerary: reordered, days: reordered.length, totalDays: reordered.length });
+        saveEdited(plan);
+        return;
+      }
       const edit = CTA.plannerEdit;
       if (!edit) return;
       if (act === 'insert') {
@@ -130,7 +199,7 @@
         theme: el.querySelector('#p-theme').value,
         season: el.querySelector('#p-season').value,
       };
-      const plan = CTA.plannerService.planTrip(index, input);
+      const plan = CTA.plannerService.planTrip(index, input, CTA.plannerGeo);
       if (!plan.ok) {
         result.innerHTML = CTA.ui.errorBox(plan.error === 'EMPTY_RESULT' ? 'EMPTY_RESULT' : 'INVALID_INPUT');
         return;

@@ -52,13 +52,17 @@
       '<div class="chip-row">' + (d.themes || []).map(t => '<span class="chip">' + esc((CTA.themeLabels || {})[t] || t) + '</span>').join('') + '</div>' +
       '<div class="detail-actions"><button class="fav-btn" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '">' + (fav ? '⭐ 已收藏' : '☆ 收藏') + '</button>' +
       '<a class="btn" href="#/planner?dest=' + encodeURIComponent(d.id) + '">加入规划</a></div>' +
-      '<nav class="detail-nav" aria-label="页面内导航"><button type="button" data-scroll-to="sec-highlights">主要特色</button><button type="button" data-scroll-to="sec-activities">推荐活动</button><button type="button" data-scroll-to="sec-plan">建议游玩</button><button type="button" data-scroll-to="sec-transport">交通说明</button><button type="button" data-scroll-to="related-box" data-nav-related hidden>相关目的地</button></nav>' +
+      '<nav class="detail-nav" aria-label="页面内导航"><button type="button" data-scroll-to="sec-highlights">主要特色</button><button type="button" data-scroll-to="sec-activities">推荐活动</button><button type="button" data-scroll-to="sec-plan">建议游玩</button><button type="button" data-scroll-to="sec-transport">交通说明</button><button type="button" data-scroll-to="rec-section" data-nav-related hidden>关联推荐</button></nav>' +
       '<h3 id="sec-highlights">主要特色</h3><ul>' + (d.highlights || []).map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>' +
       '<h3 id="sec-activities">推荐活动</h3><ul>' + (d.activities || []).map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
       '<h3 id="sec-plan">建议游玩</h3><p>' + esc(d.suggestedDays ? (d.suggestedDays.min + '–' + d.suggestedDays.max + ' 天') : '') +
       (d.seasonNotes ? '；' + esc(d.seasonNotes) : '') + '</p>' +
       '<h3 id="sec-transport">交通说明</h3><p>' + esc(d.transportNotes || '') + '</p>' +
-      '<section id="related-box" hidden><h3>相关目的地</h3><div class="card-grid" data-related></div></section>' +
+      '<section id="rec-section" hidden><h3>关联推荐</h3>' +
+      '<div class="rec-module" data-rec-nearby hidden><h4>附近值得一起游览</h4><p class="rec-intro">直线距离 300 公里以内，适合顺路一起游览</p><div class="card-grid"></div></div>' +
+      '<div class="rec-module" data-rec-similar hidden><h4>相似旅行体验</h4><p class="rec-intro">与这里有相似的主题与旅行体验</p><div class="card-grid"></div></div>' +
+      '<div class="rec-module" data-rec-extended hidden><h4>延伸探索</h4><p class="rec-intro">同一地区或同一主题的下一步探索</p><div class="card-grid"></div></div>' +
+      '</section>' +
       '</article>';
 
     /* 页内导航：按钮 + scrollIntoView，不用 #sec-* 锚点（Hash 路由会把裸锚点当成未知路由）。
@@ -69,7 +73,8 @@
       const target = el.querySelector('#' + btn.getAttribute('data-scroll-to'));
       if (target) target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
     });
-    /* 相关目的地：同省+3、每个共同主题+2、同类型+1；不足时按得分补齐，无结果则整段隐藏 */
+    /* B5 关联推荐：三层（附近 / 相似体验 / 延伸探索），由 recommendations.js 计算；模块为空时隐藏，不凑数。
+       当前目的地不推荐自己，三层之间不重复（引擎内去重）。 */
     (async () => {
       try {
         const index = await CTA.dataService.loadIndex();
@@ -83,11 +88,26 @@
           parts.push(d.province, d.city);
           eyebrow.textContent = parts.join(' · ');
         }
-        const rel = CTA.pages._relatedFor(index, d.id, 4);
-        if (!rel.length) return;
-        const box2 = el.querySelector('#related-box');
-        box2.querySelector('[data-related]').innerHTML = rel.map(e => CTA.ui.destCard(e, { no: index.findIndex(x => x.id === e.id) + 1 })).join('');
-        box2.hidden = false;
+        if (!CTA.recommendations || typeof CTA.recommendations.getRecommendations !== 'function') return;
+        const rec = CTA.recommendations.getRecommendations(index, d.id, CTA.plannerGeo, { themes: CTA.themeLabels, types: CTA.typeLabels });
+        const noOf = id => index.findIndex(x => x.id === id) + 1;
+        const mods = [
+          { key: 'nearby', sel: '[data-rec-nearby]' },
+          { key: 'similar', sel: '[data-rec-similar]' },
+          { key: 'extended', sel: '[data-rec-extended]' },
+        ];
+        let shown = 0;
+        mods.forEach(m => {
+          const items = rec[m.key] || [];
+          if (!items.length) return;
+          const box = el.querySelector(m.sel);
+          box.querySelector('.card-grid').innerHTML = items.map(x =>
+            CTA.ui.destCard(x.dest, { no: noOf(x.dest.id), note: x.reason })).join('');
+          box.hidden = false;
+          shown++;
+        });
+        if (!shown) return;
+        el.querySelector('#rec-section').hidden = false;
         const navRel = el.querySelector('[data-nav-related]');
         if (navRel) navRel.hidden = false;
       } catch (e) { /* 索引不可用时静默降级，不影响详情主体 */ }

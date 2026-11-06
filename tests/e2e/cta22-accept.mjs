@@ -23,10 +23,13 @@ let p = await newPage({ width: 1440, height: 900 });
 await p.goto(BASE + '/#/', { waitUntil: 'networkidle' });
 await p.waitForSelector('.car-slide.on');
 ok('首页5张轮播', await p.evaluate(() => document.querySelectorAll('.car-slide').length) === 5);
-ok('首屏零文字内容（仅图标控件）', await p.evaluate(() => {
-  const t = document.querySelector('.car').innerText.replace(/[❚❚‹›▶\s]/g, '');
-  return t.length === 0;
-}), await p.evaluate(() => JSON.stringify(document.querySelector('.car').innerText)));
+ok('首屏信息层：每张有目的地名+卖点+CTA（B1）', await p.evaluate(() => {
+  const caps = [...document.querySelectorAll('.car-slide .car-caption')];
+  return caps.length === 5 && caps.every(c =>
+    c.querySelector('.car-title').textContent.trim().length > 0 &&
+    c.querySelector('.car-sub').textContent.trim().length > 0 &&
+    c.querySelector('.car-cta').textContent.includes('探索目的地'));
+}), 'caption=' + await p.evaluate(() => document.querySelectorAll('.car-slide .car-caption').length));
 ok('首屏全幅无溢出', (await overflow(p)) <= 0, String(await overflow(p)));
 ok('全局顶栏隐藏', await p.evaluate(() => getComputedStyle(document.querySelector('.topbar')).display === 'none'));
 ok('页内导航在首屏后', await p.evaluate(() => !!document.querySelector('.home-nav')));
@@ -55,9 +58,9 @@ await p.click('.car-dot[data-dot="3"]');
 await p.waitForTimeout(300);
 ok('圆点跳转', (await curSlide()) === 3, String(await curSlide()));
 const paused = await p.evaluate(() => { document.querySelector('[data-car-pause]').click(); return document.querySelector('[data-car-pause]').textContent; });
-ok('暂停按钮切换（暂停态→播放态）', paused === '❚❚', paused);
+ok('暂停按钮切换（播放态→暂停态，B1显式暂停）', paused === '▶', paused);
 const paused2 = await p.evaluate(() => { document.querySelector('[data-car-pause]').click(); return document.querySelector('[data-car-pause]').textContent; });
-ok('暂停按钮切换（播放态→暂停态）', paused2 === '▶', paused2);
+ok('暂停按钮切换（暂停态→播放态，B1恢复）', paused2 === '❚❚', paused2);
 ok('控件键盘可达', await p.evaluate(() => {
   document.querySelector('[data-car-next]').focus();
   return document.activeElement.getAttribute('data-car-next') !== null;
@@ -146,7 +149,7 @@ for (const w of [360, 768]) {
 p = await newPage({ width: 1440, height: 900 });
 await p.goto(BASE + '/#/credits', { waitUntil: 'networkidle' });
 await p.waitForSelector('.credit-img');
-ok('版权页129张（A1：93→129）', await p.evaluate(() => document.querySelectorAll('.credit-img').length) === 129);
+ok('版权页134张（A1 129 + B1 首页轮播 5）', await p.evaluate(() => document.querySelectorAll('.credit-img').length) === 134);
 ok('每图有作者+来源链接+许可链接（Public domain 无官方 deed 页，显示许可名称即可）', await p.evaluate(() =>
   [...document.querySelectorAll('.credit-img')].every(li => {
     const links = [...li.querySelectorAll('a[href^="http"]')];
@@ -157,7 +160,7 @@ ok('每图有作者+来源链接+许可链接（Public domain 无官方 deed 页
     return licText.includes('作者') && hasSrc && (!needsDeed || hasDeed);
   })));
 ok('来源链接可点击（真实a标签）', await p.evaluate(() =>
-  [...document.querySelectorAll('.credit-meta a')].filter(a => a.textContent.includes('原作品')).length) === 129);
+  [...document.querySelectorAll('.credit-meta a')].filter(a => a.textContent.includes('原作品')).length) === 134);
 ok('手机端版权页可读', await p.evaluate(() => {
   const s = getComputedStyle(document.querySelector('.credit-meta p'));
   return parseFloat(s.fontSize) >= 13;
@@ -201,7 +204,10 @@ await p.close();
 p = await newPage({ width: 1440, height: 900 });
 await p.goto(BASE + '/#/discover', { waitUntil: 'networkidle' });
 await p.waitForSelector('#discover-form');
-ok('发现页头图无图注叠加', await p.evaluate(() => !document.querySelector('.disc-band-cap')));
+ok('发现页头图有标题层（B2 精选聚光灯）', await p.evaluate(() => {
+  const cap = document.querySelector('.disc-band-cap');
+  return !!cap && !!cap.querySelector('.disc-band-title').textContent.trim() && !!cap.querySelector('.disc-band-kicker').textContent.trim();
+}));
 ok('搜索筛选功能正常', await p.evaluate(async () => {
   document.querySelector('#f-keyword').value = '黄山';
   document.querySelector('#discover-form').dispatchEvent(new Event('submit', { cancelable: true }));

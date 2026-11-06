@@ -63,6 +63,9 @@
     const prio = opts && opts.priority;
     const no = opts && opts.no;
     const featured = !!(opts && opts.featured);
+    /* B5：推荐理由/距离行（仅推荐卡片传入），置于地区行之后、摘要之前 */
+    const note = opts && opts.note;
+    const noteHtml = note ? '<p class="rec-note">' + esc(note) + '</p>' : '';
     /* 主推卡用 1600w 原图（不得用 thumb 放大）；普通卡用 thumb */
     const cardSrc = (featured && d.coverFull) ? d.coverFull : d.coverThumb;
     const img = cardSrc
@@ -80,7 +83,7 @@
     return '<article class="dest-card' + (featured ? ' featured' : '') + '">' + badges +
       '<a class="card-link" href="#/dest/' + encodeURIComponent(d.id) + '">' + img +
       '<div class="card-body"><h3>' + esc(d.name) + '</h3>' +
-      '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + '</p>' +
+      '<p class="card-loc">' + esc(d.province) + ' · ' + esc(d.city) + '</p>' + noteHtml +
       '<p class="card-summary">' + esc(d.summary || '') + '</p>' + cardMeta(d) +
       '<div class="chip-row">' + themes + '</div></div></a>' +
       '<button class="fav-btn fav-icon" data-fav="' + esc(d.id) + '" aria-pressed="' + fav + '" aria-label="' + (fav ? '已收藏，点击取消收藏' : '收藏') + '">' + (fav ? '★' : '☆') + '</button>' +

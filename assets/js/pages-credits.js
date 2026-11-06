@@ -19,6 +19,27 @@
     let html = '<div class="credits-page"><p class="kicker">Credits · 摄影版权</p><h1>摄影版权</h1>' +
       '<p class="credits-intro">本站图片为真实摄影作品，版权归原作者所有。每张图片的作者、来源链接、许可证及许可链接列出如下；' +
       'CC 系列许可证要求署名作者、声明许可、给出处链接并标记改编（本站图片均经缩放并转为 WebP）。点击来源链接可查看原作品页面。</p>';
+    /* B1：首页轮播图（data/heroes.json，独立于目的地相册） */
+    try {
+      const heroes = await CTA.dataService.loadHeroes();
+      const hh = (heroes || []).filter(h => h && h.src);
+      if (hh.length) {
+        html += '<section class="credit-dest" id="cd-heroes" aria-label="首页轮播图片版权">' +
+          '<h2>首页轮播 <span class="credit-dest-prov">Hero Carousel · ' + hh.length + ' 张</span></h2><ul class="credit-list">';
+        hh.forEach((h, i) => {
+          const deed = CTA.ui.licenseUrl(h.license);
+          html += '<li class="credit-img" id="ci-heroes-' + i + '">' +
+            '<img src="' + esc(h.src) + '" alt="' + esc(h.alt || '') + '" loading="lazy" onerror="CTA.imgErr(this,\'thumb\')">' +
+            '<div class="credit-meta"><p class="credit-file">' + esc((h.src || '').split('/').pop()) + '（→ ' + esc(h.destId || '') + '）</p>' +
+            '<p>作者：' + esc(h.credit || '未标注') + '</p>' +
+            '<p>来源：<a href="' + esc(h.sourceUrl || '') + '" target="_blank" rel="noopener noreferrer">查看原作品页面</a></p>' +
+            '<p>许可：' + (deed
+              ? '<a href="' + esc(deed) + '" target="_blank" rel="noopener noreferrer">' + esc(h.license) + '</a>'
+              : esc(h.license || '未标注')) + '</p></div></li>';
+        });
+        html += '</ul></section>';
+      }
+    } catch (e) { /* heroes 加载失败不阻塞版权页 */ }
     for (const d of dests) {
       const imgs = (d.images || []).filter(i => i && i.src);
       if (!imgs.length) continue;

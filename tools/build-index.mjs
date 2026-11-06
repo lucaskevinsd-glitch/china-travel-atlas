@@ -25,6 +25,7 @@ for (const f of files) {
       type: d.type, themes: d.themes, bestSeasons: d.bestSeasons, suggestedDays: d.suggestedDays,
       summary: d.summary, coverThumb: d.images && d.images[0] ? d.images[0].thumb : null,
       coverFull: d.images && d.images[0] ? d.images[0].src : null, shard,
+      location: d.location ? { lat: d.location.lat, lng: d.location.lng, coordSystem: d.location.coordSystem } : null,
     });
   }
 }
